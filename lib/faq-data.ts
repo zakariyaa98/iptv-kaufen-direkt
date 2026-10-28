@@ -1,3 +1,5 @@
+import { LOWEST_PRICE, formatPrice } from "./plans";
+
 export type FaqItem = {
   question: string;
   answer: string;
@@ -10,83 +12,69 @@ export type FaqCategory = {
 
 export const faqCategories: FaqCategory[] = [
   {
-    category: "Einstieg",
+    category: "Unser Service",
     items: [
       {
-        question: "Was ist OSCam?",
+        question: "Verkaufen Sie IPTV-Abos oder Senderpakete?",
         answer:
-          "OSCam ist eine quelloffene Softcam-Software für Linux-basierte Receiver wie Enigma2-Geräte. Sie verwaltet den Zugriff auf Conditional-Access-Module und leitet Entschlüsselungsanfragen an lokal angeschlossene, rechtmäßig erworbene Smartcards oder CI+-Module weiter.",
+          "Nein. Wir verkaufen keine Senderpakete und keine Zugangsdaten. Wir bieten ausschließlich Einrichtungshilfe, Support bei technischen Problemen und Anleitungen.",
       },
       {
-        question: "Was ist iCam und wie unterscheidet es sich von OSCam?",
+        question: "Wie läuft die Einrichtung ab?",
         answer:
-          "iCam ist ein Softcam-Client, der nach einem ähnlichen Prinzip wie OSCam arbeitet, sich in Detailfragen wie Konfigurationssyntax und unterstützten Protokollen aber unterscheidet. Mehr dazu lesen Sie auf unserer Seite iCam.",
+          "Sie schreiben uns per WhatsApp, Telegram oder über das Kontaktformular, welche Geräte Sie haben. Danach führen wir Sie Schritt für Schritt per Chat, Sprachnachricht oder Videoanruf durch die Einrichtung. Eine Fernwartung erfolgt nur mit Ihrer Zustimmung.",
       },
       {
-        question: "Ist die Nutzung von OSCam oder iCam legal?",
+        question: "Welche Geräte unterstützen Sie?",
         answer:
-          "Die Software selbst ist frei verfügbare Open-Source-Software. Ihre Nutzung ist Teil einer legalen technischen Konfiguration, solange sie ausschließlich mit eigenen, rechtmäßig erworbenen Zugangsberechtigungen erfolgt. Wir erklären hier ausschließlich die technische Funktionsweise und bieten keine Zugangsdaten oder Kartenserver an.",
+          "Wir helfen bei Fire TV Stick, Smart TVs von Samsung und LG, Android-TV- und Google-TV-Geräten, MAG-Boxen und Enigma2-Receivern wie VU+, Dreambox, Zgemma und GigaBlue.",
+      },
+      {
+        question: "Was kostet die Hilfe?",
+        answer: `Die Pakete beginnen bei ${formatPrice(LOWEST_PRICE)} für 1 Monat und 1 Gerät. Alle Preise für 1, 2 oder 3 Geräte und Laufzeiten bis 2 Jahre finden Sie auf unserer Seite „Pakete“. TV-Sender oder Zugangsdaten sind nicht enthalten.`,
       },
     ],
   },
   {
-    category: "Enigma2 & Receiver",
+    category: "IPTV allgemein",
     items: [
       {
-        question: "Welche Receiver unterstützen OSCam?",
+        question: "Was ist IPTV?",
         answer:
-          "Grundsätzlich jeder Receiver, der mit einem Enigma2-Image läuft — darunter VU+, Dreambox, Zgemma, GigaBlue und viele weitere Modelle. Details finden Sie auf unseren Geräteseiten.",
+          "IPTV steht für Internet Protocol Television, also Fernsehen über das Internet. Statt per Satellit, Kabel oder Antenne kommen die Sender als Datenstrom über Ihren Internetanschluss.",
       },
       {
-        question: "Brauche ich Programmierkenntnisse für die Einrichtung?",
+        question: "Ist IPTV in Deutschland legal?",
         answer:
-          "Nein, die Grundkonfiguration erfolgt über Textdateien mit klar dokumentierter Struktur beziehungsweise über die Weboberfläche (WebIf). Etwas technisches Interesse ist hilfreich, Programmierkenntnisse sind aber nicht erforderlich.",
+          "Die Technik ist legal. Entscheidend ist, ob der Anbieter die Rechte an den Sendern besitzt. Angebote mit Tausenden Pay-TV-Sendern zu Kleinstpreisen sind in der Regel illegal.",
       },
       {
-        question: "Was ist der Unterschied zwischen den Enigma2-Images (OpenATV, OpenPLi, etc.)?",
+        question: "Welche Internetgeschwindigkeit brauche ich?",
         answer:
-          "Die Images unterscheiden sich in Oberfläche, vorinstallierten Paketen und Plugin-Feed, teilen sich aber dieselbe Enigma2-Grundlage. OSCam und iCam lassen sich auf den gängigen Images vergleichbar einrichten.",
+          "Als Richtwert etwa 8 bis 10 Mbit/s für einen HD-Stream und 20 bis 25 Mbit/s für 4K. Wichtiger als die Höchstgeschwindigkeit ist eine stabile Verbindung.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen M3U und Xtream Codes?",
+        answer:
+          "Eine M3U-Playlist ist eine einfache Liste von Stream-Adressen. Xtream Codes nutzt Server, Benutzername und Passwort und lädt Senderliste und Programmzeitschrift automatisch.",
       },
     ],
   },
   {
-    category: "Konfiguration",
+    category: "Kontakt & Ablauf",
     items: [
       {
-        question: "Welche Konfigurationsdateien sind bei OSCam wichtig?",
+        question: "Wie schnell antworten Sie?",
         answer:
-          "Die zentralen Dateien sind oscam.conf (allgemeine Einstellungen), oscam.server (Kartenleser/Reader) und oscam.user (Benutzerkonten). Mehr dazu in unserem Blogartikel zur OSCam-Konfiguration.",
+          "Wir bemühen uns, Anfragen am selben Tag zu beantworten. An Wochenenden und Feiertagen kann es etwas länger dauern.",
       },
       {
-        question: "Was ist das OSCam WebIf?",
+        question: "Brauche ich technisches Vorwissen?",
         answer:
-          "Das WebIf ist die browserbasierte Weboberfläche von OSCam. Darüber lassen sich Status, Logs und viele Einstellungen bequem einsehen und anpassen, ohne jede Datei manuell zu bearbeiten.",
-      },
-    ],
-  },
-  {
-    category: "Support",
-    items: [
-      {
-        question: "Wie schnell kann ich Unterstützung bekommen?",
-        answer:
-          "In der Regel antworten wir innerhalb weniger Stunden über WhatsApp und vereinbaren einen Termin für die Fernunterstützung.",
-      },
-      {
-        question: "Welche Support-Pakete bietet OSCam-iCam an?",
-        answer:
-          "Von der einmaligen Basis-Einrichtung bis zum laufenden Premium-Support über mehrere Monate. Details und Preise finden Sie auf unserer Service-Seite.",
-      },
-      {
-        question: "Was tue ich, wenn OSCam nach einem Update nicht mehr startet?",
-        answer:
-          "Meist hilft ein Blick in die Logdatei sowie eine Prüfung der zuletzt geänderten Konfigurationsdateien auf Syntaxfehler. Eine ausführliche Anleitung finden Sie in unserem Blogartikel zu häufigen OSCam-Fehlern, bei Bedarf hilft unser Support-Team gerne weiter.",
-      },
-      {
-        question: "Bietet ihr Zugangsdaten oder Kartenserver an?",
-        answer:
-          "Nein. Wir bieten ausschließlich technische Aufklärung und Unterstützung bei der Konfiguration von OSCam/iCam auf Ihrem eigenen Receiver mit Ihren eigenen, rechtmäßig erworbenen Berechtigungen.",
+          "Nein. Wir erklären jeden Schritt verständlich und passen das Tempo an Sie an.",
       },
     ],
   },
 ];
+
+export const allFaqItems: FaqItem[] = faqCategories.flatMap((category) => category.items);

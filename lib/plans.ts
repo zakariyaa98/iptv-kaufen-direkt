@@ -1,149 +1,72 @@
 import { buildWhatsAppLink } from "./whatsapp";
 
-/** Rounds to the nearest whole-percent discount between an original and current price. */
-export function discountPercent(originalPrice: number, price: number): number {
-  return Math.round(100 - (price / originalPrice) * 100);
+/**
+ * Single source of truth for all prices on the site. The homepage, /iptv-pakete,
+ * the comparison table, the FAQ and the Service JSON-LD all read from here.
+ * Prices are total prices in EUR for the whole duration.
+ */
+
+export type DurationId = "1m" | "3m" | "6m" | "12m" | "24m";
+
+export const DURATIONS: { id: DurationId; label: string }[] = [
+  { id: "1m", label: "1 Monat" },
+  { id: "3m", label: "3 Monate" },
+  { id: "6m", label: "6 Monate" },
+  { id: "12m", label: "1 Jahr" },
+  { id: "24m", label: "2 Jahre" },
+];
+
+/** The duration highlighted in every device category. */
+export const FEATURED_DURATION: DurationId = "12m";
+
+export type DeviceCount = 1 | 2 | 3;
+
+export type DeviceCategory = {
+  devices: DeviceCount;
+  label: string;
+  prices: Record<DurationId, number>;
+};
+
+export const deviceCategories: DeviceCategory[] = [
+  { devices: 1, label: "1 Gerät", prices: { "1m": 12, "3m": 20, "6m": 30, "12m": 45, "24m": 65 } },
+  { devices: 2, label: "2 Geräte", prices: { "1m": 19, "3m": 35, "6m": 50, "12m": 70, "24m": 105 } },
+  { devices: 3, label: "3 Geräte", prices: { "1m": 26, "3m": 45, "6m": 70, "12m": 100, "24m": 145 } },
+];
+
+/** What every package includes. Setup help, support and guides only – no TV channels or access data. */
+export const planFeatures: string[] = [
+  "Einrichtungshilfe für die gewählte Anzahl an Geräten",
+  "Support per WhatsApp, Telegram und E-Mail während der Laufzeit",
+  "Schritt-für-Schritt-Anleitungen für Ihre Geräte",
+];
+
+export const PLAN_SCOPE_NOTE =
+  "Die Pakete umfassen ausschließlich Einrichtungshilfe, Support und Anleitungen. TV-Sender, Abonnements oder Zugangsdaten sind nicht enthalten.";
+
+/**
+ * Price note required next to consumer prices (PAngV).
+ * TODO(owner): if you are a small business under § 19 UStG, change this to
+ * "Gemäß § 19 UStG wird keine Umsatzsteuer berechnet."
+ */
+export const PRICE_NOTE = "Gesamtpreis für die gesamte Laufzeit, inkl. gesetzlicher MwSt.";
+
+export function formatPrice(price: number): string {
+  return price.toLocaleString("de-DE", {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: Number.isInteger(price) ? 0 : 2,
+  });
 }
 
-// ---------------------------------------------------------------------------
-// Home page — featured service packages preview (3 cards)
-// ---------------------------------------------------------------------------
-
-export type FeaturedPlan = {
-  id: string;
-  duration: string;
-  price: string;
-  period: string;
-  badge?: string;
-  featured?: boolean;
-  whatsappLink: string;
-};
-
-export const homeFeatures: string[] = [
-  "Persönliche Fernunterstützung bei der OSCam/iCam-Einrichtung auf Ihrem Enigma2-Receiver",
-  "Konfiguration von oscam.conf, oscam.server und oscam.user gemeinsam mit Ihnen",
-  "Einrichtung von Bouquets und EPG, sofern gewünscht",
-  "Hilfe bei der Fehlersuche anhand Ihrer Logdateien",
-  "Support-Team auf Deutsch, erreichbar per WhatsApp",
-];
-
-export const featuredPlans: FeaturedPlan[] = [
-  {
-    id: "starter",
-    duration: "Starter",
-    price: "14,99€",
-    period: "3 Monate",
-    whatsappLink: buildWhatsAppLink(
-      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Starter" (14,99€ / 3 Monate).'
-    ),
-  },
-  {
-    id: "basic",
-    duration: "Basic",
-    price: "29,99€",
-    period: "6 Monate",
-    whatsappLink: buildWhatsAppLink(
-      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Basic" (29,99€ / 6 Monate).'
-    ),
-  },
-  {
-    id: "standard",
-    duration: "Standard",
-    price: "34,99€",
-    period: "12 Monate",
-    whatsappLink: buildWhatsAppLink(
-      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Standard" (34,99€ / 12 Monate).'
-    ),
-  },
-  {
-    id: "beliebt",
-    duration: "Beliebtestes Angebot",
-    price: "49,99€",
-    period: "24 Monate",
-    featured: true,
-    whatsappLink: buildWhatsAppLink(
-      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Beliebtestes Angebot" (49,99€ / 24 Monate).'
-    ),
-  },
-];
-
-// ---------------------------------------------------------------------------
-// Service page — package tabs, each with 1/2/3-Geräte-Stufen
-// ---------------------------------------------------------------------------
-
-export type DeviceTier = {
-  id: string;
-  devices: 1 | 2 | 3;
-  label: string;
-  originalPrice: number;
-  price: number;
-  whatsappLink: string;
-};
-
-export type PricingDuration = {
-  id: string;
-  label: string;
-  badge?: string;
-  featured?: boolean;
-  tiers: DeviceTier[];
-};
-
-export const pricingFeatures: string[] = [
-  "Fernunterstützung per WhatsApp oder Fernwartungssoftware",
-  "Konfiguration von oscam.conf, oscam.server und oscam.user",
-  "Einrichtung des OSCam WebIf zur späteren Selbstverwaltung",
-  "Hilfe bei Bouquet- und EPG-Organisation unter Enigma2",
-  "Geeignet für VU+, Dreambox, Zgemma und weitere Enigma2-Receiver",
-  "Support-Team auf Deutsch erreichbar",
-];
-
-function buildTiers(
-  packageLabel: string,
-  entries: { devices: 1 | 2 | 3; originalPrice: number; price: number }[]
-): DeviceTier[] {
-  return entries.map(({ devices, originalPrice, price }) => ({
-    id: `${packageLabel}-${devices}`,
-    devices,
-    label: devices === 1 ? "1 Receiver" : `${devices} Receiver`,
-    originalPrice,
-    price,
-    whatsappLink: buildWhatsAppLink(
-      `Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "${packageLabel}" für ${devices} Receiver${
-        devices > 1 ? "" : ""
-      } (${price}€).`
-    ),
-  }));
+export function durationLabel(id: DurationId): string {
+  return DURATIONS.find((duration) => duration.id === id)?.label ?? id;
 }
 
-export const pricingDurations: PricingDuration[] = [
-  {
-    id: "basis",
-    label: "Basis-Einrichtung",
-    tiers: buildTiers("Basis-Einrichtung", [
-      { devices: 1, originalPrice: 39, price: 14.99 },
-      { devices: 2, originalPrice: 59, price: 45 },
-      { devices: 3, originalPrice: 79, price: 60 },
-    ]),
-  },
-  {
-    id: "erweitert",
-    label: "Erweiterte Einrichtung",
-    badge: "🔥 Am meisten gebucht",
-    featured: true,
-    tiers: buildTiers("Erweiterte Einrichtung", [
-      { devices: 1, originalPrice: 65, price: 29.99 },
-      { devices: 2, originalPrice: 99, price: 75 },
-      { devices: 3, originalPrice: 129, price: 95 },
-    ]),
-  },
-  {
-    id: "premium",
-    label: "Premium-Support (3 Monate)",
-    badge: "💎 Laufende Betreuung",
-    tiers: buildTiers("Premium-Support (3 Monate)", [
-      { devices: 1, originalPrice: 99, price: 34.99 },
-      { devices: 2, originalPrice: 149, price: 120 },
-      { devices: 3, originalPrice: 189, price: 150 },
-    ]),
-  },
-];
+export function planWhatsAppLink(category: DeviceCategory, duration: DurationId): string {
+  return buildWhatsAppLink(
+    `Hallo IPTV Kaufen Direkt Team,\nich interessiere mich für das Paket „${durationLabel(duration)} – ${category.label}“ (${formatPrice(category.prices[duration])}).`
+  );
+}
+
+/** Lowest price on the site, used for "ab …" texts so they never drift from the price list. */
+export const LOWEST_PRICE = Math.min(...deviceCategories.flatMap((category) => Object.values(category.prices)));

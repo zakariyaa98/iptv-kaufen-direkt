@@ -1,0 +1,52 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { ArticleView } from "@/components/content/ArticleView";
+import { devices, getDevice } from "@/lib/devices";
+import { pageMetadata } from "@/lib/seo";
+import { deviceWhatsAppLink } from "@/lib/whatsapp";
+
+type PageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return devices.map((device) => ({ slug: device.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const device = getDevice(slug);
+  if (!device) return {};
+
+  return pageMetadata({
+    title: device.seoTitle,
+    description: device.metaDescription,
+    path: `/geraete/${device.slug}`,
+    type: "article",
+    publishedTime: device.publishedAt,
+    modifiedTime: device.updatedAt ?? device.publishedAt,
+  });
+}
+
+export default async function DevicePage({ params }: PageProps) {
+  const { slug } = await params;
+  const device = getDevice(slug);
+  if (!device) notFound();
+
+  const path = `/geraete/${device.slug}`;
+
+  return (
+    <ArticleView
+      article={device}
+      path={path}
+      eyebrow={`Geräte · ${device.shortName}`}
+      breadcrumbs={[
+        { label: "Geräte", href: "/geraete" },
+        { label: device.shortName, href: path },
+      ]}
+      whatsappLink={deviceWhatsAppLink(device.name)}
+    />
+  );
+}

@@ -1,16 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import {
+  EMAIL_MAX_LENGTH,
+  EMAIL_REGEX,
+  NAME_MAX_LENGTH,
+  isContactDevice,
+} from "@/lib/contact-options";
+import { SITE } from "@/lib/site";
 
-const CONTACT_DESTINATION_EMAIL = "contactipm3tv@gmail.com";
+const CONTACT_DESTINATION_EMAIL = SITE.email;
+// Resend's shared test sender. It only delivers to the address the Resend account is
+// registered with. For production, verify your own domain in Resend and change this.
 const CONTACT_SENDER_EMAIL = "onboarding@resend.dev";
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type ContactPayload = {
   name?: unknown;
+  device?: unknown;
   email?: unknown;
-  subject?: unknown;
-  message?: unknown;
 };
 
 function escapeHtml(value: string) {
@@ -32,12 +38,19 @@ export async function POST(request: Request) {
   }
 
   const name = typeof payload.name === "string" ? payload.name.trim() : "";
+  const device = typeof payload.device === "string" ? payload.device.trim() : "";
   const email = typeof payload.email === "string" ? payload.email.trim() : "";
-  const subject = typeof payload.subject === "string" ? payload.subject.trim() : "";
-  const message = typeof payload.message === "string" ? payload.message.trim() : "";
 
-  if (!name || !email || !subject || !message) {
+  if (!name || !device || !email) {
     return NextResponse.json({ error: "Bitte füllen Sie alle Felder aus." }, { status: 400 });
+  }
+
+  if (name.length > NAME_MAX_LENGTH || email.length > EMAIL_MAX_LENGTH) {
+    return NextResponse.json({ error: "Eine Eingabe ist zu lang." }, { status: 400 });
+  }
+
+  if (!isContactDevice(device)) {
+    return NextResponse.json({ error: "Bitte wählen Sie ein Gerät aus der Liste." }, { status: 400 });
   }
 
   if (!EMAIL_REGEX.test(email)) {
@@ -52,8 +65,8 @@ export async function POST(request: Request) {
   if (!apiKey) {
     console.error("Contact form error: RESEND_API_KEY is not configured.");
     return NextResponse.json(
-      { error: "Der Nachrichtendienst ist derzeit nicht verfügbar." },
-      { status: 500 }
+      { error: "Das Kontaktformular ist derzeit nicht verfügbar." },
+      { status: 503 }
     );
   }
 
@@ -64,22 +77,20 @@ export async function POST(request: Request) {
       from: CONTACT_SENDER_EMAIL,
       to: CONTACT_DESTINATION_EMAIL,
       replyTo: email,
-      subject: `Kontaktformular: ${subject}`,
-      text: `Neue Kontaktanfrage von der Website\n\nName: ${name}\nE-Mail: ${email}\nBetreff: ${subject}\n\nNachricht:\n${message}`,
+      subject: `[${SITE.name}] Neue Anfrage: ${device}`,
+      text: `Neue Anfrage über das Kontaktformular\n\nName: ${name}\nGerät: ${device}\nE-Mail: ${email}`,
       html: `
-        <h2>Neue Kontaktanfrage von der Website</h2>
+        <h2>Neue Anfrage über das Kontaktformular</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Gerät:</strong> ${escapeHtml(device)}</p>
         <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Betreff:</strong> ${escapeHtml(subject)}</p>
-        <p><strong>Nachricht:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
       `,
     });
 
     if (error) {
       console.error("Resend API error:", error);
       return NextResponse.json(
-        { error: "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut." },
+        { error: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut." },
         { status: 502 }
       );
     }
@@ -88,7 +99,7 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("Unexpected error sending contact email:", err);
     return NextResponse.json(
-      { error: "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut." },
+      { error: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut." },
       { status: 500 }
     );
   }

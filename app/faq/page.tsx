@@ -1,96 +1,46 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { ContactCTA } from "@/components/sections/ContactCTA";
-import { faqCategories } from "@/lib/faq-data";
+import { Container } from "@/components/ui/Container";
+import { FaqList, faqJsonLd } from "@/components/ui/FaqList";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { allFaqItems, faqCategories } from "@/lib/faq-data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Häufige Fragen zu OSCam & iCam | OSCam-iCam",
+export const metadata: Metadata = pageMetadata({
+  title: "Häufige Fragen zu IPTV und unserem Service",
   description:
-    "Was ist OSCam, was ist iCam, welche Receiver werden unterstützt und wie läuft der technische Support ab? Antworten auf die wichtigsten Fragen.",
-  alternates: {
-    canonical: "/faq",
-  },
-  openGraph: {
-    type: "website",
-    locale: "de_DE",
-    siteName: "OSCam-iCam",
-    url: "/faq",
-    title: "Häufige Fragen zu OSCam & iCam | OSCam-iCam",
-    description: "Antworten auf die wichtigsten Fragen zu OSCam, iCam, Receivern und Support.",
-    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: ["https://oscam-icam.de/opengraph-image"],
-    title: "Häufige Fragen zu OSCam & iCam | OSCam-iCam",
-    description: "Antworten auf die wichtigsten Fragen zu OSCam, iCam, Receivern und Support.",
-  },
-};
-
-const allFaqItems = faqCategories.flatMap((category) => category.items);
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: allFaqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
+    "Antworten auf häufige Fragen: Was ist IPTV, ist IPTV legal, welche Geräte werden unterstützt und wie läuft unsere Einrichtung per WhatsApp ab?",
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <Breadcrumbs items={[{ label: "Startseite", href: "/" }, { label: "FAQ", href: "/faq" }]} />
+      <JsonLd data={faqJsonLd(allFaqItems)} />
+      <Breadcrumbs items={[{ label: "FAQ", href: "/faq" }]} />
 
-      <section className="py-16 sm:py-24">
-        <Container className="flex flex-col items-center gap-14">
+      <section className="py-12 sm:py-16">
+        <Container className="flex flex-col items-center gap-12">
           <SectionHeading
             as="h1"
             eyebrow="FAQ"
-            title="Fragen? Wahrscheinlich schon beantwortet."
-            description="Von der Einrichtung bis zum passenden Support-Paket — hier finden Sie die Antworten, die uns am häufigsten erreichen. Nichts dabei? Schreiben Sie uns direkt."
+            title="Häufige Fragen"
+            description="Die Fragen, die uns am häufigsten erreichen. Ihre ist nicht dabei? Schreiben Sie uns einfach."
           />
-
           <div className="flex w-full max-w-3xl flex-col gap-12">
             {faqCategories.map((category) => (
-              <div key={category.category} className="flex flex-col gap-4">
+              <section key={category.category} className="flex flex-col gap-4">
                 <h2 className="text-xl font-semibold text-foreground">{category.category}</h2>
-                <div className="flex flex-col gap-4">
-                  {category.items.map((item) => (
-                    <details
-                      key={item.question}
-                      className="group rounded-2xl border border-border bg-background-elevated p-6 open:border-aqua/50"
-                    >
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-foreground marker:content-none">
-                        {item.question}
-                        <span className="shrink-0 text-aqua transition-transform duration-300 group-open:rotate-45">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5" aria-hidden="true">
-                            <path d="M12 5v14M5 12h14" strokeLinecap="round" />
-                          </svg>
-                        </span>
-                      </summary>
-                      <p className="mt-3 text-sm leading-relaxed text-muted">{item.answer}</p>
-                    </details>
-                  ))}
-                </div>
-              </div>
+                <FaqList items={category.items} />
+              </section>
             ))}
           </div>
         </Container>
       </section>
 
-      <ContactCTA />
+      <CtaBanner />
     </>
   );
 }

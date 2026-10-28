@@ -1,36 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  /* Core dark palette — German-flag-inspired, tuned for a technical
-     OSCam / iCam / Enigma2 site. Near-black charcoal dominates; red and gold
-     appear only as accents, never as large fills. */
-  --background: #090909;          /* dominant page background */
-  --background-elevated: #171717; /* cards / raised surfaces (never pure black) */
-  --surface: #1c1c1c;             /* deepest raised surface (nested panels) */
-  --foreground: #ffffff;          /* primary text */
-  --secondary: #d1d5db;           /* secondary text */
-  --muted: #9ca3af;               /* muted / meta text */
-  --border: #2a2a2a;              /* default hairline border */
-  --border-strong: #3a3a3a;       /* emphasised border / divider */
+  /* IPTV Kaufen Direkt — deep navy base, cyan as the single action colour,
+     violet only for small labels. All text tokens meet WCAG AA on --background. */
+  --background: #0a0f1c;
+  --background-elevated: #111829;
+  --surface: #172036;
+  --foreground: #f8fafc;
+  --secondary: #cbd5e1;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --border-strong: #334155;
 
-  /* Primary accent — German red (#E30613). Variable names kept as "aqua" so the
-     existing bg-aqua / text-aqua / border-aqua utilities across the codebase stay
-     valid; only the values changed. "-soft" is a brighter red used for text hover
-     states on the near-black background (hover brightens so the link stays
-     legible). "-dim" (#B80510) is a deep red for depth: borders/fills on light
-     surfaces, gradient stops, quieter accents. */
-  --brand-aqua: #e30613;
-  --brand-aqua-dim: #b80510;
-  --brand-aqua-soft: #ff1a2d;
-
-  /* Secondary accent — German gold (#FFD500). Used sparingly: eyebrow/section
-     labels, blog category tags, small decorative marks. Pairs with dark text or
-     sits as a small mark on the dark background — never large bright fills.
-     "-dim" (#E5BE00) is the darker gold for hover/depth. */
-  --brand-gold: #ffd500;
-  --brand-gold-dim: #e5be00;
-
-  --brand-black: #000000;
+  --brand-accent: #22d3ee;
+  --brand-accent-soft: #67e8f9;
+  --brand-accent-dim: #0891b2;
+  --brand-accent-ink: #03141a; /* text colour on accent fills */
+  --brand-highlight: #a78bfa;
 }
 
 @theme inline {
@@ -43,12 +29,11 @@
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
 
-  --color-aqua: var(--brand-aqua);
-  --color-aqua-dim: var(--brand-aqua-dim);
-  --color-aqua-soft: var(--brand-aqua-soft);
-  --color-gold: var(--brand-gold);
-  --color-gold-dim: var(--brand-gold-dim);
-  --color-black: var(--brand-black);
+  --color-accent: var(--brand-accent);
+  --color-accent-soft: var(--brand-accent-soft);
+  --color-accent-dim: var(--brand-accent-dim);
+  --color-accent-ink: var(--brand-accent-ink);
+  --color-highlight: var(--brand-highlight);
 
   --font-sans: var(--font-manrope);
   --font-display: var(--font-manrope);
@@ -65,30 +50,36 @@ body {
 }
 
 ::selection {
-  background: var(--brand-aqua);
-  color: #ffffff;
+  background: var(--brand-accent);
+  color: var(--brand-accent-ink);
 }
 
-.text-gradient-aqua {
-  background: linear-gradient(90deg, #FF1A2D 0%, #E30613 55%, #B80510 100%);
+:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #67e8f9 0%, #22d3ee 45%, #a78bfa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.bg-noise {
-  background-image: radial-gradient(
-      circle at 20% 20%,
-      rgba(227, 6, 19, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(circle at 80% 0%, rgba(227, 6, 19, 0.06), transparent 45%);
+/* Hero backdrop: soft glows plus a faint grid, pure CSS, no images to load. */
+.hero-glow {
+  background-image:
+    radial-gradient(ellipse 60% 50% at 15% 10%, rgba(34, 211, 238, 0.16), transparent 60%),
+    radial-gradient(ellipse 50% 45% at 90% 20%, rgba(167, 139, 250, 0.14), transparent 60%);
 }
 
-.glass-panel {
-  background: rgba(23, 23, 23, 0.6);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 80%);
 }
 
 @keyframes fade-up {
@@ -107,21 +98,14 @@ body {
 }
 
 .animate-fade-up-delay-1 {
-  animation: fade-up 0.7s ease-out both;
-  animation-delay: 0.12s;
+  animation: fade-up 0.7s ease-out 0.12s both;
 }
 
 .animate-fade-up-delay-2 {
-  animation: fade-up 0.7s ease-out both;
-  animation-delay: 0.24s;
+  animation: fade-up 0.7s ease-out 0.24s both;
 }
 
-.animate-fade-up-delay-3 {
-  animation: fade-up 0.7s ease-out both;
-  animation-delay: 0.36s;
-}
-
-@keyframes pulse-glow {
+@keyframes pulse-ring {
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35);
@@ -131,118 +115,16 @@ body {
   }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2.4s ease-out infinite;
-}
-
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee-scroll 40s linear infinite;
-}
-
-/* Same keyframe, played backwards — gives a left-to-right strip without a
-   second, near-duplicate @keyframes block. */
-.animate-marquee-reverse {
-  animation: marquee-scroll 40s linear infinite reverse;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .marquee-track:hover {
-    animation-play-state: paused;
-  }
-}
-
-.marquee-fade {
-  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-}
-
-/* Editorial features list (Features section): each row's optional hover
-   background photo fades in as a soft, edge-less blob rather than a hard
-   rectangle — keeps it feeling like ambient light, never a card. */
-.feature-bg-mask {
-  mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
-}
-
-/* Hero background (components/home/HeroBackground.tsx): solid black base, a
-   dark scrim gradient, a periodic diagonal light beam, film grain and a
-   vignette — no imagery, purely atmospheric. Beam/scrim colors use a muted,
-   understated red treatment scoped to this effect rather than the flat
-   --brand-aqua token, kept deliberately subtle to stay premium rather than
-   cyberpunk/neon. */
-.hero-bg-base {
-  background: #090909;
-}
-
-/* Darkens the poster grid heavily on the left, where the Hero text sits, and
-   lets it read more clearly toward the right — plus a soft red atmospheric
-   glow positioned off-center for mood, not as a dominant color. */
-.hero-poster-scrim {
-  background: radial-gradient(ellipse 60% 60% at 78% 35%, rgba(227, 6, 19, 0.12), transparent 60%),
-    linear-gradient(
-      100deg,
-      rgba(9, 9, 9, 0.97) 0%,
-      rgba(9, 9, 9, 0.93) 32%,
-      rgba(9, 9, 9, 0.62) 58%,
-      rgba(9, 9, 9, 0.32) 100%
-    );
-}
-
-.hero-beam {
-  position: absolute;
-  top: -50%;
-  left: -30%;
-  width: 120px;
-  height: 220%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(227, 6, 19, 0.06),
-    rgba(227, 6, 19, 0.12),
-    rgba(227, 6, 19, 0.06),
-    transparent
-  );
-  transform: rotate(18deg);
-  animation: hero-sweep 9s ease-in-out infinite;
-}
-
-@keyframes hero-sweep {
-  0% {
-    left: -30%;
-  }
-  45% {
-    left: 110%;
-  }
-  100% {
-    left: 110%;
-  }
-}
-
-.hero-grain {
-  opacity: 0.045;
-  mix-blend-mode: overlay;
-  background-repeat: repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-.hero-vignette {
-  background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(0, 0, 0, 0.78) 100%);
+.animate-pulse-ring {
+  animation: pulse-ring 2.4s ease-out infinite;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-visible {
@@ -250,27 +132,17 @@ body {
   transform: translateY(0);
 }
 
-.reveal-delay-1 {
-  transition-delay: 0.08s;
-}
-
-.reveal-delay-2 {
-  transition-delay: 0.16s;
-}
-
-.reveal-delay-3 {
-  transition-delay: 0.24s;
-}
-
-.reveal-delay-4 {
-  transition-delay: 0.32s;
-}
-
-.reveal-delay-5 {
-  transition-delay: 0.4s;
-}
+.reveal-delay-1 { transition-delay: 0.06s; }
+.reveal-delay-2 { transition-delay: 0.12s; }
+.reveal-delay-3 { transition-delay: 0.18s; }
+.reveal-delay-4 { transition-delay: 0.24s; }
+.reveal-delay-5 { transition-delay: 0.3s; }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .reveal {
     opacity: 1;
     transform: none;
@@ -278,14 +150,9 @@ body {
   }
 
   .animate-fade-up,
-  .animate-pulse-glow,
-  .animate-marquee,
-  .animate-marquee-reverse {
+  .animate-fade-up-delay-1,
+  .animate-fade-up-delay-2,
+  .animate-pulse-ring {
     animation: none;
-  }
-
-  .hero-beam {
-    animation: none;
-    opacity: 0;
   }
 }

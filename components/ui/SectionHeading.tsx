@@ -3,7 +3,8 @@ type SectionHeadingProps = {
   title: string;
   description?: string;
   align?: "left" | "center";
-  as?: "h2" | "h1";
+  as?: "h1" | "h2";
+  id?: string;
 };
 
 export function SectionHeading({
@@ -12,18 +13,19 @@ export function SectionHeading({
   description,
   align = "center",
   as = "h2",
+  id,
 }: SectionHeadingProps) {
   const Heading = as;
-  const alignClasses = align === "center" ? "text-center items-center mx-auto" : "text-left items-start";
+  const alignClasses = align === "center" ? "mx-auto items-center text-center" : "items-start text-left";
+  const size =
+    as === "h1" ? "text-3xl sm:text-4xl lg:text-5xl" : "text-2xl sm:text-3xl lg:text-4xl";
 
   return (
     <div className={`flex max-w-2xl flex-col gap-4 ${alignClasses}`}>
       {eyebrow ? (
-        <span className="inline-flex w-fit items-center rounded-full border border-gold/30 bg-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-          {eyebrow}
-        </span>
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-highlight">{eyebrow}</span>
       ) : null}
-      <Heading className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+      <Heading id={id} className={`${size} font-bold tracking-tight text-balance text-foreground`}>
         {title}
       </Heading>
       {description ? (
