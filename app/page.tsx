@@ -104,153 +104,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 2 · Pricing */}
-      <section id="preise" className="relative scroll-mt-20 overflow-hidden py-16 sm:py-24" aria-labelledby="plans-heading">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(34,211,238,0.10),transparent_70%),radial-gradient(ellipse_40%_30%_at_90%_60%,rgba(167,139,250,0.08),transparent_70%)]"
-        />
-        <Container className="relative flex flex-col gap-12 sm:gap-14">
-          <SectionHeading
-            id="plans-heading"
-            eyebrow="Pakete & Preise"
-            title="IPTV Preise und Abonnements im Überblick"
-            description="Unsere Pakete umfassen Einrichtungshilfe, Support und Anleitungen – für 1, 2 oder 3 Geräte und Laufzeiten von 1 Monat bis 2 Jahre. Alle Beträge sind Gesamtpreise für die gesamte Laufzeit."
-          />
-          <HomePricing />
-          <div className="mx-auto grid w-full max-w-5xl gap-4 md:grid-cols-2">
-            {pricingExplainer.map((paragraph, index) => (
-              <div
-                key={paragraph}
-                className="flex gap-4 rounded-2xl border border-border bg-background-elevated/60 p-6 text-sm leading-relaxed text-secondary"
-              >
-                <span
-                  aria-hidden
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                    index === 0 ? "bg-accent/15 text-accent" : "bg-highlight/15 text-highlight"
-                  }`}
-                >
-                  {index === 0 ? "i" : "!"}
-                </span>
-                <p>{paragraph}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-sm text-muted">
-            Alle 15 Preise in einer Tabelle und Antworten zum Ablauf finden Sie unter{" "}
-            <Link href="/iptv-pakete" className={inlineLink}>
-              IPTV-Pakete &amp; Preise
-            </Link>
-            .
-          </p>
-        </Container>
-      </section>
-
-      {/* 3 · Introduction */}
-      <section className="py-16 sm:py-24" aria-labelledby="intro-heading">
-        <Container className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-          <div className="flex flex-col gap-6">
-            <SectionHeading
-              id="intro-heading"
-              align="left"
-              eyebrow="Grundlagen"
-              title="IPTV in Deutschland: Die wichtigsten Informationen auf einen Blick"
-            />
-            {introParagraphs.map((paragraph) => (
-              <p key={paragraph} className="text-base leading-relaxed text-secondary">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-          <aside
-            aria-labelledby="intro-checklist-heading"
-            className="flex flex-col gap-5 self-start rounded-3xl border border-border bg-background-elevated p-6 sm:p-8"
-          >
-            <h3 id="intro-checklist-heading" className="text-lg font-semibold text-foreground">
-              Bevor Sie IPTV kaufen: drei Fragen
-            </h3>
-            <ol className="flex flex-col gap-5">
-              {introChecklist.map((item, index) => (
-                <li key={item.title} className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent">
-                    {index + 1}
-                  </span>
-                  <div className="flex flex-col gap-1">
-                    <p className="font-semibold text-foreground">{item.title}</p>
-                    <p className="text-sm leading-relaxed text-muted">{item.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <p className="border-t border-border pt-5 text-sm leading-relaxed text-muted">
-              Und vor allem: Besitzt der Anbieter die Rechte an den Sendern? Mehr dazu unter{" "}
-              <a href="#legal-heading" className={inlineLink}>
-                Ist IPTV in Deutschland legal?
-              </a>
-            </p>
-          </aside>
-        </Container>
-      </section>
-
-      {/* 4 · Why us */}
-      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="why-heading">
-        <Container className="flex flex-col gap-12">
-          <SectionHeading
-            id="why-heading"
-            eyebrow="Unser Service"
-            title="Warum IPTV Kaufen Direkt?"
-            description="Viele Seiten im Netz wollen Ihnen vor allem ein Abo verkaufen. Wir helfen Ihnen, eine legale Lösung zu finden und sie auf Ihren Geräten zum Laufen zu bringen."
-          />
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {whyUsBenefits.map((benefit) => (
-              <li
-                key={benefit.title}
-                className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6 transition-colors hover:border-border-strong"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                  <CheckIcon className="mt-0 h-5 w-5" />
-                </span>
-                <h3 className="text-lg font-semibold text-foreground">{benefit.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{benefit.text}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
-      {/* 5 · Features */}
-      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="features-heading">
-        <Container className="flex flex-col gap-12">
-          <SectionHeading
-            id="features-heading"
-            eyebrow="Funktionen"
-            title="Welche Funktionen bietet ein moderner IPTV-Dienst?"
-            description="Welche Funktionen Ihnen zur Verfügung stehen, legt immer der jeweilige Anbieter fest. Diese Funktionen sind bei lizenzierten IPTV-Diensten verbreitet – und bei ihrer Einrichtung helfen wir Ihnen."
-          />
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {iptvFeatures.map((feature) => (
-              <li key={feature.title} className="flex flex-col gap-2 rounded-2xl border border-border bg-background-elevated p-6">
-                <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{feature.text}</p>
-                {feature.href ? (
-                  <Link href={feature.href} className="mt-auto pt-2 text-sm font-semibold text-accent hover:text-accent-soft">
-                    {feature.linkLabel} <span aria-hidden>→</span>
-                  </Link>
-                ) : null}
-              </li>
-            ))}
-            <li className="flex flex-col justify-center gap-2 rounded-2xl border border-dashed border-highlight/40 bg-highlight/5 p-6">
-              <p className="text-sm font-semibold text-highlight">Unser Beitrag</p>
-              <p className="text-sm leading-relaxed text-secondary">
-                Wir richten diese Funktionen auf Ihren Geräten ein. Inhalte schalten wir nicht frei – das übernimmt
-                Ihr Anbieter.
-              </p>
-            </li>
-          </ul>
-        </Container>
-      </section>
-
-      {/* 6 · Devices */}
+      {/* 2 · Devices */}
       <section className="py-16 sm:py-24" aria-labelledby="devices-heading">
         <Container className="flex flex-col gap-12">
           <SectionHeading
@@ -319,6 +173,152 @@ export default function HomePage() {
             </Link>
             .
           </p>
+        </Container>
+      </section>
+
+      {/* 3 · Pricing */}
+      <section id="preise" className="relative scroll-mt-20 overflow-hidden py-16 sm:py-24" aria-labelledby="plans-heading">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(34,211,238,0.10),transparent_70%),radial-gradient(ellipse_40%_30%_at_90%_60%,rgba(167,139,250,0.08),transparent_70%)]"
+        />
+        <Container className="relative flex flex-col gap-12 sm:gap-14">
+          <SectionHeading
+            id="plans-heading"
+            eyebrow="Pakete & Preise"
+            title="IPTV Preise und Abonnements im Überblick"
+            description="Unsere Pakete umfassen Einrichtungshilfe, Support und Anleitungen – für 1, 2 oder 3 Geräte und Laufzeiten von 1 Monat bis 2 Jahre. Alle Beträge sind Gesamtpreise für die gesamte Laufzeit."
+          />
+          <HomePricing />
+          <div className="mx-auto grid w-full max-w-5xl gap-4 md:grid-cols-2">
+            {pricingExplainer.map((paragraph, index) => (
+              <div
+                key={paragraph}
+                className="flex gap-4 rounded-2xl border border-border bg-background-elevated/60 p-6 text-sm leading-relaxed text-secondary"
+              >
+                <span
+                  aria-hidden
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                    index === 0 ? "bg-accent/15 text-accent" : "bg-highlight/15 text-highlight"
+                  }`}
+                >
+                  {index === 0 ? "i" : "!"}
+                </span>
+                <p>{paragraph}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted">
+            Alle 15 Preise in einer Tabelle und Antworten zum Ablauf finden Sie unter{" "}
+            <Link href="/iptv-pakete" className={inlineLink}>
+              IPTV-Pakete &amp; Preise
+            </Link>
+            .
+          </p>
+        </Container>
+      </section>
+
+      {/* 4 · Introduction */}
+      <section className="py-16 sm:py-24" aria-labelledby="intro-heading">
+        <Container className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="flex flex-col gap-6">
+            <SectionHeading
+              id="intro-heading"
+              align="left"
+              eyebrow="Grundlagen"
+              title="IPTV in Deutschland: Die wichtigsten Informationen auf einen Blick"
+            />
+            {introParagraphs.map((paragraph) => (
+              <p key={paragraph} className="text-base leading-relaxed text-secondary">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <aside
+            aria-labelledby="intro-checklist-heading"
+            className="flex flex-col gap-5 self-start rounded-3xl border border-border bg-background-elevated p-6 sm:p-8"
+          >
+            <h3 id="intro-checklist-heading" className="text-lg font-semibold text-foreground">
+              Bevor Sie IPTV kaufen: drei Fragen
+            </h3>
+            <ol className="flex flex-col gap-5">
+              {introChecklist.map((item, index) => (
+                <li key={item.title} className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent">
+                    {index + 1}
+                  </span>
+                  <div className="flex flex-col gap-1">
+                    <p className="font-semibold text-foreground">{item.title}</p>
+                    <p className="text-sm leading-relaxed text-muted">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="border-t border-border pt-5 text-sm leading-relaxed text-muted">
+              Und vor allem: Besitzt der Anbieter die Rechte an den Sendern? Mehr dazu unter{" "}
+              <a href="#legal-heading" className={inlineLink}>
+                Ist IPTV in Deutschland legal?
+              </a>
+            </p>
+          </aside>
+        </Container>
+      </section>
+
+      {/* 5 · Why us */}
+      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="why-heading">
+        <Container className="flex flex-col gap-12">
+          <SectionHeading
+            id="why-heading"
+            eyebrow="Unser Service"
+            title="Warum IPTV Kaufen Direkt?"
+            description="Viele Seiten im Netz wollen Ihnen vor allem ein Abo verkaufen. Wir helfen Ihnen, eine legale Lösung zu finden und sie auf Ihren Geräten zum Laufen zu bringen."
+          />
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {whyUsBenefits.map((benefit) => (
+              <li
+                key={benefit.title}
+                className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6 transition-colors hover:border-border-strong"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <CheckIcon className="mt-0 h-5 w-5" />
+                </span>
+                <h3 className="text-lg font-semibold text-foreground">{benefit.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{benefit.text}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* 6 · Features */}
+      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="features-heading">
+        <Container className="flex flex-col gap-12">
+          <SectionHeading
+            id="features-heading"
+            eyebrow="Funktionen"
+            title="Welche Funktionen bietet ein moderner IPTV-Dienst?"
+            description="Welche Funktionen Ihnen zur Verfügung stehen, legt immer der jeweilige Anbieter fest. Diese Funktionen sind bei lizenzierten IPTV-Diensten verbreitet – und bei ihrer Einrichtung helfen wir Ihnen."
+          />
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {iptvFeatures.map((feature) => (
+              <li key={feature.title} className="flex flex-col gap-2 rounded-2xl border border-border bg-background-elevated p-6">
+                <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{feature.text}</p>
+                {feature.href ? (
+                  <Link href={feature.href} className="mt-auto pt-2 text-sm font-semibold text-accent hover:text-accent-soft">
+                    {feature.linkLabel} <span aria-hidden>→</span>
+                  </Link>
+                ) : null}
+              </li>
+            ))}
+            <li className="flex flex-col justify-center gap-2 rounded-2xl border border-dashed border-highlight/40 bg-highlight/5 p-6">
+              <p className="text-sm font-semibold text-highlight">Unser Beitrag</p>
+              <p className="text-sm leading-relaxed text-secondary">
+                Wir richten diese Funktionen auf Ihren Geräten ein. Inhalte schalten wir nicht frei – das übernimmt
+                Ihr Anbieter.
+              </p>
+            </li>
+          </ul>
         </Container>
       </section>
 
