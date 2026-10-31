@@ -2,6 +2,7 @@ export type NavLink = { href: string; label: string };
 
 export const mainNav: NavLink[] = [
   { href: "/iptv-pakete", label: "Pakete" },
+  { href: "/angebote", label: "Angebote" },
   { href: "/geraete", label: "Geräte" },
   { href: "/anleitungen", label: "Anleitungen" },
   { href: "/iptv-legal", label: "IPTV legal" },

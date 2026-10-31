@@ -10,6 +10,7 @@ const columns = [
     title: "Service",
     links: [
       { href: "/iptv-pakete", label: "Pakete & Preise" },
+      { href: "/angebote", label: "Angebote vergleichen" },
       { href: "/anleitungen", label: "Anleitungen" },
       { href: "/iptv-legal", label: "IPTV legal in Deutschland" },
       { href: "/ueber-uns", label: "Über uns" },

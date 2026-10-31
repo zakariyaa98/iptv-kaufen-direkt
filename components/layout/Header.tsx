@@ -33,7 +33,7 @@ export function Header() {
           <BrandLogo />
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Hauptnavigation">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7" aria-label="Hauptnavigation">
           {mainNav.map((link) => {
             const active = isActive(pathname, link.href);
             return (
