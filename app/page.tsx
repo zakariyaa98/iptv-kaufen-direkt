@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
@@ -8,7 +9,6 @@ import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/CheckIcon";
 import { Container } from "@/components/ui/Container";
 import { FaqList } from "@/components/ui/FaqList";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   HOME_SEO,
@@ -32,6 +32,7 @@ import {
 } from "@/lib/home-content";
 import { pageMetadata } from "@/lib/seo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
+import heroImage from "@/public/images/home page/IPTV kaufen in Deutschland – Angebote, Preise und Informationen.webp";
 
 export const metadata: Metadata = pageMetadata({
   title: HOME_SEO.title,
@@ -84,12 +85,22 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          {/* Hero image slot – final photo provided by the owner. */}
-          <ImagePlaceholder
-            alt="Fernseher mit IPTV-Programmübersicht in einem modernen Wohnzimmer"
-            aspect="aspect-[4/3]"
-            className="shadow-2xl shadow-black/40"
-          />
+          <div className="animate-fade-up-delay-1 relative isolate mx-auto w-full max-w-2xl lg:max-w-none">
+            <div
+              aria-hidden
+              className="absolute -inset-4 -z-10 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,rgba(34,211,238,0.18),transparent_70%)] blur-2xl"
+            />
+            <div className="overflow-hidden rounded-3xl border border-border-strong bg-background-elevated shadow-2xl shadow-black/40 ring-1 ring-white/5">
+              <Image
+                src={heroImage}
+                alt="IPTV kaufen in Deutschland: Fernseher mit IPTV-Senderübersicht, Angeboten und Preisen in einem modernen Wohnzimmer"
+                placeholder="blur"
+                preload
+                sizes="(min-width: 1152px) 470px, (min-width: 1024px) 42vw, (min-width: 704px) 672px, calc(100vw - 2rem)"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
         </Container>
       </section>
 
