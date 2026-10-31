@@ -35,6 +35,12 @@ const paths: Record<DeviceIconId, React.ReactNode> = {
       <path d="M7 9a5 5 0 0 1 10 0" />
     </>
   ),
+  phone: (
+    <>
+      <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" />
+      <path d="M10.5 18.5h3" />
+    </>
+  ),
 };
 
 export function DeviceIcon({ icon, className }: { icon: DeviceIconId; className?: string }) {

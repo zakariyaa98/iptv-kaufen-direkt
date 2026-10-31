@@ -44,9 +44,11 @@ export const DURATION_TAGS: Record<DurationId, string> = {
 
 /** What one package includes. Setup help, support and guides only – no TV channels or access data. */
 export function planFeatures(category: DeviceCategory, duration: DurationId): string[] {
+  // Non-breaking space/hyphen keep "1 Gerät", "1 Jahr" and "E-Mail" from splitting across lines.
+  const keep = (text: string) => text.replace(/ /g, " ");
   return [
-    `Einrichtungshilfe für ${category.label}`,
-    `Support für ${durationLabel(duration)} per WhatsApp, Telegram & E-Mail`,
+    `Einrichtungshilfe für ${keep(category.label)}`,
+    `Support für ${keep(durationLabel(duration))} per WhatsApp, Telegram & E‑Mail`,
     "Schritt-für-Schritt-Anleitungen für Ihre Geräte",
   ];
 }
@@ -55,7 +57,7 @@ export function planFeatures(category: DeviceCategory, duration: DurationId): st
 export const planBenefits: { icon: "bolt" | "chat" | "book"; label: string }[] = [
   { icon: "bolt", label: "Schnelle Einrichtungshilfe" },
   { icon: "chat", label: "Persönlicher Support" },
-  { icon: "book", label: "Anleitungen für alle gängigen Geräte" },
+  { icon: "book", label: "Anleitungen für gängige Geräte" },
 ];
 
 export const PLAN_SCOPE_NOTE =

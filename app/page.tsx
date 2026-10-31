@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArticleCard } from "@/components/content/ArticleCard";
 import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
 import { PricingPlans } from "@/components/plans/PricingPlans";
@@ -9,131 +8,75 @@ import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/CheckIcon";
 import { Container } from "@/components/ui/Container";
 import { FaqList } from "@/components/ui/FaqList";
+import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { devices } from "@/lib/devices";
-import { allFaqItems } from "@/lib/faq-data";
-import { guides } from "@/lib/guides";
+import {
+  HOME_SEO,
+  heroTrustPoints,
+  homeDevices,
+  homeFaq,
+  installGuideLinks,
+  installSteps,
+  introChecklist,
+  introParagraphs,
+  iptvFeatures,
+  legalityNote,
+  legalityParagraphs,
+  pricingExplainer,
+  providerCriteria,
+  providerWarningSigns,
+  speedParagraphs,
+  speedTable,
+  speedTips,
+  whyUsBenefits,
+} from "@/lib/home-content";
 import { pageMetadata } from "@/lib/seo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = pageMetadata({
-  title: "IPTV kaufen & einrichten – legal, mit persönlicher Hilfe",
+  title: HOME_SEO.title,
   absoluteTitle: true,
-  description:
-    "Sie möchten IPTV kaufen und nutzen? Wir beraten Sie zu legalen IPTV-Anbietern in Deutschland, richten Fire TV, Smart TV & Co. ein und helfen per WhatsApp.",
+  description: HOME_SEO.description,
   path: "/",
 });
 
-const heroPoints = ["Nur legale Angebote", "Hilfe per WhatsApp", "Für alle gängigen Geräte"];
-
-const benefits = [
-  {
-    title: "Unabhängige Beratung",
-    text: "Wir verkaufen keine Senderpakete. Deshalb empfehlen wir nur, was zu Ihren Geräten und Wünschen passt.",
-  },
-  {
-    title: "Persönliche Einrichtung",
-    text: "Wir richten Apps, Playlists und Programmzeitschrift gemeinsam mit Ihnen ein, Schritt für Schritt.",
-  },
-  {
-    title: "Verständlich auf Deutsch",
-    text: "Keine Fachbegriffe ohne Erklärung. Sie erfahren, was wir tun und warum.",
-  },
-  {
-    title: "Hilfe, wenn es hakt",
-    text: "Ruckeln, kein Bild, fehlende Sender: Wir suchen die Ursache mit Ihnen und beheben sie.",
-  },
-];
-
-const steps = [
-  {
-    title: "Schreiben Sie uns",
-    text: "Per WhatsApp oder Kontaktformular. Nennen Sie Ihre Geräte und was Sie schauen möchten.",
-  },
-  {
-    title: "Ehrliche Empfehlung",
-    text: "Wir zeigen Ihnen, was mit Ihren Geräten möglich ist, und nennen Ihnen das passende Paket.",
-  },
-  {
-    title: "Gemeinsame Einrichtung",
-    text: "Per Chat, Videoanruf oder Fernwartung richten wir alles ein, bis das Bild läuft.",
-  },
-];
-
-/** Decorative program-guide mockup for the hero. Purely visual, hidden from assistive tech. */
-function HeroVisual() {
-  const rows = [
-    { channel: "Das Erste", now: "Tagesschau", width: "w-3/5" },
-    { channel: "ZDF", now: "heute journal", width: "w-2/5" },
-    { channel: "Arte", now: "Dokumentation", width: "w-4/5" },
-    { channel: "3sat", now: "Kulturzeit", width: "w-1/2" },
-  ];
-
-  return (
-    <div aria-hidden className="relative mx-auto w-full max-w-md lg:max-w-none">
-      <div className="rounded-3xl border border-border-strong bg-background-elevated/90 p-4 shadow-2xl shadow-black/40 backdrop-blur sm:p-5">
-        <div className="mb-4 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Programm · Jetzt</span>
-          <span className="rounded-full bg-accent/15 px-2.5 py-1 text-[11px] font-semibold text-accent">EPG geladen</span>
-        </div>
-        <ul className="flex flex-col gap-2.5">
-          {rows.map((row) => (
-            <li key={row.channel} className="flex items-center gap-3 rounded-xl bg-surface p-3">
-              <span className="flex h-9 w-14 shrink-0 items-center justify-center rounded-lg bg-background text-[11px] font-bold text-secondary">
-                {row.channel}
-              </span>
-              <div className="flex min-w-0 flex-1 flex-col gap-1.5">
-                <span className="truncate text-sm font-medium text-foreground">{row.now}</span>
-                <span className="h-1.5 w-full overflow-hidden rounded-full bg-background">
-                  <span className={`block h-full rounded-full bg-gradient-to-r from-accent to-highlight ${row.width}`} />
-                </span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="absolute -bottom-5 -left-3 flex items-center gap-2 rounded-2xl border border-border-strong bg-surface px-4 py-3 shadow-xl sm:-left-6">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-[#052e16]">
-          <WhatsAppIcon className="h-4 w-4" />
-        </span>
-        <span className="text-xs font-medium text-secondary">Persönliche Hilfe per WhatsApp</span>
-      </div>
-    </div>
-  );
-}
+const inlineLink = "font-medium text-accent underline underline-offset-4 hover:text-accent-soft";
 
 export default function HomePage() {
-  const latestGuides = guides.slice(0, 3);
-  const faqPreview = allFaqItems.slice(0, 5);
-
   return (
     <>
-      {/* Hero */}
+      {/* 1 · Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div aria-hidden className="hero-glow absolute inset-0" />
         <div aria-hidden className="hero-grid absolute inset-0" />
         <Container className="relative grid items-center gap-14 py-14 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
           <div className="flex flex-col gap-6">
             <span className="animate-fade-up w-fit rounded-full border border-border-strong bg-surface/70 px-3.5 py-1.5 text-xs font-semibold text-secondary">
-              IPTV kaufen, einrichten, loslegen
+              Einrichtungshilfe · Support · Anleitungen
             </span>
-            <h1 className="animate-fade-up text-4xl font-extrabold leading-[1.1] tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
-              IPTV legal nutzen, <span className="text-gradient">ohne Technikstress</span>
+            <h1 className="animate-fade-up text-4xl font-extrabold leading-[1.1] tracking-tight text-balance text-foreground sm:text-5xl lg:text-[3.4rem]">
+              IPTV kaufen in Deutschland – <span className="text-gradient">Angebote, Preise und Informationen</span>
             </h1>
             <p className="animate-fade-up-delay-1 max-w-xl text-base leading-relaxed text-secondary sm:text-lg">
-              Wir beraten Sie zu legalen IPTV-Angeboten in Deutschland und richten alles auf Ihrem Fire TV
-              Stick, Smart TV oder Receiver ein. Persönlich, verständlich und per WhatsApp.
+              Sie möchten IPTV kaufen und suchen einen ehrlichen Überblick? Hier finden Sie transparente Preise für
+              persönliche Einrichtungshilfe und Support, Anleitungen für Ihre Geräte und alles, was Sie vor der Wahl
+              eines IPTV-Anbieters wissen sollten.
+            </p>
+            <p className="animate-fade-up-delay-1 max-w-xl text-sm leading-relaxed text-muted">
+              Wichtig vorab: Wir verkaufen keine Senderpakete und keine Zugangsdaten. Wir sorgen dafür, dass ein
+              legaler Dienst auf Ihren Geräten zuverlässig läuft.
             </p>
             <div className="animate-fade-up-delay-2 flex flex-col gap-3 sm:flex-row">
-              <Button href={WHATSAPP_DEFAULT_LINK} external variant="primary">
-                Per WhatsApp anfragen
+              <Button href="#preise" variant="primary">
+                Preise ansehen
               </Button>
-              <Button href="/geraete" variant="secondary">
-                Unterstützte Geräte
+              <Button href={WHATSAPP_DEFAULT_LINK} external variant="secondary">
+                <WhatsAppIcon className="h-4 w-4" />
+                Per WhatsApp beraten lassen
               </Button>
             </div>
-            <ul className="animate-fade-up-delay-2 flex flex-wrap gap-x-6 gap-y-2 pt-2">
-              {heroPoints.map((point) => (
+            <ul className="animate-fade-up-delay-2 flex flex-col gap-2 pt-2 sm:flex-row sm:flex-wrap sm:gap-x-6">
+              {heroTrustPoints.map((point) => (
                 <li key={point} className="flex items-center gap-2 text-sm text-secondary">
                   <CheckIcon className="mt-0 text-accent" />
                   {point}
@@ -141,22 +84,76 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <HeroVisual />
+          {/* Hero image slot – final photo provided by the owner. */}
+          <ImagePlaceholder
+            alt="Fernseher mit IPTV-Programmübersicht in einem modernen Wohnzimmer"
+            aspect="aspect-[4/3]"
+            className="shadow-2xl shadow-black/40"
+          />
         </Container>
       </section>
 
-      {/* Benefits */}
-      <section className="py-16 sm:py-24" aria-labelledby="benefits-heading">
+      {/* 2 · Introduction */}
+      <section className="py-16 sm:py-24" aria-labelledby="intro-heading">
+        <Container className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="flex flex-col gap-6">
+            <SectionHeading
+              id="intro-heading"
+              align="left"
+              eyebrow="Grundlagen"
+              title="IPTV in Deutschland: Die wichtigsten Informationen auf einen Blick"
+            />
+            {introParagraphs.map((paragraph) => (
+              <p key={paragraph} className="text-base leading-relaxed text-secondary">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <aside
+            aria-labelledby="intro-checklist-heading"
+            className="flex flex-col gap-5 self-start rounded-3xl border border-border bg-background-elevated p-6 sm:p-8"
+          >
+            <h3 id="intro-checklist-heading" className="text-lg font-semibold text-foreground">
+              Bevor Sie IPTV kaufen: drei Fragen
+            </h3>
+            <ol className="flex flex-col gap-5">
+              {introChecklist.map((item, index) => (
+                <li key={item.title} className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent">
+                    {index + 1}
+                  </span>
+                  <div className="flex flex-col gap-1">
+                    <p className="font-semibold text-foreground">{item.title}</p>
+                    <p className="text-sm leading-relaxed text-muted">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="border-t border-border pt-5 text-sm leading-relaxed text-muted">
+              Und vor allem: Besitzt der Anbieter die Rechte an den Sendern? Mehr dazu unter{" "}
+              <a href="#legal-heading" className={inlineLink}>
+                Ist IPTV in Deutschland legal?
+              </a>
+            </p>
+          </aside>
+        </Container>
+      </section>
+
+      {/* 3 · Why us */}
+      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="why-heading">
         <Container className="flex flex-col gap-12">
           <SectionHeading
-            id="benefits-heading"
-            eyebrow="Warum wir"
-            title="IPTV-Hilfe, die auf Ihrer Seite steht"
-            description="Viele Angebote im Netz wollen Ihnen vor allem ein Abo verkaufen. Wir helfen Ihnen, die richtige Lösung zu finden und sie zum Laufen zu bringen."
+            id="why-heading"
+            eyebrow="Unser Service"
+            title="Warum IPTV Kaufen Direkt?"
+            description="Viele Seiten im Netz wollen Ihnen vor allem ein Abo verkaufen. Wir helfen Ihnen, eine legale Lösung zu finden und sie auf Ihren Geräten zum Laufen zu bringen."
           />
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((benefit) => (
-              <li key={benefit.title} className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {whyUsBenefits.map((benefit) => (
+              <li
+                key={benefit.title}
+                className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6 transition-colors hover:border-border-strong"
+              >
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   <CheckIcon className="mt-0 h-5 w-5" />
                 </span>
@@ -168,136 +165,330 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* How it works */}
-      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="steps-heading">
-        <Container className="flex flex-col gap-12">
-          <SectionHeading id="steps-heading" eyebrow="So einfach geht’s" title="In drei Schritten zu Ihrem IPTV" />
-          <ol className="grid gap-6 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <li key={step.title} className="flex flex-col gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-lg font-bold text-accent">
-                  {index + 1}
-                </span>
-                <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-muted sm:text-base">{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </Container>
-      </section>
-
-      {/* Plans */}
-      <section className="py-16 sm:py-24" aria-labelledby="plans-heading">
+      {/* 4 · Pricing */}
+      <section id="preise" className="scroll-mt-20 py-16 sm:py-24" aria-labelledby="plans-heading">
         <Container className="flex flex-col gap-12">
           <SectionHeading
             id="plans-heading"
-            eyebrow="Pakete"
-            title="Einrichtungshilfe und Support zum festen Preis"
-            description="Wählen Sie die Anzahl Ihrer Geräte und die Laufzeit. Sie zahlen für unsere Hilfe, nicht für Sender."
+            eyebrow="Pakete & Preise"
+            title="IPTV Preise und Abonnements im Überblick"
+            description="Unsere Pakete umfassen Einrichtungshilfe, Support und Anleitungen – für 1, 2 oder 3 Geräte und Laufzeiten von 1 Monat bis 2 Jahre. Alle Beträge sind Gesamtpreise für die gesamte Laufzeit."
           />
           <PricingPlans />
+          <div className="mx-auto grid max-w-4xl gap-4 rounded-2xl border border-border bg-background-elevated/60 p-6 text-sm leading-relaxed text-secondary sm:p-8 md:grid-cols-2 md:gap-8">
+            {pricingExplainer.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
           <p className="text-center text-sm text-muted">
-            Alle Preise im Vergleich und Antworten zum Ablauf finden Sie auf der Seite{" "}
-            <Link href="/iptv-pakete" className="font-medium text-accent underline underline-offset-4">
-              Pakete &amp; Preise
+            Alle 15 Preise in einer Tabelle und Antworten zum Ablauf finden Sie unter{" "}
+            <Link href="/iptv-pakete" className={inlineLink}>
+              IPTV-Pakete &amp; Preise
             </Link>
             .
           </p>
         </Container>
       </section>
 
-      {/* Devices */}
-      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="devices-heading">
+      {/* 5 · Features */}
+      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="features-heading">
+        <Container className="flex flex-col gap-12">
+          <SectionHeading
+            id="features-heading"
+            eyebrow="Funktionen"
+            title="Welche Funktionen bietet ein moderner IPTV-Dienst?"
+            description="Welche Funktionen Ihnen zur Verfügung stehen, legt immer der jeweilige Anbieter fest. Diese Funktionen sind bei lizenzierten IPTV-Diensten verbreitet – und bei ihrer Einrichtung helfen wir Ihnen."
+          />
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {iptvFeatures.map((feature) => (
+              <li key={feature.title} className="flex flex-col gap-2 rounded-2xl border border-border bg-background-elevated p-6">
+                <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{feature.text}</p>
+                {feature.href ? (
+                  <Link href={feature.href} className="mt-auto pt-2 text-sm font-semibold text-accent hover:text-accent-soft">
+                    {feature.linkLabel} <span aria-hidden>→</span>
+                  </Link>
+                ) : null}
+              </li>
+            ))}
+            <li className="flex flex-col justify-center gap-2 rounded-2xl border border-dashed border-highlight/40 bg-highlight/5 p-6">
+              <p className="text-sm font-semibold text-highlight">Unser Beitrag</p>
+              <p className="text-sm leading-relaxed text-secondary">
+                Wir richten diese Funktionen auf Ihren Geräten ein. Inhalte schalten wir nicht frei – das übernimmt
+                Ihr Anbieter.
+              </p>
+            </li>
+          </ul>
+        </Container>
+      </section>
+
+      {/* 6 · Devices */}
+      <section className="py-16 sm:py-24" aria-labelledby="devices-heading">
         <Container className="flex flex-col gap-12">
           <SectionHeading
             id="devices-heading"
             eyebrow="Kompatible Geräte"
-            title="IPTV auf Ihrem Gerät einrichten"
-            description="Für jedes Gerät gibt es eine ausführliche Anleitung. Lieber nicht selbst machen? Dann übernehmen wir das für Sie."
+            title="Auf welchen Geräten kann IPTV genutzt werden?"
+            description="IPTV läuft auf fast jedem modernen Gerät mit Internetzugang. Ob eine bestimmte App verfügbar ist, hängt vom Dienst ab – hier sind die gängigsten IPTV-Geräte in Deutschland."
           />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {devices.map((device) => (
-              <ArticleCard
-                key={device.slug}
-                href={`/geraete/${device.slug}`}
-                title={device.shortName}
-                excerpt={device.excerpt}
-                icon={<DeviceIcon icon={device.icon} className="h-6 w-6" />}
-              />
-            ))}
-            <Link
-              href="/kontakt"
-              className="flex h-full flex-col justify-center gap-2 rounded-2xl border border-dashed border-border-strong p-6 text-center transition-colors hover:border-accent/50"
-            >
-              <span className="text-lg font-semibold text-foreground">Ihr Gerät fehlt?</span>
-              <span className="text-sm text-muted">Fragen Sie uns. Wir prüfen, was möglich ist.</span>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {homeDevices.map((device) => {
+              const body = (
+                <>
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                    <DeviceIcon icon={device.icon} className="h-6 w-6" />
+                  </span>
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-accent">{device.name}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{device.text}</p>
+                  {device.href ? (
+                    <span className="mt-auto pt-2 text-sm font-semibold text-accent">
+                      Zur Anleitung <span aria-hidden>→</span>
+                    </span>
+                  ) : (
+                    <span className="mt-auto w-fit rounded-full border border-border-strong px-2.5 py-0.5 text-xs font-medium text-muted">
+                      Anleitung folgt
+                    </span>
+                  )}
+                </>
+              );
+              const cardClass = "group flex h-full flex-col gap-3 rounded-2xl border bg-background-elevated p-6 transition-colors";
+              return (
+                <li key={device.name}>
+                  {device.href ? (
+                    <Link href={device.href} className={`${cardClass} border-border hover:border-accent/50`}>
+                      {body}
+                    </Link>
+                  ) : (
+                    <div className={`${cardClass} border-border`}>{body}</div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+          <p className="text-center text-sm text-muted">
+            Ihr Gerät ist nicht dabei?{" "}
+            <Link href="/kontakt" className={inlineLink}>
+              Fragen Sie uns
+            </Link>{" "}
+            – wir prüfen, was möglich ist. Alle Geräte im Überblick:{" "}
+            <Link href="/geraete" className={inlineLink}>
+              IPTV-Geräte
             </Link>
+            .
+          </p>
+        </Container>
+      </section>
+
+      {/* 7 · Installation */}
+      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="install-heading">
+        <Container className="flex flex-col gap-12">
+          <SectionHeading
+            id="install-heading"
+            eyebrow="Einrichtung"
+            title="IPTV installieren und richtig einrichten"
+            description="Die genauen Schritte unterscheiden sich je nach Gerät und Dienst. Der grundsätzliche Ablauf ist aber fast immer gleich."
+          />
+          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
+            <ol className="flex flex-col gap-6">
+              {installSteps.map((step, index) => (
+                <li key={step.title} className="flex gap-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/40 text-base font-bold text-accent">
+                    {index + 1}
+                  </span>
+                  <div className="flex flex-col gap-1.5">
+                    <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
+                    <p className="text-sm leading-relaxed text-muted sm:text-base">{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <aside
+              aria-labelledby="install-guides-heading"
+              className="flex flex-col gap-5 self-start rounded-3xl border border-border bg-background-elevated p-6 sm:p-8"
+            >
+              <h3 id="install-guides-heading" className="text-lg font-semibold text-foreground">
+                Anleitungen für Ihr Gerät
+              </h3>
+              <ul className="flex flex-col gap-1">
+                {installGuideLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="flex items-start gap-2 py-1.5 text-sm text-secondary transition-colors hover:text-accent">
+                      <span aria-hidden className="text-accent">
+                        →
+                      </span>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col gap-3 border-t border-border pt-5">
+                <p className="text-sm leading-relaxed text-muted">
+                  Lieber nicht selbst einrichten? Wir führen Sie Schritt für Schritt durch alle Einstellungen.
+                </p>
+                <Button href={WHATSAPP_DEFAULT_LINK} external variant="whatsapp" className="w-full">
+                  <WhatsAppIcon className="h-5 w-5" />
+                  Einrichtungshilfe anfragen
+                </Button>
+              </div>
+            </aside>
           </div>
         </Container>
       </section>
 
-      {/* Legal */}
+      {/* 8 · Provider selection */}
+      <section className="py-16 sm:py-24" aria-labelledby="provider-heading">
+        <Container className="flex flex-col gap-12">
+          <SectionHeading
+            id="provider-heading"
+            eyebrow="Orientierung"
+            title="Woran erkennt man einen seriösen IPTV Anbieter?"
+            description="Bevor Sie einen IPTV-Anbieter wählen und Geld bezahlen, lohnt ein kritischer Blick. Diese sieben Kriterien helfen bei der Einschätzung."
+          />
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {providerCriteria.map((criterion) => (
+              <li key={criterion.title} className="flex flex-col gap-2 rounded-2xl border border-border bg-background-elevated p-6">
+                <CheckIcon className="mt-0 h-5 w-5 text-accent" />
+                <h3 className="text-base font-semibold text-foreground">{criterion.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{criterion.text}</p>
+              </li>
+            ))}
+            <li className="flex flex-col gap-3 rounded-2xl border border-highlight/30 bg-highlight/5 p-6">
+              <h3 className="text-base font-semibold text-highlight">Warnsignale</h3>
+              <ul className="flex flex-col gap-2">
+                {providerWarningSigns.map((sign) => (
+                  <li key={sign} className="flex items-start gap-2 text-sm leading-relaxed text-secondary">
+                    <span aria-hidden className="mt-0.5 font-bold text-highlight">
+                      !
+                    </span>
+                    {sign}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </ul>
+          <p className="text-center text-sm text-muted">
+            Die ausführliche Checkliste lesen Sie im Ratgeber{" "}
+            <Link href="/anleitungen/iptv-anbieter-erkennen" className={inlineLink}>
+              Seriöse IPTV-Anbieter erkennen
+            </Link>
+            .
+          </p>
+        </Container>
+      </section>
+
+      {/* 9 · Internet speed */}
+      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="speed-heading">
+        <Container className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="flex min-w-0 flex-col gap-6">
+            <SectionHeading
+              id="speed-heading"
+              align="left"
+              eyebrow="Internet"
+              title="Welche Internetgeschwindigkeit benötigt IPTV?"
+            />
+            {speedParagraphs.map((paragraph) => (
+              <p key={paragraph} className="text-base leading-relaxed text-secondary">
+                {paragraph}
+              </p>
+            ))}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-lg font-semibold text-foreground">So wird Ihre Verbindung stabiler</h3>
+              <ul className="flex flex-col gap-2">
+                {speedTips.map((tip) => (
+                  <li key={tip} className="flex items-start gap-2 text-sm leading-relaxed text-secondary">
+                    <CheckIcon className="text-accent" />
+                    {tip}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="flex min-w-0 flex-col gap-3 self-center">
+            <figure className="flex flex-col gap-3">
+              <div className="w-full overflow-x-auto rounded-2xl border border-border">
+                <table className="w-full border-collapse text-left text-sm">
+                  <thead>
+                    <tr className="bg-surface">
+                      {speedTable.headers.map((header) => (
+                        <th key={header} scope="col" className="border-b border-border px-3 py-3 sm:px-4 font-semibold text-foreground">
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {speedTable.rows.map(([quality, perStream, connection]) => (
+                      <tr key={quality} className="odd:bg-background even:bg-background-elevated">
+                        <th scope="row" className="border-b border-border px-3 py-3 sm:px-4 font-medium text-foreground">
+                          {quality}
+                        </th>
+                        <td className="border-b border-border px-3 py-3 sm:px-4 whitespace-nowrap tabular-nums text-secondary">{perStream}</td>
+                        <td className="border-b border-border px-3 py-3 sm:px-4 whitespace-nowrap tabular-nums text-secondary">{connection}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <figcaption className="text-xs leading-relaxed text-muted">{speedTable.caption}</figcaption>
+            </figure>
+            <p className="text-sm text-muted">
+              Mehr dazu:{" "}
+              <Link href="/anleitungen/internetgeschwindigkeit-iptv" className={inlineLink}>
+                Internetgeschwindigkeit für IPTV
+              </Link>
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* 10 · Legality */}
       <section className="py-16 sm:py-24" aria-labelledby="legal-heading">
         <Container>
-          <div className="grid gap-8 rounded-3xl border border-highlight/30 bg-highlight/5 p-7 sm:p-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
-            <div className="flex flex-col gap-4">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-highlight">Transparenz</span>
-              <h2 id="legal-heading" className="text-2xl font-bold tracking-tight text-balance text-foreground sm:text-3xl">
-                Ist IPTV legal? Ja, wenn der Anbieter die Senderrechte hat.
+          <div className="grid gap-10 rounded-3xl border border-highlight/30 bg-highlight/5 p-7 sm:p-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+            <div className="flex flex-col gap-5">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-highlight">Recht & Sicherheit</span>
+              <h2 id="legal-heading" className="scroll-mt-24 text-2xl font-bold tracking-tight text-balance text-foreground sm:text-3xl lg:text-4xl">
+                Ist IPTV in Deutschland legal?
               </h2>
-              <p className="text-base leading-relaxed text-secondary">
-                Angebote mit Tausenden Pay-TV-Sendern für wenige Euro sind in Deutschland in aller Regel illegal.
-                Das Risiko tragen auch die Kunden. Wir arbeiten deshalb nur mit legalen Lösungen und zeigen Ihnen,
-                woran Sie seriöse Anbieter erkennen.
-              </p>
+              {legalityParagraphs.map((paragraph) => (
+                <p key={paragraph} className="text-base leading-relaxed text-secondary">
+                  {paragraph}
+                </p>
+              ))}
+              <p className="text-xs text-muted">{legalityNote}</p>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-4 self-center">
+              <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-5">
+                <p className="text-sm font-semibold text-foreground">Kurz gesagt</p>
+                <ul className="flex flex-col gap-2 text-sm leading-relaxed text-secondary">
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="text-accent" />
+                    IPTV als Technik ist legal.
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="text-accent" />
+                    Legal ist ein Angebot nur mit Rechten an den Inhalten.
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon className="text-accent" />
+                    Auch Nutzer illegaler Angebote gehen ein Risiko ein.
+                  </li>
+                </ul>
+              </div>
               <Button href="/iptv-legal" variant="primary">
                 IPTV legal in Deutschland
               </Button>
-              <Button href="/anleitungen/iptv-anbieter-erkennen" variant="secondary">
-                Seriöse Anbieter erkennen
-              </Button>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Guides */}
-      <section className="border-t border-border py-16 sm:py-24" aria-labelledby="guides-heading">
-        <Container className="flex flex-col gap-12">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeading
-              id="guides-heading"
-              align="left"
-              eyebrow="Anleitungen"
-              title="Wissen, das wirklich weiterhilft"
-            />
-            <Button href="/anleitungen" variant="secondary" className="shrink-0">
-              Alle Anleitungen
-            </Button>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {latestGuides.map((guide) => (
-              <ArticleCard
-                key={guide.slug}
-                href={`/anleitungen/${guide.slug}`}
-                title={guide.title}
-                excerpt={guide.excerpt}
-                label={guide.category}
-                meta={`${guide.readingTimeMinutes} Min.`}
-              />
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* FAQ */}
-      <section className="border-t border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="faq-preview-heading">
+      {/* 11 · FAQ – no FAQPage JSON-LD here: /faq already carries it, and Google limits FAQ rich results to authoritative sites. */}
+      <section className="border-t border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="faq-heading">
         <Container className="flex flex-col items-center gap-10">
-          <SectionHeading id="faq-preview-heading" eyebrow="FAQ" title="Häufige Fragen" />
+          <SectionHeading id="faq-heading" eyebrow="FAQ" title="Häufig gestellte Fragen zu IPTV" />
           <div className="w-full max-w-3xl">
-            <FaqList items={faqPreview} />
+            <FaqList items={homeFaq} />
           </div>
           <Button href="/faq" variant="secondary">
             Alle Fragen ansehen
@@ -305,7 +496,11 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <CtaBanner />
+      {/* 12 · Final CTA */}
+      <CtaBanner
+        title="Bereit für IPTV auf Ihren Geräten?"
+        description="Sehen Sie sich unsere Pakete an oder schreiben Sie uns direkt. Wir sagen Ihnen ehrlich, was mit Ihren Geräten möglich ist, und begleiten Sie Schritt für Schritt bis zum ersten Sender."
+      />
     </>
   );
 }

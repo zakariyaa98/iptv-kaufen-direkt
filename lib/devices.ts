@@ -1,6 +1,6 @@
 import type { Article } from "./content-types";
 
-export type DeviceIcon = "stick" | "tv" | "box" | "mag" | "receiver";
+export type DeviceIcon = "stick" | "tv" | "box" | "mag" | "receiver" | "phone";
 
 export type Device = Article & {
   name: string;

@@ -32,14 +32,15 @@ export function PlanCard({ category, duration, featured = false }: PlanCardProps
         </span>
       ) : null}
 
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h3 className="text-base font-semibold text-foreground">{durationLabel(duration)}</h3>
+      {/* Fixed-height tag row keeps titles and prices aligned across the five cards. */}
+      <div className="mb-2 flex h-6 items-center">
         {featured ? null : (
-          <span className="rounded-full border border-highlight/30 bg-highlight/10 px-2 py-0.5 text-[11px] font-semibold text-highlight">
+          <span className="whitespace-nowrap rounded-full border border-highlight/30 bg-highlight/10 px-2 py-0.5 text-[11px] font-semibold text-highlight">
             {DURATION_TAGS[duration]}
           </span>
         )}
       </div>
+      <h3 className="text-base font-semibold text-foreground">{durationLabel(duration)}</h3>
       <p className="mt-1 text-xs text-muted">{category.label}</p>
 
       <p className="mt-4 text-3xl font-bold tracking-tight tabular-nums text-foreground">
