@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
+import { DeviceGlyph, PricingComparison } from "@/components/plans/PricingComparison";
 import { CheckIcon } from "@/components/ui/CheckIcon";
 import {
   DURATIONS,
@@ -21,83 +22,11 @@ import {
 
 /**
  * Homepage-only pricing block: device selector, five duration cards and a
- * service comparison for 1, 2 and 3 Geräte. All numbers come from lib/plans.ts;
- * the service rows only repeat what the site already states elsewhere.
+ * full price/service comparison table (PricingComparison). All numbers come from lib/plans.ts.
  * /iptv-pakete and /angebote keep using PricingPlans + PriceTable.
  */
 
 const minPrice = (category: DeviceCategory) => Math.min(...Object.values(category.prices));
-const maxPrice = (category: DeviceCategory) => Math.max(...Object.values(category.prices));
-
-type ServiceRow = { label: string; hint?: string; value: (category: DeviceCategory) => ReactNode };
-
-const included = (text: string) => (
-  <span className="inline-flex items-center gap-1.5 text-secondary">
-    <CheckIcon className="mt-0 text-accent" />
-    <span>{text}</span>
-  </span>
-);
-
-const serviceRows: ServiceRow[] = [
-  {
-    label: "Einrichtungshilfe",
-    hint: "Fernseher, Sticks oder Receiver",
-    value: (category) => included(`${category.devices} ${category.devices === 1 ? "Gerät" : "Geräte"}`),
-  },
-  {
-    label: "Support-Dauer",
-    hint: "entspricht der gewählten Laufzeit",
-    value: () => <span className="text-secondary">1 Monat – 2 Jahre</span>,
-  },
-  {
-    label: "Support-Kanäle",
-    value: () => <span className="text-secondary">WhatsApp, Telegram, E‑Mail</span>,
-  },
-  {
-    label: "Einrichtung per Chat, Sprachnachricht oder Videoanruf",
-    value: () => included("Inklusive"),
-  },
-  {
-    label: "Schritt-für-Schritt-Anleitungen",
-    hint: "Fire TV, Smart TV, Android TV, MAG, Enigma2",
-    value: () => included("Inklusive"),
-  },
-  {
-    label: "Fernwartung",
-    value: () => <span className="text-secondary">nur mit Ihrer Zustimmung</span>,
-  },
-  {
-    label: "TV-Sender, Abos oder Zugangsdaten",
-    value: () => <span className="text-muted">nicht enthalten</span>,
-  },
-  {
-    label: "Gesamtpreis je nach Laufzeit",
-    value: (category) => (
-      <span className="font-semibold tabular-nums text-foreground">
-        {formatPrice(minPrice(category))} – {formatPrice(maxPrice(category))}
-      </span>
-    ),
-  },
-];
-
-function DeviceGlyph({ count, active }: { count: DeviceCount; active: boolean }) {
-  return (
-    <span aria-hidden className="flex items-end gap-1">
-      {Array.from({ length: 3 }, (_, index) => (
-        <span
-          key={index}
-          className={`h-3 w-4 rounded-[3px] border transition-colors ${
-            index < count
-              ? active
-                ? "border-accent bg-accent/30"
-                : "border-secondary/60 bg-secondary/10"
-              : "border-border-strong/60"
-          }`}
-        />
-      ))}
-    </span>
-  );
-}
 
 function HomePlanCard({ category, duration }: { category: DeviceCategory; duration: DurationId }) {
   const featured = duration === FEATURED_DURATION;
@@ -243,84 +172,7 @@ export function HomePricing() {
         </div>
       </div>
 
-      {/* Service comparison – 1, 2, 3 Geräte */}
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col items-center gap-2 text-center">
-          <h3 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">Leistungen im Vergleich</h3>
-          <p className="max-w-xl text-sm leading-relaxed text-muted">
-            Alle Pakete enthalten dieselben Leistungen – sie unterscheiden sich nur in der Anzahl der Geräte und der
-            Laufzeit.
-          </p>
-        </div>
-
-        <div className="overflow-hidden rounded-3xl border border-border bg-background-elevated/70">
-          <table className="w-full border-collapse text-left text-sm">
-            <caption className="sr-only">Leistungen und Preisspannen für 1, 2 und 3 Geräte</caption>
-            <thead>
-              <tr className="grid grid-cols-3 border-b border-border sm:table-row">
-                <th scope="col" className="hidden px-6 py-5 align-bottom sm:table-cell">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Leistung</span>
-                </th>
-                {deviceCategories.map((item) => {
-                  const active = item.devices === selected;
-                  return (
-                    <th
-                      key={item.devices}
-                      scope="col"
-                      className={`px-2 py-4 text-center align-bottom transition-colors sm:px-4 sm:py-5 ${
-                        active ? "bg-accent/10" : ""
-                      }`}
-                    >
-                      <span className="flex flex-col items-center gap-2">
-                        <DeviceGlyph count={item.devices} active={active} />
-                        <span className="text-sm font-bold text-foreground sm:text-base">{item.label}</span>
-                        <button
-                          type="button"
-                          aria-pressed={active}
-                          onClick={() => setSelected(item.devices)}
-                          className={`min-h-9 rounded-full px-3 text-[11px] font-semibold transition-colors sm:text-xs ${
-                            active
-                              ? "bg-accent text-accent-ink"
-                              : "border border-border-strong text-secondary hover:border-accent hover:text-accent"
-                          }`}
-                        >
-                          {active ? "Ausgewählt" : "Auswählen"}
-                        </button>
-                      </span>
-                    </th>
-                  );
-                })}
-              </tr>
-            </thead>
-            <tbody>
-              {serviceRows.map((row) => (
-                <tr
-                  key={row.label}
-                  className="grid grid-cols-3 border-b border-border last:border-b-0 sm:table-row sm:even:bg-surface/25"
-                >
-                  <th
-                    scope="row"
-                    className="col-span-3 px-4 pb-1 pt-4 font-semibold text-foreground sm:w-[38%] sm:px-6 sm:py-4"
-                  >
-                    {row.label}
-                    {row.hint ? <span className="block text-xs font-normal text-muted">{row.hint}</span> : null}
-                  </th>
-                  {deviceCategories.map((item) => (
-                    <td
-                      key={item.devices}
-                      className={`flex items-start justify-center px-2 pb-4 pt-2 text-center text-xs transition-colors sm:table-cell sm:px-4 sm:py-4 sm:text-sm ${
-                        item.devices === selected ? "bg-accent/5" : ""
-                      }`}
-                    >
-                      {row.value(item)}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <PricingComparison selected={selected} onSelect={setSelected} />
     </div>
   );
 }
