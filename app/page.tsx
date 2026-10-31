@@ -104,7 +104,49 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 2 · Introduction */}
+      {/* 2 · Pricing */}
+      <section id="preise" className="relative scroll-mt-20 overflow-hidden py-16 sm:py-24" aria-labelledby="plans-heading">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(34,211,238,0.10),transparent_70%),radial-gradient(ellipse_40%_30%_at_90%_60%,rgba(167,139,250,0.08),transparent_70%)]"
+        />
+        <Container className="relative flex flex-col gap-12 sm:gap-14">
+          <SectionHeading
+            id="plans-heading"
+            eyebrow="Pakete & Preise"
+            title="IPTV Preise und Abonnements im Überblick"
+            description="Unsere Pakete umfassen Einrichtungshilfe, Support und Anleitungen – für 1, 2 oder 3 Geräte und Laufzeiten von 1 Monat bis 2 Jahre. Alle Beträge sind Gesamtpreise für die gesamte Laufzeit."
+          />
+          <HomePricing />
+          <div className="mx-auto grid w-full max-w-5xl gap-4 md:grid-cols-2">
+            {pricingExplainer.map((paragraph, index) => (
+              <div
+                key={paragraph}
+                className="flex gap-4 rounded-2xl border border-border bg-background-elevated/60 p-6 text-sm leading-relaxed text-secondary"
+              >
+                <span
+                  aria-hidden
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                    index === 0 ? "bg-accent/15 text-accent" : "bg-highlight/15 text-highlight"
+                  }`}
+                >
+                  {index === 0 ? "i" : "!"}
+                </span>
+                <p>{paragraph}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted">
+            Alle 15 Preise in einer Tabelle und Antworten zum Ablauf finden Sie unter{" "}
+            <Link href="/iptv-pakete" className={inlineLink}>
+              IPTV-Pakete &amp; Preise
+            </Link>
+            .
+          </p>
+        </Container>
+      </section>
+
+      {/* 3 · Introduction */}
       <section className="py-16 sm:py-24" aria-labelledby="intro-heading">
         <Container className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div className="flex flex-col gap-6">
@@ -150,7 +192,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 3 · Why us */}
+      {/* 4 · Why us */}
       <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="why-heading">
         <Container className="flex flex-col gap-12">
           <SectionHeading
@@ -173,48 +215,6 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-        </Container>
-      </section>
-
-      {/* 4 · Pricing */}
-      <section id="preise" className="relative scroll-mt-20 overflow-hidden py-16 sm:py-24" aria-labelledby="plans-heading">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(34,211,238,0.10),transparent_70%),radial-gradient(ellipse_40%_30%_at_90%_60%,rgba(167,139,250,0.08),transparent_70%)]"
-        />
-        <Container className="relative flex flex-col gap-12 sm:gap-14">
-          <SectionHeading
-            id="plans-heading"
-            eyebrow="Pakete & Preise"
-            title="IPTV Preise und Abonnements im Überblick"
-            description="Unsere Pakete umfassen Einrichtungshilfe, Support und Anleitungen – für 1, 2 oder 3 Geräte und Laufzeiten von 1 Monat bis 2 Jahre. Alle Beträge sind Gesamtpreise für die gesamte Laufzeit."
-          />
-          <HomePricing />
-          <div className="mx-auto grid w-full max-w-5xl gap-4 md:grid-cols-2">
-            {pricingExplainer.map((paragraph, index) => (
-              <div
-                key={paragraph}
-                className="flex gap-4 rounded-2xl border border-border bg-background-elevated/60 p-6 text-sm leading-relaxed text-secondary"
-              >
-                <span
-                  aria-hidden
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                    index === 0 ? "bg-accent/15 text-accent" : "bg-highlight/15 text-highlight"
-                  }`}
-                >
-                  {index === 0 ? "i" : "!"}
-                </span>
-                <p>{paragraph}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-sm text-muted">
-            Alle 15 Preise in einer Tabelle und Antworten zum Ablauf finden Sie unter{" "}
-            <Link href="/iptv-pakete" className={inlineLink}>
-              IPTV-Pakete &amp; Preise
-            </Link>
-            .
-          </p>
         </Container>
       </section>
 

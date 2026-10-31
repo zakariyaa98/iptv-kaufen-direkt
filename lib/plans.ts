@@ -28,7 +28,7 @@ export type DeviceCategory = {
 };
 
 export const deviceCategories: DeviceCategory[] = [
-  { devices: 1, label: "1 Gerät", prices: { "1m": 12, "3m": 20, "6m": 30, "12m": 45, "24m": 65 } },
+  { devices: 1, label: "1 Gerät", prices: { "1m": 12, "3m": 20, "6m": 30, "12m": 45, "24m": 75 } },
   { devices: 2, label: "2 Geräte", prices: { "1m": 19, "3m": 35, "6m": 50, "12m": 70, "24m": 105 } },
   { devices: 3, label: "3 Geräte", prices: { "1m": 26, "3m": 45, "6m": 70, "12m": 100, "24m": 145 } },
 ];
