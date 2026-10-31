@@ -1,3 +1,10 @@
+import type { StaticImageData } from "next/image";
+import fireTvImage from "@/public/images/home page/Geräten/iptv kaufen Amazon firetv stick.webp";
+import androidMobileImage from "@/public/images/home page/Geräten/iptv kaufen andoird smartphone.webp";
+import googleTvImage from "@/public/images/home page/Geräten/iptv kaufen google tv.webp";
+import magImage from "@/public/images/home page/Geräten/iptv kaufen MAG.webp";
+import smartTvImage from "@/public/images/home page/Geräten/iptv kaufen SMART TV LG.webp";
+import enigma2Image from "@/public/images/home page/Geräten/iptv kaufen vu+.webp";
 import type { DeviceIcon } from "./devices";
 import type { FaqItem } from "./faq-data";
 import { LOWEST_PRICE, formatPrice } from "./plans";
@@ -109,6 +116,8 @@ export type HomeDevice = {
   name: string;
   icon: DeviceIcon;
   text: string;
+  image: StaticImageData;
+  imageAlt: string;
   /** Set once the device page exists; cards without href render as "Anleitung folgt". */
   href?: string;
 };
@@ -119,36 +128,48 @@ export const homeDevices: HomeDevice[] = [
     icon: "tv",
     text: "Samsung (Tizen), LG (webOS) und weitere Smart TVs: Viele Dienste bieten eine App direkt im Store des Fernsehers – ganz ohne Zusatzgerät.",
     href: "/geraete/smart-tv",
+    image: smartTvImage,
+    imageAlt: "Großer Smart TV mit IPTV-Senderübersicht und Streaming-Apps an der Wand eines modernen Wohnzimmers",
   },
   {
     name: "Amazon Fire TV",
     icon: "stick",
     text: "Der Fire TV Stick ist günstig, wird einfach in den HDMI-Anschluss gesteckt und unterstützt viele offizielle Apps und IPTV-Player.",
     href: "/geraete/fire-tv-stick",
+    image: fireTvImage,
+    imageAlt: "Amazon Fire TV Stick 4K mit HDMI-Anschluss und Alexa-Sprachfernbedienung für IPTV",
   },
   {
     name: "Android TV & Google TV",
     icon: "box",
     text: "Boxen und Fernseher mit Android TV oder Google TV greifen auf den Google Play Store zu und bieten damit eine große App-Auswahl.",
     href: "/geraete/android-tv-box",
+    image: googleTvImage,
+    imageAlt: "Fernseher mit Google-TV-Oberfläche und IPTV-Player-Apps, darunter eine Android-TV-Box mit Fernbedienung",
   },
   {
     name: "Android-Smartphone & Tablet",
     icon: "phone",
     text: "Ideal für unterwegs oder als zweiter Bildschirm. Die meisten Dienste bieten Apps für Android-Smartphones und -Tablets an.",
     // TODO(owner): add href once /geraete/android exists.
+    image: androidMobileImage,
+    imageAlt: "Android-Smartphone und Tablet mit geöffneter IPTV-Player-App und Live-Senderliste",
   },
   {
     name: "Enigma2-Receiver",
     icon: "receiver",
     text: "VU+, Dreambox, Zgemma oder GigaBlue: Linux-Receiver mit Enigma2 binden IPTV per Bouquet oder Plugin ein – ideal für Technikbegeisterte.",
     href: "/geraete/enigma2-receiver",
+    image: enigma2Image,
+    imageAlt: "Enigma2-Receiver VU+ Uno 4K SE mit Display für IPTV per Bouquet oder Plugin",
   },
   {
     name: "MAG-Box",
     icon: "mag",
     text: "MAG-Boxen sind speziell für IPTV gebaut und werden über ein Portal mit dem Dienst verbunden. Die Bedienung ähnelt einem klassischen Receiver.",
     href: "/geraete/mag-box",
+    image: magImage,
+    imageAlt: "IPTV-Box MAG 524 mit leuchtendem Ring und passender Fernbedienung",
   },
 ];
 

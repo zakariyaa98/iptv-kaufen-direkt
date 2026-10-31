@@ -242,31 +242,46 @@ export default function HomePage() {
             title="Auf welchen Geräten kann IPTV genutzt werden?"
             description="IPTV läuft auf fast jedem modernen Gerät mit Internetzugang. Ob eine bestimmte App verfügbar ist, hängt vom Dienst ab – hier sind die gängigsten IPTV-Geräte in Deutschland."
           />
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {homeDevices.map((device) => {
               const body = (
                 <>
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                    <DeviceIcon icon={device.icon} className="h-6 w-6" />
-                  </span>
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-accent">{device.name}</h3>
-                  <p className="text-sm leading-relaxed text-muted">{device.text}</p>
-                  {device.href ? (
-                    <span className="mt-auto pt-2 text-sm font-semibold text-accent">
-                      Zur Anleitung <span aria-hidden>→</span>
-                    </span>
-                  ) : (
-                    <span className="mt-auto w-fit rounded-full border border-border-strong px-2.5 py-0.5 text-xs font-medium text-muted">
-                      Anleitung folgt
-                    </span>
-                  )}
+                  <div className="relative aspect-[3/2] overflow-hidden border-b border-border bg-background">
+                    <Image
+                      src={device.image}
+                      alt={device.imageAlt}
+                      placeholder="blur"
+                      fill
+                      sizes="(min-width: 1152px) 352px, (min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 2rem)"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3 p-6">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                        <DeviceIcon icon={device.icon} className="h-5 w-5" />
+                      </span>
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-accent">{device.name}</h3>
+                    </div>
+                    <p className="text-sm leading-relaxed text-muted">{device.text}</p>
+                    {device.href ? (
+                      <span className="mt-auto pt-2 text-sm font-semibold text-accent">
+                        Zur Anleitung <span aria-hidden>→</span>
+                      </span>
+                    ) : (
+                      <span className="mt-auto w-fit rounded-full border border-border-strong px-2.5 py-0.5 text-xs font-medium text-muted">
+                        Anleitung folgt
+                      </span>
+                    )}
+                  </div>
                 </>
               );
-              const cardClass = "group flex h-full flex-col gap-3 rounded-2xl border bg-background-elevated p-6 transition-colors";
+              const cardClass =
+                "group flex h-full flex-col overflow-hidden rounded-2xl border bg-background-elevated shadow-lg shadow-black/20 transition-all duration-300";
               return (
                 <li key={device.name}>
                   {device.href ? (
-                    <Link href={device.href} className={`${cardClass} border-border hover:border-accent/50`}>
+                    <Link href={device.href} className={`${cardClass} border-border hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/10`}>
                       {body}
                     </Link>
                   ) : (
