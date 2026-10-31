@@ -33,11 +33,29 @@ export const deviceCategories: DeviceCategory[] = [
   { devices: 3, label: "3 Geräte", prices: { "1m": 26, "3m": 45, "6m": 70, "12m": 100, "24m": 145 } },
 ];
 
-/** What every package includes. Setup help, support and guides only – no TV channels or access data. */
-export const planFeatures: string[] = [
-  "Einrichtungshilfe für die gewählte Anzahl an Geräten",
-  "Support per WhatsApp, Telegram und E-Mail während der Laufzeit",
-  "Schritt-für-Schritt-Anleitungen für Ihre Geräte",
+/** Short descriptive tag per duration card. Neutral wording only – no popularity or discount claims. */
+export const DURATION_TAGS: Record<DurationId, string> = {
+  "1m": "Zum Ausprobieren",
+  "3m": "Flexibel",
+  "6m": "Halbes Jahr",
+  "12m": "Empfohlen",
+  "24m": "Längste Laufzeit",
+};
+
+/** What one package includes. Setup help, support and guides only – no TV channels or access data. */
+export function planFeatures(category: DeviceCategory, duration: DurationId): string[] {
+  return [
+    `Einrichtungshilfe für ${category.label}`,
+    `Support für ${durationLabel(duration)} per WhatsApp, Telegram & E-Mail`,
+    "Schritt-für-Schritt-Anleitungen für Ihre Geräte",
+  ];
+}
+
+/** Benefit badges shown above the plan cards; they apply to every package. */
+export const planBenefits: { icon: "bolt" | "chat" | "book"; label: string }[] = [
+  { icon: "bolt", label: "Schnelle Einrichtungshilfe" },
+  { icon: "chat", label: "Persönlicher Support" },
+  { icon: "book", label: "Anleitungen für alle gängigen Geräte" },
 ];
 
 export const PLAN_SCOPE_NOTE =

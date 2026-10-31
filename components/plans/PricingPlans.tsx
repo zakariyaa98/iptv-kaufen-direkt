@@ -2,16 +2,21 @@
 
 import { useState } from "react";
 import { PlanCard } from "@/components/plans/PlanCard";
-import { CheckIcon } from "@/components/ui/CheckIcon";
 import {
   DURATIONS,
   FEATURED_DURATION,
   PLAN_SCOPE_NOTE,
   PRICE_NOTE,
   deviceCategories,
-  planFeatures,
+  planBenefits,
   type DeviceCount,
 } from "@/lib/plans";
+
+const benefitIcons: Record<(typeof planBenefits)[number]["icon"], string> = {
+  bolt: "M13 2L4.5 13.5H12L11 22l8.5-11.5H12L13 2z",
+  chat: "M21 12a8 8 0 01-11.8 7L4 20l1.1-4.6A8 8 0 1121 12z",
+  book: "M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14zM4 19.5A2.5 2.5 0 006.5 22H20v-5",
+};
 
 /** Device switcher (1/2/3 Geräte) plus the five duration cards of the selected category. */
 export function PricingPlans() {
@@ -48,7 +53,30 @@ export function PricingPlans() {
         </div>
       </div>
 
-      <div aria-live="polite" className="grid gap-5 pt-2 sm:grid-cols-2 lg:grid-cols-5">
+      <ul className="flex flex-wrap justify-center gap-2">
+        {planBenefits.map((benefit) => (
+          <li
+            key={benefit.label}
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3.5 py-1.5 text-xs font-medium text-secondary"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-3.5 w-3.5 shrink-0 text-accent"
+              aria-hidden="true"
+            >
+              <path d={benefitIcons[benefit.icon]} />
+            </svg>
+            {benefit.label}
+          </li>
+        ))}
+      </ul>
+
+      <div aria-live="polite" className="grid gap-5 pt-4 sm:grid-cols-2 lg:grid-cols-5">
         {DURATIONS.map((duration) => (
           <PlanCard
             key={`${category.devices}-${duration.id}`}
@@ -59,19 +87,9 @@ export function PricingPlans() {
         ))}
       </div>
 
-      <div className="flex flex-col items-center gap-4 text-center">
-        <ul className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-6">
-          {planFeatures.map((feature) => (
-            <li key={feature} className="flex items-start gap-2 text-sm text-secondary">
-              <CheckIcon className="text-accent" />
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="max-w-2xl text-xs leading-relaxed text-muted">
-          {PRICE_NOTE} {PLAN_SCOPE_NOTE}
-        </p>
-      </div>
+      <p className="mx-auto max-w-2xl text-center text-xs leading-relaxed text-muted">
+        {PRICE_NOTE} {PLAN_SCOPE_NOTE}
+      </p>
     </div>
   );
 }
