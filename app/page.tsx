@@ -61,8 +61,8 @@ export default function HomePage() {
               eines IPTV-Anbieters wissen sollten.
             </p>
             <p className="animate-fade-up-delay-1 max-w-xl text-sm leading-relaxed text-muted">
-              Wichtig vorab: Wir verkaufen keine Senderpakete und keine Zugangsdaten. Wir sorgen dafür, dass ein
-              legaler Dienst auf Ihren Geräten zuverlässig läuft.
+              Bei uns findest du einen zuverlässigen und stabilen IPTV-Server. Kontaktiere uns einfach – wir helfen
+              dir gerne weiter.
             </p>
             <div className="animate-fade-up-delay-2 flex flex-col gap-3 sm:flex-row">
               <Button href="#preise" variant="primary">
