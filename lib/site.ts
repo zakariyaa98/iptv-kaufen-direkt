@@ -5,7 +5,7 @@
  */
 export const SITE = {
   name: "IPTV Kaufen Direkt",
-  url: "https://iptv-kaufen-direkt.de",
+  url: "https://www.iptv-kaufen-direkt.de",
   locale: "de_DE",
   language: "de-DE",
   tagline: "IPTV-Einrichtung, Beratung und Support auf Deutsch",
