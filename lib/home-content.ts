@@ -4,7 +4,7 @@ import androidMobileImage from "@/public/images/home page/Geräten/iptv kaufen a
 import googleTvImage from "@/public/images/home page/Geräten/iptv kaufen google tv.webp";
 import magImage from "@/public/images/home page/Geräten/iptv kaufen MAG.webp";
 import smartTvImage from "@/public/images/home page/Geräten/iptv kaufen SMART TV LG.webp";
-import enigma2Image from "@/public/images/home page/Geräten/iptv kaufen vu+.webp";
+import enigma2Image from "@/public/images/home page/Geräten/iptv-kaufen-enigma2-vu-plus-receiver.webp";
 import whySetupImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/persoenliche-iptv-einrichtungshilfe.webp";
 import whyPricesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/transparente-iptv-gesamtpreise.webp";
 import whyChannelsImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/iptv-support-whatsapp-telegram.webp";

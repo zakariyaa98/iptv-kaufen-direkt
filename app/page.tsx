@@ -28,7 +28,7 @@ import {
 } from "@/lib/home-content";
 import { pageMetadata } from "@/lib/seo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
-import heroImage from "@/public/images/home page/IPTV kaufen in Deutschland – Angebote, Preise und Informationen.webp";
+import heroImage from "@/public/images/home page/iptv-kaufen-deutschland-angebote-preise-informationen.webp";
 import infoImage from "@/public/images/home page/Informationen/IPTV in Deutschland Die wichtigsten Informationen.webp";
 
 export const metadata: Metadata = pageMetadata({

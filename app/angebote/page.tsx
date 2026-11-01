@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { PriceTable } from "@/components/plans/PriceTable";
@@ -12,6 +13,7 @@ import { FaqList, faqJsonLd } from "@/components/ui/FaqList";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { devices } from "@/lib/devices";
+import { homeDevices } from "@/lib/home-content";
 import {
   DURATIONS,
   DURATION_TAGS,
@@ -130,8 +132,17 @@ const durationAdvice: Record<DurationId, string> = {
   "24m": "Die längste Laufzeit: einmal abstimmen, zwei Jahre Unterstützung.",
 };
 
-const featuredDeviceSlugs = ["smart-tv", "fire-tv-stick", "android-tv-box", "enigma2-receiver"];
-const featuredDevices = featuredDeviceSlugs.flatMap((slug) => devices.filter((device) => device.slug === slug));
+/*
+ * Every device with its own guide page, shown with the real product photo from the homepage device section.
+ * Photo and alt text are reused from lib/home-content.ts; the card text comes from lib/devices.ts,
+ * so this page doesn't duplicate the homepage copy.
+ */
+const featuredDeviceSlugs = ["smart-tv", "fire-tv-stick", "android-tv-box", "enigma2-receiver", "mag-box"];
+const featuredDevices = featuredDeviceSlugs.flatMap((slug) => {
+  const device = devices.find((item) => item.slug === slug);
+  const photo = homeDevices.find((item) => item.href === `/geraete/${slug}`);
+  return device && photo ? [{ ...device, image: photo.image, imageAlt: photo.imageAlt }] : [];
+});
 
 const orderInfo: { icon: keyof typeof icons; title: string; text: React.ReactNode }[] = [
   {
@@ -499,36 +510,55 @@ export default function AngebotePage() {
         <Container className="flex flex-col gap-12">
           <SectionHeading
             id="devices-heading"
-            eyebrow="Geräte"
+            eyebrow="Kompatible Geräte"
             title="Welches IPTV Angebot passt zu Ihren Geräten?"
             description="Jedes Paket gilt für die gängigen IPTV-Geräte im Haushalt. Zu jedem Gerät gibt es eine ausführliche Anleitung – so sehen Sie vorab, was die Einrichtung umfasst."
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {featuredDevices.map((device) => (
-              <Link
+          {/*
+            Five cards on a 4-/6-column grid (each card spans 2), so the incomplete last row is centred:
+            tablet 2 + 2 + 1, desktop 3 + 2. auto-rows-fr gives every card the same height.
+          */}
+          <ul className="grid auto-rows-fr gap-6 sm:grid-cols-4 lg:grid-cols-6">
+            {featuredDevices.map((device, index) => (
+              <li
                 key={device.slug}
-                href={`/geraete/${device.slug}`}
-                className="group flex flex-col gap-4 rounded-2xl border border-border bg-background-elevated p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/50"
+                className={`sm:col-span-2 ${
+                  index === featuredDevices.length - 1 && featuredDevices.length % 2 === 1 ? "sm:col-start-2 lg:col-start-auto" : ""
+                } ${index === 3 && featuredDevices.length === 5 ? "lg:col-start-2" : ""}`}
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
-                  <DeviceIcon icon={device.icon} className="h-6 w-6" />
-                </span>
-                <h3 className="text-base font-semibold text-foreground">{device.shortName}</h3>
-                <p className="flex-1 text-sm leading-relaxed text-muted">{device.excerpt}</p>
-                <span className="text-sm font-semibold text-accent">
-                  Zur Anleitung <span aria-hidden className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-                </span>
-              </Link>
+                <Link
+                  href={`/geraete/${device.slug}`}
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-background-elevated shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/10"
+                >
+                  <div className="relative aspect-[3/2] overflow-hidden border-b border-border bg-background">
+                    <Image
+                      src={device.image}
+                      alt={device.imageAlt}
+                      placeholder="blur"
+                      fill
+                      sizes="(min-width: 1152px) 352px, (min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 2rem)"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3 p-6">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                        <DeviceIcon icon={device.icon} className="h-5 w-5" />
+                      </span>
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-accent">{device.shortName}</h3>
+                    </div>
+                    <p className="text-sm leading-relaxed text-muted">{device.excerpt}</p>
+                    <span className="mt-auto pt-2 text-sm font-semibold text-accent">
+                      Zur Anleitung
+                      <span className="sr-only">: IPTV auf {device.shortName} einrichten</span>{" "}
+                      <span aria-hidden className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+                    </span>
+                  </div>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
           <div className="flex flex-col items-center gap-4 text-center">
-            <p className="max-w-2xl text-sm leading-relaxed text-muted">
-              Sie nutzen eine MAG-Box? Auch dafür gibt es eine Anleitung:{" "}
-              <Link href="/geraete/mag-box" className={inlineLink}>
-                IPTV auf der MAG-Box einrichten
-              </Link>
-              .
-            </p>
             <Button href="/geraete" variant="secondary">
               Alle Geräte ansehen
             </Button>

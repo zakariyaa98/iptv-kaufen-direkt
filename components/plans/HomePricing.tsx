@@ -44,8 +44,9 @@ function HomePlanCard({ category, duration }: { category: DeviceCategory; durati
           featured ? "bg-gradient-to-b from-[#0f2333] to-background-elevated xl:py-9" : "bg-background-elevated"
         }`}
       >
-        <div className="flex items-center justify-between gap-3">
-          <h3 className="text-lg font-bold tracking-tight text-foreground">{durationLabel(duration)}</h3>
+        {/* In the narrow 5-column xl layout the badge sits above the title, so no title wraps and all cards line up. */}
+        <div className="flex items-center justify-between gap-3 xl:flex-col-reverse xl:items-start xl:justify-start xl:gap-2">
+          <h3 className="whitespace-nowrap text-lg font-bold tracking-tight text-foreground">{durationLabel(duration)}</h3>
           <span
             className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-semibold ${
               featured

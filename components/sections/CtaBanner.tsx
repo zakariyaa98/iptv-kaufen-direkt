@@ -34,12 +34,13 @@ export function CtaBanner({
               </a>
             </p>
           </div>
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
-            <Button href={whatsappLink} external variant="whatsapp" className="w-full sm:w-auto">
+          {/* shrink-0 + nowrap: keep the buttons at their natural width instead of squeezing the labels onto two lines. */}
+          <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
+            <Button href={whatsappLink} external variant="whatsapp" className="w-full whitespace-nowrap sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Per WhatsApp schreiben
             </Button>
-            <Button href="/iptv-pakete" variant="secondary" className="w-full sm:w-auto">
+            <Button href="/iptv-pakete" variant="secondary" className="w-full whitespace-nowrap sm:w-auto">
               Pakete ansehen
             </Button>
           </div>
