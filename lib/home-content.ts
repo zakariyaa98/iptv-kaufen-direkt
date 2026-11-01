@@ -459,6 +459,66 @@ export const legalityParagraphs = [
 export const legalityNote =
   "Diese Informationen dienen der Orientierung und ersetzen keine Rechtsberatung.";
 
+export const legalQuickFacts = [
+  {
+    tone: "ok",
+    title: "Die Technik ist legal",
+    text: "IPTV ist nur ein Übertragungsweg – genau wie Satellit oder Kabel.",
+  },
+  {
+    tone: "info",
+    title: "Entscheidend sind die Rechte",
+    text: "Legal ist ein Angebot nur, wenn der Anbieter die Sender und Inhalte zeigen darf.",
+  },
+  {
+    tone: "warn",
+    title: "Auch Nutzer tragen ein Risiko",
+    text: "Wer offensichtlich illegale Streams nutzt, kann selbst rechtliche Probleme bekommen.",
+  },
+] as const;
+
+export const legalComparison = {
+  legal: {
+    title: "Legale IPTV-Dienste",
+    subtitle: "Mit Erlaubnis der Sender und Rechteinhaber",
+    points: [
+      "Nennen ihre Sender und Partner offen",
+      "Vollständiges Impressum, AGB und Datenschutzerklärung",
+      "Marktübliche Preise mit klarer Laufzeit",
+      "Zahlung mit Käuferschutz, z. B. Lastschrift, Karte oder PayPal",
+      "Offizielle Apps aus den bekannten App-Stores",
+    ],
+    examples: "Beispiele: MagentaTV, waipu.tv, Zattoo sowie die Mediatheken von ARD und ZDF.",
+  },
+  illegal: {
+    title: "Nicht autorisierte Angebote",
+    subtitle: "Ohne Rechte an den gezeigten Inhalten",
+    points: [
+      "Tausende Sender inklusive Pay-TV für wenige Euro im Monat",
+      "Kein, ein unvollständiges oder ein falsches Impressum",
+      "Zahlung nur per Kryptowährung, Gutscheinkarte oder Überweisung an Privatpersonen",
+      "Zugangsdaten per Messenger, Apps nur zum manuellen Installieren",
+      "Häufige Ausfälle – oft ist der Dienst plötzlich ganz verschwunden",
+    ],
+    examples: "Je günstiger und umfangreicher ein Angebot wirkt, desto genauer sollten Sie hinschauen.",
+  },
+};
+
+export const legalRisks = [
+  {
+    title: "Rechtliche Folgen",
+    text: "Urheberrechtsverletzungen können zu Abmahnungen und Schadensersatzforderungen führen.",
+  },
+  {
+    title: "Geld ohne Gegenleistung",
+    text: "Ohne Käuferschutz ist Ihre Zahlung verloren, wenn der Dienst abgeschaltet wird.",
+  },
+  {
+    title: "Unsichere Apps",
+    text: "Apps aus unbekannten Quellen können Schadsoftware enthalten oder Daten abgreifen.",
+  },
+];
+
 export const homeFaq: FaqItem[] = [
   {
     question: "Was ist IPTV?",

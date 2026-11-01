@@ -5,6 +5,7 @@ import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
 import { HomePricing } from "@/components/plans/HomePricing";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import { LegalitySection } from "@/components/sections/LegalitySection";
 import { SpeedSection } from "@/components/sections/SpeedSection";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/CheckIcon";
@@ -21,8 +22,6 @@ import {
   introChecklist,
   introParagraphs,
   iptvFeatures,
-  legalityNote,
-  legalityParagraphs,
   pricingExplainer,
   providerCriteria,
   providerWarningSigns,
@@ -498,46 +497,7 @@ export default function HomePage() {
       <SpeedSection />
 
       {/* 10 · Legality */}
-      <section className="py-16 sm:py-24" aria-labelledby="legal-heading">
-        <Container>
-          <div className="grid gap-10 rounded-3xl border border-highlight/30 bg-highlight/5 p-7 sm:p-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
-            <div className="flex flex-col gap-5">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-highlight">Recht & Sicherheit</span>
-              <h2 id="legal-heading" className="scroll-mt-24 text-2xl font-bold tracking-tight text-balance text-foreground sm:text-3xl lg:text-4xl">
-                Ist IPTV in Deutschland legal?
-              </h2>
-              {legalityParagraphs.map((paragraph) => (
-                <p key={paragraph} className="text-base leading-relaxed text-secondary">
-                  {paragraph}
-                </p>
-              ))}
-              <p className="text-xs text-muted">{legalityNote}</p>
-            </div>
-            <div className="flex flex-col gap-4 self-center">
-              <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-5">
-                <p className="text-sm font-semibold text-foreground">Kurz gesagt</p>
-                <ul className="flex flex-col gap-2 text-sm leading-relaxed text-secondary">
-                  <li className="flex items-start gap-2">
-                    <CheckIcon className="text-accent" />
-                    IPTV als Technik ist legal.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon className="text-accent" />
-                    Legal ist ein Angebot nur mit Rechten an den Inhalten.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon className="text-accent" />
-                    Auch Nutzer illegaler Angebote gehen ein Risiko ein.
-                  </li>
-                </ul>
-              </div>
-              <Button href="/iptv-legal" variant="primary">
-                IPTV legal in Deutschland
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <LegalitySection />
 
       {/* 11 · FAQ – no FAQPage JSON-LD here: /faq already carries it, and Google limits FAQ rich results to authoritative sites. */}
       <section className="border-t border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="faq-heading">
