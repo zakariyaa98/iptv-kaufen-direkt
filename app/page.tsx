@@ -33,6 +33,7 @@ import {
 import { pageMetadata } from "@/lib/seo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 import heroImage from "@/public/images/home page/IPTV kaufen in Deutschland – Angebote, Preise und Informationen.webp";
+import infoImage from "@/public/images/home page/Informationen/IPTV in Deutschland Die wichtigsten Informationen.webp";
 
 export const metadata: Metadata = pageMetadata({
   title: HOME_SEO.title,
@@ -234,33 +235,50 @@ export default function HomePage() {
               </p>
             ))}
           </div>
-          <aside
-            aria-labelledby="intro-checklist-heading"
-            className="flex flex-col gap-5 self-start rounded-3xl border border-border bg-background-elevated p-6 sm:p-8"
-          >
-            <h3 id="intro-checklist-heading" className="text-lg font-semibold text-foreground">
-              Bevor Sie IPTV kaufen: drei Fragen
-            </h3>
-            <ol className="flex flex-col gap-5">
-              {introChecklist.map((item, index) => (
-                <li key={item.title} className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent">
-                    {index + 1}
-                  </span>
-                  <div className="flex flex-col gap-1">
-                    <p className="font-semibold text-foreground">{item.title}</p>
-                    <p className="text-sm leading-relaxed text-muted">{item.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <p className="border-t border-border pt-5 text-sm leading-relaxed text-muted">
-              Und vor allem: Besitzt der Anbieter die Rechte an den Sendern? Mehr dazu unter{" "}
-              <a href="#legal-heading" className={inlineLink}>
-                Ist IPTV in Deutschland legal?
-              </a>
-            </p>
-          </aside>
+          <div className="mx-auto flex w-full max-w-2xl flex-col gap-6 self-start lg:mx-0 lg:max-w-none">
+            <figure className="relative isolate">
+              <div
+                aria-hidden
+                className="absolute -inset-3 -z-10 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,rgba(34,211,238,0.14),transparent_70%)] blur-2xl"
+              />
+              <div className="overflow-hidden rounded-3xl border border-border-strong bg-white p-1.5 shadow-2xl shadow-black/40 ring-1 ring-white/5">
+                <Image
+                  src={infoImage}
+                  alt="IPTV in Deutschland im Überblick: Familie schaut IPTV auf dem Smart TV – 4K-Qualität, legale lizenzierte Anbieter, Glasfaser-Internet und Streaming-Apps auf allen Geräten"
+                  placeholder="blur"
+                  sizes="(min-width: 1152px) 470px, (min-width: 1024px) 40vw, (min-width: 704px) 672px, calc(100vw - 2rem)"
+                  className="h-auto w-full rounded-[1.25rem]"
+                />
+              </div>
+            </figure>
+            <aside
+              aria-labelledby="intro-checklist-heading"
+              className="flex flex-col gap-5 rounded-3xl border border-border bg-background-elevated p-6 sm:p-8"
+            >
+              <h3 id="intro-checklist-heading" className="text-lg font-semibold text-foreground">
+                Bevor Sie IPTV kaufen: drei Fragen
+              </h3>
+              <ol className="flex flex-col gap-5">
+                {introChecklist.map((item, index) => (
+                  <li key={item.title} className="flex gap-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent">
+                      {index + 1}
+                    </span>
+                    <div className="flex flex-col gap-1">
+                      <p className="font-semibold text-foreground">{item.title}</p>
+                      <p className="text-sm leading-relaxed text-muted">{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <p className="border-t border-border pt-5 text-sm leading-relaxed text-muted">
+                Und vor allem: Besitzt der Anbieter die Rechte an den Sendern? Mehr dazu unter{" "}
+                <a href="#legal-heading" className={inlineLink}>
+                  Ist IPTV in Deutschland legal?
+                </a>
+              </p>
+            </aside>
+          </div>
         </Container>
       </section>
 
