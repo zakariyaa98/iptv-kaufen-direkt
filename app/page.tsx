@@ -338,14 +338,34 @@ export default function HomePage() {
           />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {iptvFeatures.map((feature) => (
-              <li key={feature.title} className="flex flex-col gap-2 rounded-2xl border border-border bg-background-elevated p-6">
-                <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{feature.text}</p>
-                {feature.href ? (
-                  <Link href={feature.href} className="mt-auto pt-2 text-sm font-semibold text-accent hover:text-accent-soft">
-                    {feature.linkLabel} <span aria-hidden>→</span>
-                  </Link>
-                ) : null}
+              <li
+                key={feature.title}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background-elevated shadow-lg shadow-black/20 transition-colors duration-300 hover:border-border-strong"
+              >
+                <div className="p-2 pb-0">
+                  <div
+                    className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/10"
+                    style={{ backgroundColor: feature.imageBg }}
+                  >
+                    <Image
+                      src={feature.image}
+                      alt={feature.imageAlt}
+                      placeholder="blur"
+                      fill
+                      sizes="240px"
+                      className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col gap-2 p-6">
+                  <h3 className="text-base font-semibold text-foreground">{feature.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{feature.text}</p>
+                  {feature.href ? (
+                    <Link href={feature.href} className="mt-auto pt-2 text-sm font-semibold text-accent hover:text-accent-soft">
+                      {feature.linkLabel} <span aria-hidden>→</span>
+                    </Link>
+                  ) : null}
+                </div>
               </li>
             ))}
             <li className="flex flex-col justify-center gap-2 rounded-2xl border border-dashed border-highlight/40 bg-highlight/5 p-6">

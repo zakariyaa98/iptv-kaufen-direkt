@@ -11,6 +11,13 @@ import whyChannelsImage from "@/public/images/home page/Warum IPTV Kaufen Direkt
 import whyLegalImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/4. Klare Haltung zur Legalität.webp";
 import whyGuidesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/5. Anleitungen auf Deutsch.webp";
 import whyDevicesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/6. Für mehrere Geräte.webp";
+import featureLiveImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/1.webp";
+import featureEpgImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/2.webp";
+import featureReplayImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/3.webp";
+import featureCloudImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/4.webp";
+import featureMultiImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/5.webp";
+import featureQualityImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/6.webp";
+import featurePinImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/7.webp";
 import type { DeviceIcon } from "./devices";
 import type { FaqItem } from "./faq-data";
 import { LOWEST_PRICE, formatPrice } from "./plans";
@@ -104,36 +111,66 @@ export const pricingExplainer = [
   "Wichtig: Unsere Pakete enthalten keine TV-Sender, Abonnements oder Zugangsdaten. Den eigentlichen TV-Dienst schließen Sie direkt bei einem lizenzierten Anbieter ab – wir sorgen dafür, dass er auf Ihren Geräten zuverlässig läuft.",
 ];
 
-export const iptvFeatures: { title: string; text: string; href?: string; linkLabel?: string }[] = [
+export const iptvFeatures: {
+  title: string;
+  text: string;
+  image: StaticImageData;
+  imageAlt: string;
+  /** Matches the image's own background so the frame has no visible seam. */
+  imageBg: string;
+  href?: string;
+  linkLabel?: string;
+}[] = [
   {
     title: "Live-TV und Senderliste",
     text: "Das laufende Programm wie beim klassischen Fernsehen. Eine gut sortierte Senderliste mit Favoriten macht das Umschalten schnell und bequem.",
+    image: featureLiveImage,
+    imageAlt: "IPTV-Symbol mit Live-Fernseher und Senderliste mit ARD, ZDF und RTL",
+    imageBg: "#fefefe",
   },
   {
     title: "Elektronische Programmzeitschrift (EPG)",
     text: "Der EPG zeigt, was gerade läuft und was als Nächstes kommt. Bei Player-Apps muss er oft separat eingebunden werden.",
+    image: featureEpgImage,
+    imageAlt: "Kalender mit Programmliste als Symbol für die elektronische Programmzeitschrift (EPG) bei IPTV",
+    imageBg: "#fefefe",
     href: "/anleitungen/epg-einrichten",
     linkLabel: "EPG einrichten",
   },
   {
     title: "Zeitversetztes Fernsehen und Replay",
     text: "Viele Dienste erlauben, eine Sendung zu pausieren, neu zu starten oder verpasste Sendungen nachträglich abzurufen – sofern die Senderrechte das zulassen.",
+    image: featureReplayImage,
+    imageAlt: "Uhr mit Zurückspulen- und Play-Taste als Symbol für zeitversetztes Fernsehen und Replay",
+    imageBg: "#fefefe",
   },
   {
     title: "Aufnahmen in der Cloud",
     text: "Statt einer Festplatte nutzen einige Anbieter einen Online-Rekorder. Umfang und Speicherdauer unterscheiden sich je nach Tarif deutlich.",
+    image: featureCloudImage,
+    imageAlt: "Wolke mit rotem Aufnahmeknopf als Symbol für IPTV-Aufnahmen im Cloud-Rekorder",
+    imageBg: "#f9f9f9",
   },
   {
     title: "Nutzung auf mehreren Geräten",
     text: "Fernseher, Tablet und Smartphone mit einem Konto: Wie viele Streams gleichzeitig laufen dürfen, regelt der Vertrag mit dem Anbieter.",
+    image: featureMultiImage,
+    imageAlt: "Fernseher, Tablet, Smartphone und Laptop verbunden als Symbol für IPTV auf mehreren Geräten",
+    imageBg: "#fefefe",
   },
   {
     title: "HD- und 4K-Bildqualität",
     text: "Ob ein Sender in HD oder 4K verfügbar ist, hängt vom Dienst, vom Tarif und von Ihrer Internetverbindung ab.",
+    image: featureQualityImage,
+    imageAlt: "Bildschirm mit HD-Kennzeichnung und goldenem 4K-UHD-Symbol für IPTV in HD- und 4K-Bildqualität",
+    imageBg: "#fefefe",
   },
   {
     title: "Jugendschutz und PIN",
     text: "Eine PIN-Sperre schützt bestimmte Inhalte oder Einkäufe. Gerade in Familien lohnt es sich, diese Funktion von Anfang an einzurichten.",
+    image: featurePinImage,
+    imageAlt: "Schutzschild mit Kind, Schloss und PIN-Feld als Symbol für Jugendschutz und PIN-Sperre bei IPTV",
+    imageBg: "#fefefe",
   },
 ];
 
