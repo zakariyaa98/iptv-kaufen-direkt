@@ -5,6 +5,12 @@ import googleTvImage from "@/public/images/home page/Geräten/iptv kaufen google
 import magImage from "@/public/images/home page/Geräten/iptv kaufen MAG.webp";
 import smartTvImage from "@/public/images/home page/Geräten/iptv kaufen SMART TV LG.webp";
 import enigma2Image from "@/public/images/home page/Geräten/iptv kaufen vu+.webp";
+import whySetupImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/1. Persönliche Einrichtungshilfe.webp";
+import whyPricesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/2. Transparente Gesamtpreise.webp";
+import whyChannelsImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/3. Erreichbar auf Ihren Kanälen.webp";
+import whyLegalImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/4. Klare Haltung zur Legalität.webp";
+import whyGuidesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/5. Anleitungen auf Deutsch.webp";
+import whyDevicesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/6. Für mehrere Geräte.webp";
 import type { DeviceIcon } from "./devices";
 import type { FaqItem } from "./faq-data";
 import { LOWEST_PRICE, formatPrice } from "./plans";
@@ -47,30 +53,49 @@ export const introChecklist = [
   },
 ];
 
-export const whyUsBenefits = [
+export const whyUsBenefits: { title: string; text: string; image: StaticImageData; imageAlt: string; imageBg: string }[] = [
   {
     title: "Persönliche Einrichtungshilfe",
     text: "Wir führen Sie Schritt für Schritt per Chat, Sprachnachricht oder Videoanruf durch die Einrichtung. Eine Fernwartung erfolgt nur mit Ihrer ausdrücklichen Zustimmung.",
+    image: whySetupImage,
+    imageAlt: "Headset mit Schraubenschlüssel als Symbol für persönliche IPTV-Einrichtungshilfe per Chat, Sprachnachricht oder Videoanruf",
+    // Matches the image's own background so the frame has no visible seam.
+    imageBg: "#fdfdfd",
   },
   {
     title: "Transparente Gesamtpreise",
     text: "Sie sehen vorab, was ein Paket für die gesamte Laufzeit kostet. Ohne Lockpreise, ohne durchgestrichene Fantasiepreise.",
+    image: whyPricesImage,
+    imageAlt: "Preisschild mit Häkchen und der Aufschrift „Transparente Gesamtpreise“ für faire IPTV-Paketpreise ohne Lockangebote",
+    imageBg: "#ffffff",
   },
   {
     title: "Erreichbar auf Ihren Kanälen",
     text: "Schreiben Sie uns per WhatsApp, Telegram oder E-Mail. Wir bemühen uns, Anfragen noch am selben Tag zu beantworten.",
+    image: whyChannelsImage,
+    imageAlt: "WhatsApp- und Telegram-Symbol mit dem Hinweis „Erreichbar auf Ihren Kanälen“ für schnellen IPTV-Support",
+    imageBg: "#f7f7f7",
   },
   {
     title: "Klare Haltung zur Legalität",
     text: "Wir verkaufen weder Senderpakete noch Zugangsdaten. Wir helfen ausschließlich bei legalen Lösungen und sagen offen, wenn ein Angebot problematisch ist.",
+    image: whyLegalImage,
+    imageAlt: "Schutzschild mit Waage und Häkchen als Symbol für legale IPTV-Lösungen in Deutschland",
+    imageBg: "#fdfdfd",
   },
   {
     title: "Anleitungen auf Deutsch",
     text: "Für Fire TV, Smart TV, Android TV, MAG-Boxen und Enigma2-Receiver gibt es ausführliche Anleitungen – kostenlos und verständlich erklärt.",
+    image: whyGuidesImage,
+    imageAlt: "Aufgeschlagenes Handbuch mit Play-Symbol in Deutschlandfarben für IPTV-Anleitungen auf Deutsch",
+    imageBg: "#fdfdfd",
   },
   {
     title: "Für mehrere Geräte",
     text: "Wohnzimmer, Schlafzimmer, Kinderzimmer: Unsere Pakete decken die Einrichtung auf einem, zwei oder drei Geräten ab.",
+    image: whyDevicesImage,
+    imageAlt: "Monitor, Tablet, Laptop und Smartphone als Symbol für die IPTV-Einrichtung auf mehreren Geräten",
+    imageBg: "#fefefe",
   },
 ];
 

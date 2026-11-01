@@ -295,13 +295,32 @@ export default function HomePage() {
             {whyUsBenefits.map((benefit) => (
               <li
                 key={benefit.title}
-                className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6 transition-colors hover:border-border-strong"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background-elevated shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-border-strong hover:shadow-xl hover:shadow-accent/10"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                  <CheckIcon className="mt-0 h-5 w-5" />
-                </span>
-                <h3 className="text-lg font-semibold text-foreground">{benefit.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{benefit.text}</p>
+                <div className="p-2 pb-0">
+                  <div
+                    className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/10"
+                    style={{ backgroundColor: benefit.imageBg }}
+                  >
+                    <Image
+                      src={benefit.image}
+                      alt={benefit.imageAlt}
+                      placeholder="blur"
+                      fill
+                      sizes="240px"
+                      className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col gap-3 p-6">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                      <CheckIcon className="mt-0 h-5 w-5" />
+                    </span>
+                    <h3 className="text-lg font-semibold text-foreground">{benefit.title}</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted">{benefit.text}</p>
+                </div>
               </li>
             ))}
           </ul>
