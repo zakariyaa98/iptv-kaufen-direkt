@@ -5,12 +5,12 @@ import googleTvImage from "@/public/images/home page/Geräten/iptv kaufen google
 import magImage from "@/public/images/home page/Geräten/iptv kaufen MAG.webp";
 import smartTvImage from "@/public/images/home page/Geräten/iptv kaufen SMART TV LG.webp";
 import enigma2Image from "@/public/images/home page/Geräten/iptv kaufen vu+.webp";
-import whySetupImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/1. Persönliche Einrichtungshilfe.webp";
-import whyPricesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/2. Transparente Gesamtpreise.webp";
-import whyChannelsImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/3. Erreichbar auf Ihren Kanälen.webp";
-import whyLegalImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/4. Klare Haltung zur Legalität.webp";
-import whyGuidesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/5. Anleitungen auf Deutsch.webp";
-import whyDevicesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/6. Für mehrere Geräte.webp";
+import whySetupImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/persoenliche-iptv-einrichtungshilfe.webp";
+import whyPricesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/transparente-iptv-gesamtpreise.webp";
+import whyChannelsImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/iptv-support-whatsapp-telegram.webp";
+import whyLegalImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/legale-iptv-loesungen-deutschland.webp";
+import whyGuidesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/iptv-anleitungen-auf-deutsch.webp";
+import whyDevicesImage from "@/public/images/home page/Warum IPTV Kaufen Direkt/iptv-einrichtung-mehrere-geraete.webp";
 import featureLiveImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/1.webp";
 import featureEpgImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/2.webp";
 import featureReplayImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/3.webp";

@@ -1,7 +1,11 @@
+import Image from "next/image";
+import logoHeader from "@/public/images/LOGO/iptv-kaufen-direkt-logo.webp";
+import logoTv from "@/public/images/LOGO/iptv-kaufen-direkt-logo-tv.webp";
+
 type BrandLogoProps = {
   className?: string;
-  /** Hide the wordmark and show only the icon. */
-  iconOnly?: boolean;
+  /** Which logo version to show. */
+  variant?: "header" | "footer";
 };
 
 /** Inline SVG brand mark: a screen with a play symbol and a signal arc. No image request needed. */
@@ -21,15 +25,34 @@ export function BrandMark({ className }: { className?: string }) {
   );
 }
 
-export function BrandLogo({ className, iconOnly = false }: BrandLogoProps) {
+/**
+ * Raster brand logo. Two versions of the same design:
+ * - "header": compact wordmark, loaded eagerly because it is above the fold on every page.
+ * - "footer": version with the TV stand, lazy-loaded because it sits at the bottom of the page.
+ * Height is set per breakpoint; width follows the image's own aspect ratio, so it never stretches.
+ */
+export function BrandLogo({ variant = "header", className }: BrandLogoProps) {
+  if (variant === "footer") {
+    return (
+      <Image
+        src={logoTv}
+        alt="IPTV Kaufen Direkt Logo"
+        loading="lazy"
+        sizes="(min-width: 640px) 184px, 160px"
+        // self-start: inside a flex column the default stretch would override w-auto and distort the logo.
+        className={`h-13 w-auto max-w-full self-start object-contain sm:h-15 ${className ?? ""}`}
+      />
+    );
+  }
+
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      <BrandMark className="h-9 w-9 shrink-0" />
-      {iconOnly ? null : (
-        <span className="text-base font-extrabold leading-none tracking-tight text-foreground sm:text-lg">
-          IPTV Kaufen <span className="text-accent">Direkt</span>
-        </span>
-      )}
-    </span>
+    <Image
+      src={logoHeader}
+      alt="IPTV Kaufen Direkt Logo"
+      loading="eager"
+      fetchPriority="high"
+      sizes="(min-width: 1024px) 183px, (min-width: 640px) 166px, 150px"
+      className={`h-9 w-auto object-contain sm:h-10 lg:h-11 ${className ?? ""}`}
+    />
   );
 }

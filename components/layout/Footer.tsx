@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BrandLogo } from "@/components/logo/BrandLogo";
+import { paymentMethods } from "@/lib/payment-methods";
 import { legalNav } from "@/lib/navigation";
 import { devices } from "@/lib/devices";
 import { SITE } from "@/lib/site";
@@ -35,7 +37,7 @@ export function Footer() {
     <footer className="border-t border-border bg-background-elevated/40">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] lg:px-8">
         <div className="flex flex-col gap-4">
-          <BrandLogo />
+          <BrandLogo variant="footer" />
           <p className="max-w-xs text-sm leading-relaxed text-muted">
             Einrichtungshilfe, Support und Anleitungen für IPTV auf Ihren Geräten. Wir verkaufen keine
             TV-Senderpakete.
@@ -86,7 +88,27 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-6 pb-24 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:pb-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-4 px-4 pt-8 sm:px-6 lg:flex-row lg:justify-between lg:gap-8 lg:px-8">
+          <h2 className="shrink-0 text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+            Zahlungsmethoden
+          </h2>
+          <ul className="flex w-full flex-wrap justify-center gap-2 sm:w-auto lg:justify-end">
+            {paymentMethods.map((method) => (
+              // Mobile: five per row (5 + 4, centred). From sm up: fixed-size badges in one row.
+              <li key={method.name} className="basis-[calc((100%-2rem)/5)] sm:basis-auto">
+                <Image
+                  src={method.image}
+                  alt={method.alt}
+                  title={method.name}
+                  loading="lazy"
+                  sizes="(min-width: 1280px) 77px, 64px"
+                  className="aspect-[8/5] h-auto w-full rounded-md object-contain shadow-sm shadow-black/30 ring-1 ring-white/10 sm:h-9 sm:w-[3.6rem] md:h-10 md:w-16 xl:h-12 xl:w-[4.8rem]"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-6 pb-24 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:pb-6">
           <p>
             © {new Date().getFullYear()} {SITE.name}
           </p>

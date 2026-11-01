@@ -295,16 +295,16 @@ export default function HomePage() {
               >
                 <div className="p-2 pb-0">
                   <div
-                    className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/10"
+                    className="flex h-36 items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/10 sm:h-40"
                     style={{ backgroundColor: benefit.imageBg }}
                   >
                     <Image
                       src={benefit.image}
                       alt={benefit.imageAlt}
                       placeholder="blur"
-                      fill
-                      sizes="240px"
-                      className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      loading="lazy"
+                      sizes="(min-width: 640px) 128px, 112px"
+                      className="h-28 w-28 object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-32 sm:w-32"
                     />
                   </div>
                 </div>
