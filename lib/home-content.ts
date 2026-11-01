@@ -43,7 +43,6 @@ export const HOME_SEO = {
 export const heroTrustPoints = [
   `Gesamtpreise ab ${formatPrice(LOWEST_PRICE)}`,
   "Support per WhatsApp, Telegram & E-Mail",
-  "Nur legale Lösungen – keine Senderpakete",
 ];
 
 export const introParagraphs = [
