@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", priority: 1 },
     { path: "/iptv-pakete", priority: 0.9 },
     { path: "/angebote", priority: 0.9 },
-    { path: "/geraete", priority: 0.8 },
     { path: "/anleitungen", priority: 0.8 },
     { path: "/iptv-legal", priority: 0.8, lastModified: legalIptvArticle.updatedAt ?? legalIptvArticle.publishedAt },
     { path: "/faq", priority: 0.6 },

@@ -165,8 +165,8 @@ export default function HomePage() {
               Fragen Sie uns
             </Link>{" "}
             – wir prüfen, was möglich ist. Alle Geräte im Überblick:{" "}
-            <Link href="/geraete" className={inlineLink}>
-              IPTV-Geräte
+            <Link href="/anleitungen#geraete" className={inlineLink}>
+              IPTV-Anleitungen nach Gerät
             </Link>
             .
           </p>

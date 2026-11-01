@@ -12,9 +12,18 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "IPTV-Anleitungen: Einrichtung, EPG, M3U & Fehlerhilfe",
   description:
-    "Verständliche IPTV-Anleitungen auf Deutsch: M3U und Xtream Codes, EPG einrichten, Ruckler beheben, Internetgeschwindigkeit und seriöse Anbieter erkennen.",
+    "IPTV-Anleitungen auf Deutsch: Einrichtung auf Fire TV Stick, Smart TV, Android TV, MAG-Box und Enigma2-Receiver sowie M3U, Xtream Codes, EPG und Fehlerhilfe.",
   path: "/anleitungen",
 });
+
+/** Moved here from the former /geraete overview page. */
+const deviceComparison = [
+  ["Fire TV Stick", "Günstig, einfache Bedienung", "Begrenzter Speicher"],
+  ["Smart TV", "Kein Zusatzgerät nötig", "Kleinere App-Auswahl, Updates enden früher"],
+  ["Android-TV-Box", "Größte App-Auswahl", "Billig-Boxen oft unsicher"],
+  ["MAG-Box", "Reiner IPTV-Empfänger, stabil", "Kaum andere Apps"],
+  ["Enigma2-Receiver", "IPTV neben Sat und Kabel", "Einrichtung anspruchsvoller"],
+];
 
 export default function GuidesPage() {
   return (
@@ -49,7 +58,8 @@ export default function GuidesPage() {
             </div>
           </section>
 
-          <section aria-labelledby="device-guides-heading" className="flex flex-col gap-6">
+          {/* id="geraete": target of the former /geraete page (301) and of all "Anleitungen nach Gerät" links. scroll-mt clears the sticky header. */}
+          <section id="geraete" aria-labelledby="device-guides-heading" className="flex scroll-mt-24 flex-col gap-6">
             <h2 id="device-guides-heading" className="text-2xl font-semibold tracking-tight text-foreground">
               Anleitungen nach Gerät
             </h2>
@@ -63,6 +73,32 @@ export default function GuidesPage() {
                   icon={<DeviceIcon icon={device.icon} className="h-6 w-6" />}
                 />
               ))}
+            </div>
+
+            <div className="mt-4 flex flex-col gap-5">
+              <h3 id="compare-heading" className="text-xl font-semibold tracking-tight text-foreground">
+                Die Geräte im Vergleich
+              </h3>
+              <div className="w-full overflow-x-auto rounded-2xl border border-border">
+                <table aria-labelledby="compare-heading" className="w-full min-w-[520px] border-collapse text-left text-sm">
+                  <thead>
+                    <tr className="bg-surface">
+                      <th scope="col" className="border-b border-border px-4 py-3 font-semibold text-foreground">Gerät</th>
+                      <th scope="col" className="border-b border-border px-4 py-3 font-semibold text-foreground">Stärke</th>
+                      <th scope="col" className="border-b border-border px-4 py-3 font-semibold text-foreground">Zu beachten</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {deviceComparison.map(([device, pro, con]) => (
+                      <tr key={device} className="odd:bg-background even:bg-background-elevated">
+                        <th scope="row" className="border-b border-border px-4 py-3 font-medium text-foreground">{device}</th>
+                        <td className="border-b border-border px-4 py-3 text-secondary">{pro}</td>
+                        <td className="border-b border-border px-4 py-3 text-secondary">{con}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </Container>

@@ -559,8 +559,8 @@ export default function AngebotePage() {
             ))}
           </ul>
           <div className="flex flex-col items-center gap-4 text-center">
-            <Button href="/geraete" variant="secondary">
-              Alle Geräte ansehen
+            <Button href="/anleitungen#geraete" variant="secondary">
+              Alle Geräte-Anleitungen
             </Button>
           </div>
         </Container>

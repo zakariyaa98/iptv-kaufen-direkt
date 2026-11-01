@@ -372,7 +372,7 @@ export const guides: Guide[] = [
     ],
     related: [
       { href: "/anleitungen/iptv-ruckelt-loesungen", label: "IPTV ruckelt – Ursachen und Lösungen" },
-      { href: "/geraete", label: "Kompatible Geräte im Überblick" },
+      { href: "/anleitungen#geraete", label: "IPTV-Anleitungen nach Gerät" },
     ],
   },
 ];

@@ -545,7 +545,7 @@ export const homeFaq: HomeFaqItem[] = [
     question: "Welche Geräte unterstützen IPTV?",
     answer:
       "IPTV läuft auf Smart TVs, Amazon Fire TV, Android-TV- und Google-TV-Geräten, Smartphones und Tablets, MAG-Boxen und Enigma2-Receivern. Welche Geräte genau unterstützt werden, hängt davon ab, für welche Plattformen Ihr Anbieter eine App bereitstellt.",
-    link: { href: "/geraete", label: "Alle IPTV-Geräte im Überblick" },
+    link: { href: "/anleitungen#geraete", label: "IPTV-Anleitungen nach Gerät" },
   },
   {
     question: "Kann ich IPTV auf mehreren Geräten nutzen?",

@@ -43,7 +43,7 @@ export default async function DevicePage({ params }: PageProps) {
       path={path}
       eyebrow={`Geräte · ${device.shortName}`}
       breadcrumbs={[
-        { label: "Geräte", href: "/geraete" },
+        { label: "Anleitungen", href: "/anleitungen" },
         { label: device.shortName, href: path },
       ]}
       whatsappLink={deviceWhatsAppLink(device.name)}

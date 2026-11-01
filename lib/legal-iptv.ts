@@ -84,7 +84,7 @@ export const legalIptvArticle: Article = {
   ],
   related: [
     { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV-Anbieter erkennen" },
-    { href: "/geraete", label: "Kompatible Geräte" },
+    { href: "/anleitungen#geraete", label: "IPTV-Anleitungen nach Gerät" },
     { href: "/iptv-pakete", label: "Einrichtung und Support" },
   ],
 };
