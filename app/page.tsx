@@ -5,18 +5,17 @@ import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
 import { HomePricing } from "@/components/plans/HomePricing";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import { HomeFaqSection } from "@/components/sections/HomeFaqSection";
 import { LegalitySection } from "@/components/sections/LegalitySection";
 import { SpeedSection } from "@/components/sections/SpeedSection";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/CheckIcon";
 import { Container } from "@/components/ui/Container";
-import { FaqList } from "@/components/ui/FaqList";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   HOME_SEO,
   heroTrustPoints,
   homeDevices,
-  homeFaq,
   installGuideLinks,
   installSteps,
   introChecklist,
@@ -499,18 +498,8 @@ export default function HomePage() {
       {/* 10 · Legality */}
       <LegalitySection />
 
-      {/* 11 · FAQ – no FAQPage JSON-LD here: /faq already carries it, and Google limits FAQ rich results to authoritative sites. */}
-      <section className="border-t border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="faq-heading">
-        <Container className="flex flex-col items-center gap-10">
-          <SectionHeading id="faq-heading" eyebrow="FAQ" title="Häufig gestellte Fragen zu IPTV" />
-          <div className="w-full max-w-3xl">
-            <FaqList items={homeFaq} />
-          </div>
-          <Button href="/faq" variant="secondary">
-            Alle Fragen ansehen
-          </Button>
-        </Container>
-      </section>
+      {/* 11 · FAQ */}
+      <HomeFaqSection />
 
       {/* 12 · Final CTA */}
       <CtaBanner

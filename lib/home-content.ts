@@ -519,44 +519,72 @@ export const legalRisks = [
   },
 ];
 
-export const homeFaq: FaqItem[] = [
+export type HomeFaqItem = FaqItem & {
+  /** Optional deep link shown under the answer. */
+  link?: { href: string; label: string };
+};
+
+export const homeFaq: HomeFaqItem[] = [
   {
-    question: "Was ist IPTV?",
+    question: "Was ist IPTV und wie funktioniert es?",
     answer:
-      "IPTV (Internet Protocol Television) ist Fernsehen über das Internet. Statt per Satellit, Kabel oder Antenne kommen die Sender als Datenstrom über Ihren Internetanschluss und werden über eine App oder ein spezielles Gerät wiedergegeben.",
-  },
-  {
-    question: "Wie funktioniert IPTV?",
-    answer:
-      "Der Anbieter wandelt das TV-Signal in einen Datenstrom um und überträgt ihn über das Internet. Ihre App oder Ihr Receiver empfängt diesen Strom, entschlüsselt ihn bei Bedarf und zeigt das Bild an. Senderliste und Programmzeitschrift werden ebenfalls online geladen.",
-  },
-  {
-    question: "Was kostet ein IPTV-Abonnement?",
-    answer: `Die Kosten für den eigentlichen TV-Dienst legt der jeweilige lizenzierte Anbieter fest und hängen von Senderumfang, Bildqualität und Laufzeit ab. Vergleichen Sie die aktuellen Preise direkt beim Anbieter. Unsere Pakete für Einrichtungshilfe und Support beginnen bei ${formatPrice(LOWEST_PRICE)} für 1 Monat und 1 Gerät – TV-Sender oder Zugangsdaten sind darin nicht enthalten.`,
-  },
-  {
-    question: "Welche Geräte sind kompatibel?",
-    answer:
-      "IPTV läuft auf Smart TVs, Amazon Fire TV, Android-TV- und Google-TV-Geräten, Android-Smartphones und -Tablets, MAG-Boxen und Enigma2-Receivern. Welche Geräte genau unterstützt werden, hängt davon ab, für welche Plattformen der jeweilige Dienst eine App anbietet.",
-  },
-  {
-    question: "Wie kann ich IPTV einrichten?",
-    answer:
-      "In der Regel installieren Sie die App des Dienstes aus dem Store Ihres Geräts und melden sich mit Ihrem Kundenkonto an. Bei Player-Apps binden Sie stattdessen eine M3U-Playlist oder Xtream-Codes-Daten ein. Für die gängigen Geräte finden Sie bei uns Schritt-für-Schritt-Anleitungen – oder Sie lassen sich von uns persönlich helfen.",
-  },
-  {
-    question: "Welche Internetgeschwindigkeit benötige ich?",
-    answer:
-      "Als Richtwert etwa 3 bis 5 Mbit/s für SD, 8 bis 10 Mbit/s für HD und 20 bis 25 Mbit/s für 4K – jeweils pro Stream. Planen Sie Reserve für weitere Geräte ein. Noch wichtiger als die Höchstgeschwindigkeit ist eine stabile Verbindung.",
+      "IPTV (Internet Protocol Television) ist Fernsehen über das Internet. Der Anbieter wandelt das TV-Signal in einen Datenstrom um und überträgt ihn über Ihren Internetanschluss. Eine App oder ein Receiver empfängt diesen Strom und zeigt das Bild an – Senderliste und Programmzeitschrift werden ebenfalls online geladen.",
   },
   {
     question: "Ist IPTV in Deutschland legal?",
     answer:
-      "Die Technik ist legal. Entscheidend ist, ob der Anbieter die Rechte an den Sendern und Inhalten besitzt. Angebote mit Tausenden Pay-TV-Sendern zu Kleinstpreisen sind in der Regel illegal, und auch Nutzer können sich dabei rechtlich angreifbar machen.",
+      "Die Technik ist legal. Entscheidend ist, ob der Anbieter die Rechte an den Sendern und Inhalten besitzt. Angebote mit Tausenden Pay-TV-Sendern zu Kleinstpreisen sind in der Regel illegal, und auch Nutzer können sich dabei rechtlich angreifbar machen. Diese Hinweise ersetzen keine Rechtsberatung.",
+    link: { href: "/iptv-legal", label: "IPTV legal in Deutschland" },
   },
   {
-    question: "Wie erkenne ich einen seriösen IPTV Anbieter?",
+    question: "Welche Internetgeschwindigkeit benötige ich?",
     answer:
-      "An einem vollständigen Impressum, offen genannten Senderrechten, klaren Preisen, erreichbarem Support, einer DSGVO-konformen Datenschutzerklärung und transparenten AGB mit Angaben zu Laufzeit und Kündigung. Unrealistisch günstige Komplettpakete und Zahlung nur per Kryptowährung oder Gutscheinkarte sind deutliche Warnsignale.",
+      "Als Richtwert pro Stream: etwa 3 bis 5 Mbit/s für SD, 5 bis 8 Mbit/s für HD, 8 bis 10 Mbit/s für Full HD und 20 bis 25 Mbit/s für 4K. Planen Sie Reserve für weitere Geräte im Haushalt ein. Mindestens genauso wichtig wie die Geschwindigkeit ist eine stabile Verbindung.",
+    link: { href: "/anleitungen/internetgeschwindigkeit-iptv", label: "Internetgeschwindigkeit für IPTV" },
+  },
+  {
+    question: "Welche Geräte unterstützen IPTV?",
+    answer:
+      "IPTV läuft auf Smart TVs, Amazon Fire TV, Android-TV- und Google-TV-Geräten, Smartphones und Tablets, MAG-Boxen und Enigma2-Receivern. Welche Geräte genau unterstützt werden, hängt davon ab, für welche Plattformen Ihr Anbieter eine App bereitstellt.",
+    link: { href: "/geraete", label: "Alle IPTV-Geräte im Überblick" },
+  },
+  {
+    question: "Kann ich IPTV auf mehreren Geräten nutzen?",
+    answer:
+      "In der Regel ja. Wie viele Streams gleichzeitig laufen dürfen, legt Ihr Tarif beim Anbieter fest. Beachten Sie außerdem, dass sich alle Geräte die Bandbreite Ihres Anschlusses teilen. Unsere Pakete umfassen die Einrichtung auf einem, zwei oder drei Geräten.",
+    link: { href: "#preise", label: "Pakete für 1 bis 3 Geräte" },
+  },
+  {
+    question: "Wie kann ich IPTV installieren und einrichten?",
+    answer:
+      "Meist installieren Sie die App des Dienstes aus dem Store Ihres Geräts und melden sich mit Ihrem Kundenkonto an. Bei Player-Apps binden Sie stattdessen eine M3U-Playlist oder Xtream-Codes-Zugangsdaten Ihres Anbieters ein. Für die gängigen Geräte gibt es bei uns Schritt-für-Schritt-Anleitungen – oder Sie lassen sich persönlich helfen.",
+    link: { href: "/anleitungen", label: "Zu den Anleitungen" },
+  },
+  {
+    question: "Was kann ich bei Bildstörungen oder Pufferung tun?",
+    answer:
+      "Verbinden Sie das Gerät nach Möglichkeit per LAN-Kabel oder nutzen Sie im WLAN das 5-GHz-Band. Starten Sie Router und Gerät neu, aktualisieren Sie die App und pausieren Sie große Downloads auf anderen Geräten. Hilft das nicht, wählen Sie testweise eine niedrigere Bildqualität. Ruckeln alle Sender gleichzeitig, kann auch eine Störung beim Anbieter vorliegen.",
+    link: { href: "/anleitungen/iptv-ruckelt-loesungen", label: "IPTV ruckelt: Lösungen" },
+  },
+  {
+    question: "Was ist der Unterschied zwischen IPTV und Kabel- oder Satellitenfernsehen?",
+    answer:
+      "Der Unterschied liegt im Übertragungsweg: Kabel-TV kommt über den Kabelanschluss, Satelliten-TV über eine Schüssel – IPTV über Ihren Internetanschluss. Sie brauchen daher weder Schüssel noch TV-Kabeldose und können je nach Dienst auch unterwegs, auf mehreren Geräten oder zeitversetzt fernsehen. Dafür hängt die Bildqualität von einer stabilen Internetverbindung ab.",
+  },
+  {
+    question: "Benötige ich einen speziellen Receiver?",
+    answer:
+      "Meist nicht. Viele Smart TVs haben passende Apps bereits im Store, und ältere Fernseher lassen sich mit einem Streaming-Stick wie dem Fire TV Stick oder einer Android-TV-Box nachrüsten. IPTV-Boxen wie MAG-Geräte oder Enigma2-Receiver sind eine Option, aber keine Pflicht. Einige Anbieter stellen zudem eigene Receiver bereit.",
+  },
+  {
+    question: "Worauf sollte ich bei der Wahl eines IPTV-Anbieters achten?",
+    answer:
+      "Achten Sie auf ein vollständiges Impressum, offen genannte Senderrechte, klare Preise, erreichbaren Support, eine DSGVO-konforme Datenschutzerklärung und transparente AGB mit Angaben zu Laufzeit und Kündigung. Unrealistisch günstige Komplettpakete und Zahlung nur per Kryptowährung oder Gutscheinkarte sind deutliche Warnsignale.",
+    link: { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV-Anbieter erkennen" },
+  },
+  {
+    question: "Was kostet ein IPTV-Abonnement?",
+    answer: `Die Kosten für den eigentlichen TV-Dienst legt der jeweilige lizenzierte Anbieter fest und hängen von Senderumfang, Bildqualität und Laufzeit ab. Vergleichen Sie die aktuellen Preise direkt beim Anbieter. Unsere Pakete für Einrichtungshilfe und Support beginnen bei ${formatPrice(LOWEST_PRICE)} für 1 Monat und 1 Gerät – TV-Sender oder Zugangsdaten sind darin nicht enthalten.`,
+    link: { href: "/iptv-pakete", label: "IPTV-Pakete & Preise" },
   },
 ];
