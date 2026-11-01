@@ -5,6 +5,7 @@ import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
 import { HomePricing } from "@/components/plans/HomePricing";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import { SpeedSection } from "@/components/sections/SpeedSection";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/CheckIcon";
 import { Container } from "@/components/ui/Container";
@@ -25,9 +26,6 @@ import {
   pricingExplainer,
   providerCriteria,
   providerWarningSigns,
-  speedParagraphs,
-  speedTable,
-  speedTips,
   whyUsBenefits,
 } from "@/lib/home-content";
 import { pageMetadata } from "@/lib/seo";
@@ -497,69 +495,7 @@ export default function HomePage() {
       </section>
 
       {/* 9 · Internet speed */}
-      <section className="border-y border-border bg-background-elevated/40 py-16 sm:py-24" aria-labelledby="speed-heading">
-        <Container className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex min-w-0 flex-col gap-6">
-            <SectionHeading
-              id="speed-heading"
-              align="left"
-              eyebrow="Internet"
-              title="Welche Internetgeschwindigkeit benötigt IPTV?"
-            />
-            {speedParagraphs.map((paragraph) => (
-              <p key={paragraph} className="text-base leading-relaxed text-secondary">
-                {paragraph}
-              </p>
-            ))}
-            <div className="flex flex-col gap-3">
-              <h3 className="text-lg font-semibold text-foreground">So wird Ihre Verbindung stabiler</h3>
-              <ul className="flex flex-col gap-2">
-                {speedTips.map((tip) => (
-                  <li key={tip} className="flex items-start gap-2 text-sm leading-relaxed text-secondary">
-                    <CheckIcon className="text-accent" />
-                    {tip}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="flex min-w-0 flex-col gap-3 self-center">
-            <figure className="flex flex-col gap-3">
-              <div className="w-full overflow-x-auto rounded-2xl border border-border">
-                <table className="w-full border-collapse text-left text-sm">
-                  <thead>
-                    <tr className="bg-surface">
-                      {speedTable.headers.map((header) => (
-                        <th key={header} scope="col" className="border-b border-border px-3 py-3 sm:px-4 font-semibold text-foreground">
-                          {header}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {speedTable.rows.map(([quality, perStream, connection]) => (
-                      <tr key={quality} className="odd:bg-background even:bg-background-elevated">
-                        <th scope="row" className="border-b border-border px-3 py-3 sm:px-4 font-medium text-foreground">
-                          {quality}
-                        </th>
-                        <td className="border-b border-border px-3 py-3 sm:px-4 whitespace-nowrap tabular-nums text-secondary">{perStream}</td>
-                        <td className="border-b border-border px-3 py-3 sm:px-4 whitespace-nowrap tabular-nums text-secondary">{connection}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <figcaption className="text-xs leading-relaxed text-muted">{speedTable.caption}</figcaption>
-            </figure>
-            <p className="text-sm text-muted">
-              Mehr dazu:{" "}
-              <Link href="/anleitungen/internetgeschwindigkeit-iptv" className={inlineLink}>
-                Internetgeschwindigkeit für IPTV
-              </Link>
-            </p>
-          </div>
-        </Container>
-      </section>
+      <SpeedSection />
 
       {/* 10 · Legality */}
       <section className="py-16 sm:py-24" aria-labelledby="legal-heading">

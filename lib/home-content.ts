@@ -340,28 +340,115 @@ export const providerWarningSigns = [
   "Keine AGB und keine Datenschutzerklärung",
 ];
 
-export const speedTable = {
-  headers: ["Bildqualität", "Pro Stream (Richtwert)", "Empfohlener Anschluss"],
-  rows: [
-    ["SD", "3–5 Mbit/s", "ab 16 Mbit/s"],
-    ["HD (720p/1080p)", "8–10 Mbit/s", "ab 50 Mbit/s"],
-    ["4K / UHD", "20–25 Mbit/s", "ab 100 Mbit/s"],
-  ],
-  caption:
-    "Richtwerte. Der tatsächliche Bedarf hängt vom Anbieter und von der Komprimierung ab. Der empfohlene Anschluss enthält Reserve für weitere Geräte im Haushalt.",
+export type SpeedTier = {
+  label: string;
+  resolution: string;
+  perStream: string;
+  /** Upper end of the per-stream range in Mbit/s, used to size the comparison bar. */
+  maxMbit: number;
+  connection: string;
+  idealFor: string;
 };
 
-export const speedParagraphs = [
-  "Wie viel Bandbreite IPTV benötigt, hängt vor allem von der Bildqualität und davon ab, wie viele Geräte gleichzeitig streamen. Eine pauschale Garantie gibt es nicht, denn jeder Anbieter komprimiert seine Streams anders.",
-  "Ein Rechenbeispiel: Läuft im Wohnzimmer ein 4K-Stream und im Kinderzimmer ein HD-Stream, während nebenbei Smartphones online sind, sollten Sie mit rund 45 Mbit/s rechnen – etwa 25 Mbit/s für 4K, 10 Mbit/s für HD und 10 Mbit/s Reserve.",
+export const speedTiers: SpeedTier[] = [
+  {
+    label: "SD",
+    resolution: "480p / 576p",
+    perStream: "3–5 Mbit/s",
+    maxMbit: 5,
+    connection: "ab 16 Mbit/s",
+    idealFor: "Smartphones, kleine Bildschirme und langsame Leitungen",
+  },
+  {
+    label: "HD",
+    resolution: "720p",
+    perStream: "5–8 Mbit/s",
+    maxMbit: 8,
+    connection: "ab 25 Mbit/s",
+    idealFor: "Tablets, Laptops und kleinere Fernseher",
+  },
+  {
+    label: "Full HD",
+    resolution: "1080p",
+    perStream: "8–10 Mbit/s",
+    maxMbit: 10,
+    connection: "ab 50 Mbit/s",
+    idealFor: "Der Standard für die meisten Fernseher",
+  },
+  {
+    label: "4K / UHD",
+    resolution: "2160p",
+    perStream: "20–25 Mbit/s",
+    maxMbit: 25,
+    connection: "ab 100 Mbit/s",
+    idealFor: "Große 4K-Fernseher, Filme und Sport in bester Qualität",
+  },
 ];
 
-export const speedTips = [
-  "Verbinden Sie das Wiedergabegerät per LAN-Kabel oder Powerline-Adapter.",
-  "Nutzen Sie im WLAN das 5-GHz-Band oder ein Mesh-System.",
-  "Messen Sie Ihre tatsächliche Geschwindigkeit mit der Breitbandmessung der Bundesnetzagentur.",
-  "Halten Sie die Firmware von Router und Wiedergabegerät aktuell.",
+export const speedTiersNote =
+  "Richtwerte pro Stream. Der tatsächliche Bedarf hängt vom Anbieter und von der Komprimierung ab. Der empfohlene Anschluss enthält Reserve für weitere Geräte im Haushalt.";
+
+export const speedQuickFacts = [
+  {
+    title: "Die Bildqualität bestimmt den Bedarf",
+    text: "Für Full HD reichen pro Gerät rund 10 Mbit/s, für 4K sollten es etwa 25 Mbit/s sein.",
+  },
+  {
+    title: "Mehrere Geräte addieren sich",
+    text: "Laufen zwei Fernseher gleichzeitig, brauchen Sie die Bandbreite für beide Streams – plus etwas Reserve.",
+  },
+  {
+    title: "Stabilität zählt genauso viel",
+    text: "Ruckelt das Bild, liegt es oft nicht am Tarif, sondern an einer schwankenden Verbindung im Heimnetz.",
+  },
 ];
+
+export const speedStability = {
+  title: "Stabilität ist genauso wichtig wie Geschwindigkeit",
+  paragraphs: [
+    "Die Mbit/s-Angabe Ihres Tarifs ist ein Höchstwert. Für ruckelfreies Fernsehen kommt es darauf an, dass die Daten gleichmäßig ankommen – ohne Einbrüche und Aussetzer.",
+    "Ein 100-Mbit/s-Anschluss nützt wenig, wenn das WLAN im Wohnzimmer nur 15 Mbit/s schafft oder ständig schwankt. Dann hilft auch ein schnellerer Tarif nicht weiter.",
+  ],
+  tip: "Messen Sie die Geschwindigkeit direkt am Fernseher oder Stick – zum Beispiel mit der Breitbandmessung der Bundesnetzagentur – und halten Sie die Firmware von Router und Gerät aktuell.",
+};
+
+export type SpeedConnection = {
+  icon: "lan" | "wifi" | "devices";
+  title: string;
+  badge: string;
+  text: string;
+};
+
+export const speedConnections: SpeedConnection[] = [
+  {
+    icon: "lan",
+    title: "LAN-Kabel (Ethernet)",
+    badge: "Am stabilsten",
+    text: "Ein Netzwerkkabel zwischen Router und Fernseher oder Receiver liefert gleichbleibende Werte ohne Funkstörungen. Wo kein Kabel möglich ist, helfen Powerline-Adapter über die Stromleitung.",
+  },
+  {
+    icon: "wifi",
+    title: "WLAN",
+    badge: "Bequem, aber störanfälliger",
+    text: "Wände, Entfernung und Nachbarnetze bremsen das Signal. Nutzen Sie das 5-GHz-Band, stellen Sie den Router möglichst frei auf oder erweitern Sie Ihr Netz mit einem Mesh-System.",
+  },
+  {
+    icon: "devices",
+    title: "Mehrere Geräte gleichzeitig",
+    badge: "Bandbreite wird geteilt",
+    text: "Alle Geräte im Haushalt teilen sich denselben Anschluss. Zählen Sie die Werte aller gleichzeitig laufenden Streams zusammen und planen Sie Reserve für Smartphones, Downloads und Videoanrufe ein.",
+  },
+];
+
+export const speedExample = {
+  title: "Rechenbeispiel für einen Familienhaushalt",
+  segments: [
+    { label: "4K-Stream im Wohnzimmer", mbit: 25 },
+    { label: "Full-HD-Stream im Kinderzimmer", mbit: 10 },
+    { label: "Reserve für Smartphones & Co.", mbit: 10 },
+  ],
+  conclusion: "Ein Anschluss mit 50 Mbit/s reicht hier knapp – mit 100 Mbit/s sind Sie auf der sicheren Seite.",
+};
 
 export const legalityParagraphs = [
   "Die Technik selbst ist in Deutschland völlig legal. Große Unternehmen wie die Deutsche Telekom übertragen ihr Fernsehangebot seit Jahren per IPTV, und auch ARD und ZDF bieten Livestreams über das Internet an.",
