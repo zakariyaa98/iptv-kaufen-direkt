@@ -446,10 +446,30 @@ export default function HomePage() {
           />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {providerCriteria.map((criterion) => (
-              <li key={criterion.title} className="flex flex-col gap-2 rounded-2xl border border-border bg-background-elevated p-6">
-                <CheckIcon className="mt-0 h-5 w-5 text-accent" />
-                <h3 className="text-base font-semibold text-foreground">{criterion.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{criterion.text}</p>
+              <li
+                key={criterion.title}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background-elevated shadow-lg shadow-black/20 transition-colors duration-300 hover:border-border-strong"
+              >
+                <div className="p-2 pb-0">
+                  <div
+                    className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/10"
+                    style={{ backgroundColor: criterion.imageBg }}
+                  >
+                    <Image
+                      src={criterion.image}
+                      alt={criterion.imageAlt}
+                      placeholder="blur"
+                      fill
+                      sizes="240px"
+                      className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col gap-2 p-6">
+                  <CheckIcon className="mt-0 h-5 w-5 text-accent" />
+                  <h3 className="text-base font-semibold text-foreground">{criterion.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{criterion.text}</p>
+                </div>
               </li>
             ))}
             <li className="flex flex-col gap-3 rounded-2xl border border-highlight/30 bg-highlight/5 p-6">

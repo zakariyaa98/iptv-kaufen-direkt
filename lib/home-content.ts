@@ -18,6 +18,13 @@ import featureCloudImage from "@/public/images/home page/Welche Funktionen biete
 import featureMultiImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/5.webp";
 import featureQualityImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/6.webp";
 import featurePinImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/7.webp";
+import providerImprintImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 3.webp";
+import providerRightsImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 2.webp";
+import providerPricesImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 1.webp";
+import providerSupportImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 5.webp";
+import providerDevicesImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 7.webp";
+import providerPrivacyImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 6.webp";
+import providerTermsImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 4.webp";
 import type { DeviceIcon } from "./devices";
 import type { FaqItem } from "./faq-data";
 import { LOWEST_PRICE, formatPrice } from "./plans";
@@ -267,34 +274,62 @@ export const installGuideLinks = [
   { href: "/anleitungen/iptv-ruckelt-loesungen", label: "IPTV ruckelt – Ursachen und Lösungen" },
 ];
 
-export const providerCriteria = [
+export const providerCriteria: {
+  title: string;
+  text: string;
+  image: StaticImageData;
+  imageAlt: string;
+  /** Matches the image's own background so the frame has no visible seam. */
+  imageBg: string;
+}[] = [
   {
     title: "Vollständiges Impressum",
     text: "Ein seriöser Anbieter nennt Firmennamen, ladungsfähige Anschrift und Kontaktdaten. Fehlt das Impressum oder ist es lückenhaft, sollten Sie misstrauisch werden.",
+    image: providerImprintImage,
+    imageAlt: "Dokument mit der Aufschrift „Vollständiges Impressum“, Anschrift und Geschäftsführung als Merkmal eines seriösen IPTV-Anbieters",
+    imageBg: "#fefefe",
   },
   {
     title: "Rechte an den Inhalten",
     text: "Wer Fernsehsender weiterverbreitet, braucht die Rechte der Sender und Rechteinhaber. Lizenzierte Dienste nennen ihre Senderpartner offen.",
+    image: providerRightsImage,
+    imageAlt: "Urkunde „Klare Lizenzrechte“ mit Siegel als Symbol für lizenzierte Senderrechte beim IPTV-Anbieter",
+    imageBg: "#fefefe",
   },
   {
     title: "Klare Preise",
     text: "Sie sollten vor dem Kauf genau erkennen, was Sie insgesamt zahlen – inklusive Laufzeit und eventueller Zusatzkosten.",
+    image: providerPricesImage,
+    imageAlt: "Preisschild „Transparente Preise“ mit Euro-Zeichen und Häkchen für klare IPTV-Preise ohne versteckte Kosten",
+    imageBg: "#fdfdfd",
   },
   {
     title: "Erreichbarer Kundensupport",
     text: "Ein funktionierender Support ist Pflicht. Achten Sie darauf, über welche Wege und zu welchen Zeiten der Anbieter erreichbar ist.",
+    image: providerSupportImage,
+    imageAlt: "Headset mit 24/7-Hinweis als Symbol für einen erreichbaren Kundenservice beim IPTV-Anbieter",
+    imageBg: "#fefefe",
   },
   {
     title: "Offene Angaben zur Gerätekompatibilität",
     text: "Seriöse Dienste listen auf, auf welchen Geräten ihre App läuft. Viele bieten außerdem einen kostenlosen Testzeitraum an.",
+    image: providerDevicesImage,
+    imageAlt: "Fernseher, Tablet und Smartphone mit der Aufschrift „Kompatible Geräte“ für IPTV-Gerätekompatibilität",
+    imageBg: "#fefefe",
   },
   {
     title: "Datenschutz",
     text: "Eine verständliche Datenschutzerklärung nach DSGVO und Zahlungswege mit Käuferschutz sind ein gutes Zeichen.",
+    image: providerPrivacyImage,
+    imageAlt: "Schutzschild mit Schloss und Häkchen als Symbol für Datenschutz und Sicherheit nach DSGVO",
+    imageBg: "#fcfcfc",
   },
   {
     title: "Transparente Vertragsbedingungen",
     text: "Laufzeit, Verlängerung, Kündigung und Widerrufsrecht sollten in den AGB klar geregelt und leicht auffindbar sein.",
+    image: providerTermsImage,
+    imageAlt: "Handschlag über einem Dokument „Faire Vertragsbedingungen“ als Symbol für transparente IPTV-Verträge",
+    imageBg: "#fcfcfc",
   },
 ];
 
