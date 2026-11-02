@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-labelledby="t d">
+  <title id="t">Android TV, Google TV und nicht zertifizierte Android-Boxen im Vergleich</title>
+  <desc id="d">Drei Spalten: Android TV mit App-Reihen und Google Play Store; Google TV als neuere Oberfläche mit Empfehlungen und demselben Play Store; nicht zertifizierte Android-Boxen ohne lizenzierten Play Store und mit unsicheren Updates. Darunter, wo man die Play-Protect-Zertifizierung prüft.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- col 1 Android TV -->
+    <rect x="30" y="30" width="366" height="610" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="2"/>
+    <text x="58" y="80" font-size="28" font-weight="800" fill="#f8fafc">Android TV</text>
+    <text x="58" y="110" font-size="19" font-weight="600" fill="#67e8f9">Klassische Oberfläche</text>
+    <rect x="58" y="134" width="310" height="174" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <g>
+      <rect x="74" y="152" width="60" height="8" rx="4" fill="#475569"/>
+      <rect x="74" y="168" width="64" height="40" rx="6" fill="#22d3ee" fill-opacity="0.8"/>
+      <rect x="146" y="168" width="64" height="40" rx="6" fill="#172036"/>
+      <rect x="218" y="168" width="64" height="40" rx="6" fill="#172036"/>
+      <rect x="290" y="168" width="62" height="40" rx="6" fill="#172036"/>
+      <rect x="74" y="222" width="80" height="8" rx="4" fill="#475569"/>
+      <rect x="74" y="238" width="90" height="52" rx="6" fill="#172036"/>
+      <rect x="172" y="238" width="90" height="52" rx="6" fill="#172036"/>
+      <rect x="270" y="238" width="82" height="52" rx="6" fill="#172036"/>
+    </g>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="58" y="360">App-Reihen auf dem</text>
+      <text x="58" y="388">Startbildschirm</text>
+      <text x="58" y="440">Google Play Store</text>
+      <text x="58" y="492">Bei zertifizierten Geräten</text>
+      <text x="58" y="520">mit Play Protect</text>
+    </g>
+    <path d="M58 410H368M58 462H368" stroke="#1e293b" stroke-width="2"/>
+    <rect x="58" y="566" width="200" height="40" rx="20" fill="#0b2a3a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="158" y="593" text-anchor="middle" font-size="19" font-weight="800" fill="#67e8f9">für IPTV geeignet</text>
+
+    <!-- col 2 Google TV -->
+    <rect x="417" y="30" width="366" height="610" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="445" y="80" font-size="28" font-weight="800" fill="#f8fafc">Google TV</text>
+    <text x="445" y="110" font-size="19" font-weight="600" fill="#93c5fd">Neuere Oberfläche</text>
+    <rect x="445" y="134" width="310" height="174" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <g>
+      <rect x="461" y="150" width="56" height="16" rx="8" fill="#3b82f6"/>
+      <rect x="523" y="150" width="56" height="16" rx="8" fill="#172036"/>
+      <rect x="585" y="150" width="56" height="16" rx="8" fill="#172036"/>
+      <rect x="461" y="176" width="278" height="64" rx="8" fill="#3b82f6" fill-opacity="0.45"/>
+      <rect x="461" y="250" width="64" height="40" rx="6" fill="#172036"/>
+      <rect x="533" y="250" width="64" height="40" rx="6" fill="#172036"/>
+      <rect x="605" y="250" width="64" height="40" rx="6" fill="#172036"/>
+      <rect x="677" y="250" width="62" height="40" rx="6" fill="#172036"/>
+    </g>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="445" y="360">Empfehlungen und Tabs,</text>
+      <text x="445" y="388">baut auf Android TV auf</text>
+      <text x="445" y="440">Derselbe Play Store</text>
+      <text x="445" y="492">IPTV-Player verhalten sich</text>
+      <text x="445" y="520">wie unter Android TV</text>
+    </g>
+    <path d="M445 410H755M445 462H755" stroke="#1e293b" stroke-width="2"/>
+    <rect x="445" y="566" width="200" height="40" rx="20" fill="#102a4a" stroke="#3b82f6" stroke-width="2"/>
+    <text x="545" y="593" text-anchor="middle" font-size="19" font-weight="800" fill="#93c5fd">für IPTV geeignet</text>
+
+    <!-- col 3 uncertified -->
+    <rect x="804" y="30" width="366" height="610" rx="24" fill="#111829" stroke="#f472b6" stroke-opacity="0.55" stroke-width="2"/>
+    <text x="832" y="80" font-size="28" font-weight="800" fill="#f8fafc">Android-Box</text>
+    <text x="832" y="110" font-size="19" font-weight="600" fill="#f9a8d4">ohne Zertifizierung</text>
+    <rect x="832" y="134" width="310" height="174" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2" stroke-dasharray="6 6"/>
+    <g>
+      <rect x="848" y="152" width="58" height="58" rx="10" fill="#172036"/>
+      <rect x="916" y="152" width="58" height="58" rx="10" fill="#172036"/>
+      <rect x="984" y="152" width="58" height="58" rx="10" fill="#172036"/>
+      <rect x="1052" y="152" width="74" height="58" rx="10" fill="#172036"/>
+      <rect x="848" y="222" width="58" height="58" rx="10" fill="#172036"/>
+      <rect x="916" y="222" width="58" height="58" rx="10" fill="#172036"/>
+      <circle cx="1060" cy="250" r="28" fill="none" stroke="#f472b6" stroke-width="4"/>
+      <path d="M1060 234v20M1060 264v2" stroke="#f472b6" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="832" y="360">Oft Smartphone-Android</text>
+      <text x="832" y="388">mit Launcher</text>
+      <text x="832" y="440">Kein lizenzierter Play Store</text>
+      <text x="832" y="492">Updates und Sicherheit</text>
+      <text x="832" y="520">häufig ungewiss</text>
+    </g>
+    <path d="M832 410H1142M832 462H1142" stroke="#1e293b" stroke-width="2"/>
+    <rect x="832" y="566" width="200" height="40" rx="20" fill="#3b1a2e" stroke="#f472b6" stroke-width="2"/>
+    <text x="932" y="593" text-anchor="middle" font-size="19" font-weight="800" fill="#f9a8d4">nicht empfohlen</text>
+
+    <!-- footer check -->
+    <rect x="30" y="670" width="1140" height="120" rx="24" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <text x="62" y="716" font-size="20" font-weight="700" letter-spacing="1.4" fill="#a78bfa">ZERTIFIZIERUNG PRÜFEN</text>
+    <text x="62" y="760" font-size="24" font-weight="600" fill="#f8fafc">Play Store › Profil › Einstellungen › Info › „Play Protect-Zertifizierung“</text>
+  </g>
+</svg>

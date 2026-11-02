@@ -52,88 +52,24 @@ export const devices: Device[] = [
     faq: [],
   },
   {
+    // The Android TV guide has its own page (app/geraete/android-tv-box/page.tsx, copy in lib/android-tv-content.ts).
+    // This entry only feeds the cards on /anleitungen and /angebote, the sitemap and the page metadata.
     slug: "android-tv-box",
     name: "Android-TV- und Google-TV-Boxen",
     shortName: "Android TV Box",
     icon: "box",
-    title: "IPTV auf Android-TV- und Google-TV-Geräten einrichten",
-    seoTitle: "IPTV auf Android TV Box einrichten – Apps, Tipps & Sicherheit",
+    title: "IPTV auf Android TV Box einrichten: Player, Zugang und stabiles Bild",
+    seoTitle: "IPTV auf Android TV Box einrichten: Apps & M3U",
     metaDescription:
-      "IPTV auf Android TV und Google TV: passende Apps aus dem Play Store, Kodi mit PVR IPTV Simple Client und worauf Sie beim Kauf einer Box achten sollten.",
+      "IPTV auf Android TV Box einrichten: zertifizierte Box wählen, IPTV-Player aus dem Play Store, M3U und Xtream Codes, 4K mit LAN und Hilfe bei Fehlern.",
     excerpt:
-      "Android-Geräte bieten die größte App-Auswahl für IPTV. So richten Sie sie ein und vermeiden unsichere Billig-Boxen.",
+      "Android TV oder Google TV: Kaufkriterien, Play-Store-Player wie TiviMate und Kodi, M3U und Xtream Codes, 4K per LAN und Lösungen für typische Fehler.",
     publishedAt: PUBLISHED,
-    readingTimeMinutes: 6,
-    intro: [
-      "Geräte mit Android TV oder Google TV, etwa der Chromecast mit Google TV, die Nvidia Shield oder viele Fernseher von Sony, Philips und TCL, nutzen den Google Play Store. Damit steht Ihnen die größte Auswahl an IPTV-Apps zur Verfügung.",
-      "Gleichzeitig werden viele günstige Android-Boxen ohne Google-Zertifizierung verkauft. Diese erhalten oft keine Sicherheitsupdates und sind manchmal schon ab Werk mit fragwürdigen Apps bestückt.",
-    ],
-    summary: [
-      "Bevorzugen Sie Geräte mit offiziellem Android TV oder Google TV und Zugang zum Play Store.",
-      "Legale Dienste installieren Sie direkt aus dem Play Store.",
-      "Für M3U-Playlists eignen sich TiviMate oder Kodi mit PVR IPTV Simple Client.",
-      "Meiden Sie Boxen mit vorinstallierten Streaming-Apps unklarer Herkunft.",
-    ],
-    sections: [
-      {
-        heading: "Die richtige Box auswählen",
-        list: [
-          "Google-Zertifizierung: Nur zertifizierte Geräte haben offiziellen Zugang zum Play Store und erhalten Sicherheitsupdates.",
-          "Leistung: Mindestens 2 GB Arbeitsspeicher, für 4K besser mehr.",
-          "Anschlüsse: Ein LAN-Anschluss sorgt für stabilere Streams als WLAN.",
-          "Updates: Prüfen Sie, ob der Hersteller regelmäßig Software-Updates liefert.",
-        ],
-        note: "Boxen, die mit „alle Sender kostenlos“ oder vorinstallierten Senderlisten beworben werden, sind ein Warnsignal. Solche Angebote sind in der Regel nicht lizenziert und rechtlich riskant.",
-      },
-      {
-        heading: "Legale Dienste über den Play Store",
-        steps: [
-          "Öffnen Sie den Google Play Store auf dem Gerät.",
-          "Suchen Sie nach Ihrem Dienst, zum Beispiel „Zattoo“, „waipu.tv“ oder „Joyn“.",
-          "Installieren Sie die App und melden Sie sich an.",
-        ],
-      },
-      {
-        heading: "M3U-Playlist mit TiviMate oder Kodi",
-        body: [
-          "TiviMate ist eine verbreitete IPTV-Player-App mit übersichtlicher Programmzeitschrift. Einige Funktionen wie mehrere Playlists sind kostenpflichtig.",
-          "Kodi ist kostenlos und quelloffen. Die IPTV-Funktion steckt im Add-on „PVR IPTV Simple Client“.",
-        ],
-        steps: [
-          "Installieren Sie Kodi aus dem Play Store und öffnen Sie es.",
-          "Gehen Sie zu Add-ons › Aus Repository installieren › PVR-Clients › PVR IPTV Simple Client.",
-          "Öffnen Sie die Einstellungen des Add-ons und tragen Sie unter „M3U-Playlist-URL“ Ihre Adresse ein.",
-          "Hinterlegen Sie unter „EPG-Einstellungen“ die XMLTV-Adresse, falls vorhanden.",
-          "Starten Sie Kodi neu. Die Sender erscheinen danach im Menüpunkt „TV“.",
-        ],
-      },
-      {
-        heading: "Sicherheit und Datenschutz",
-        list: [
-          "Installieren Sie Apps bevorzugt aus dem Play Store.",
-          "Geben Sie keine Zahlungsdaten in Apps unbekannter Herkunft ein.",
-          "Halten Sie Gerät und Apps aktuell.",
-          "Entfernen Sie vorinstallierte Apps, die Sie nicht kennen, oder setzen Sie das Gerät auf Werkseinstellungen zurück.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Was ist der Unterschied zwischen Android TV und Google TV?",
-        answer:
-          "Google TV ist eine neuere Bedienoberfläche, die auf Android TV aufsetzt. Für IPTV-Apps macht das kaum einen Unterschied, beide nutzen den Google Play Store.",
-      },
-      {
-        question: "Ist Kodi legal?",
-        answer:
-          "Ja. Kodi ist eine legale, quelloffene Mediacenter-Software. Rechtlich problematisch sind nur Add-ons, die nicht lizenzierte Inhalte bereitstellen.",
-      },
-    ],
-    related: [
-      { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist und Xtream Codes erklärt" },
-      { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV-Anbieter erkennen" },
-      { href: "/geraete/fire-tv-stick", label: "IPTV auf dem Fire TV Stick" },
-    ],
+    updatedAt: "2026-11-02",
+    readingTimeMinutes: 16,
+    intro: [],
+    sections: [],
+    faq: [],
   },
   {
     slug: "mag-box",

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="t d">
+  <title id="t">M3U-Playlist und Xtream Codes auf Android TV im Vergleich</title>
+  <desc id="d">Links: Eine M3U-Adresse führt zu einer Textdatei mit Einträgen aus Senderkennung, Gruppe und Stream-Adresse; die Programmzeitschrift kommt über eine separate EPG-Adresse. Rechts: Bei Xtream Codes meldet sich der Player mit Server, Benutzername und Passwort an und lädt Kategorien und Programmdaten meist automatisch. Unten eine Gegenüberstellung von Eingabe, EPG und Aktualisierung.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- M3U -->
+    <rect x="30" y="30" width="555" height="480" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="58" y="58" width="90" height="38" rx="19" fill="#22d3ee"/>
+    <text x="103" y="84" text-anchor="middle" font-size="19" font-weight="800" fill="#03141a">M3U</text>
+    <text x="166" y="86" font-size="26" font-weight="800" fill="#f8fafc">Eine Adresse, eine Liste</text>
+    <rect x="58" y="120" width="499" height="52" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="76" y="153" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="19" fill="#67e8f9">http://anbieter.example/…/liste.m3u</text>
+    <path d="M307 172V204" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="58" y="212" width="499" height="200" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <g font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17">
+      <text x="76" y="246" fill="#94a3b8">#EXTM3U</text>
+      <text x="76" y="280" fill="#cbd5e1">#EXTINF:-1 tvg-id="…" group-title="News",Sender A</text>
+      <text x="76" y="308" fill="#67e8f9">http://anbieter.example/…/1001.ts</text>
+      <text x="76" y="342" fill="#cbd5e1">#EXTINF:-1 tvg-id="…" group-title="Sport",Sender B</text>
+      <text x="76" y="370" fill="#67e8f9">http://anbieter.example/…/1002.ts</text>
+      <text x="76" y="398" fill="#475569">…</text>
+    </g>
+    <text x="58" y="456" font-size="20" fill="#cbd5e1">EPG kommt über eine eigene XMLTV-Adresse</text>
+    <text x="58" y="486" font-size="20" fill="#94a3b8">tvg-id verknüpft Sender und Programm</text>
+
+    <!-- Xtream -->
+    <rect x="615" y="30" width="555" height="480" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <rect x="643" y="58" width="110" height="38" rx="19" fill="#3b82f6"/>
+    <text x="698" y="84" text-anchor="middle" font-size="19" font-weight="800" fill="#f8fafc">Xtream</text>
+    <text x="771" y="86" font-size="26" font-weight="800" fill="#f8fafc">Anmeldung am Server</text>
+    <g font-size="18" font-weight="700" fill="#94a3b8">
+      <text x="643" y="142">SERVER</text>
+      <text x="643" y="214">BENUTZERNAME</text>
+      <text x="903" y="214">PASSWORT</text>
+    </g>
+    <rect x="643" y="152" width="499" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="659" y="181" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="18" fill="#e2e8f0">http://anbieter.example:8080</text>
+    <rect x="643" y="224" width="240" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <rect x="903" y="224" width="239" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="919" y="254" font-size="22" fill="#e2e8f0" letter-spacing="3">••••••</text>
+    <path d="M892 276V308" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <!-- auto-loaded categories -->
+    <rect x="643" y="316" width="499" height="96" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <g font-size="18" font-weight="700">
+      <rect x="659" y="332" width="120" height="30" rx="15" fill="#102a4a"/><text x="719" y="353" text-anchor="middle" fill="#93c5fd">Kategorien</text>
+      <rect x="789" y="332" width="100" height="30" rx="15" fill="#102a4a"/><text x="839" y="353" text-anchor="middle" fill="#93c5fd">Sender</text>
+      <rect x="899" y="332" width="76" height="30" rx="15" fill="#102a4a"/><text x="937" y="353" text-anchor="middle" fill="#93c5fd">EPG</text>
+      <rect x="985" y="332" width="141" height="30" rx="15" fill="#102a4a"/><text x="1055" y="353" text-anchor="middle" fill="#93c5fd">Kontostatus</text>
+    </g>
+    <text x="659" y="394" font-size="18" fill="#94a3b8">lädt der Player meist automatisch</text>
+    <text x="643" y="456" font-size="20" fill="#cbd5e1">Kurze Felder, bequem mit der Fernbedienung</text>
+    <text x="643" y="486" font-size="20" fill="#94a3b8">Nur bei Anbietern mit Xtream-Schnittstelle</text>
+
+    <!-- comparison -->
+    <rect x="30" y="540" width="1140" height="230" rx="24" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <g font-size="19" font-weight="700" letter-spacing="1.2" fill="#94a3b8">
+      <text x="62" y="586">KRITERIUM</text>
+      <text x="380" y="586">M3U</text>
+      <text x="790" y="586">XTREAM CODES</text>
+    </g>
+    <path d="M62 604H1138" stroke="#334155" stroke-width="2"/>
+    <g font-size="21" fill="#e2e8f0">
+      <text x="62" y="644" font-weight="700">Eingabe</text>
+      <text x="380" y="644">Eine lange Adresse</text>
+      <text x="790" y="644">Drei kurze Felder</text>
+      <text x="62" y="690" font-weight="700">EPG</text>
+      <text x="380" y="690">Separate XMLTV-Adresse</text>
+      <text x="790" y="690">Meist automatisch</text>
+      <text x="62" y="736" font-weight="700">Aktualisierung</text>
+      <text x="380" y="736">Liste neu laden</text>
+      <text x="790" y="736">Über den Server</text>
+    </g>
+  </g>
+</svg>
