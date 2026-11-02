@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="t d">
+  <title id="t">M3U und Xtream Codes auf Enigma2 im Vergleich</title>
+  <desc id="d">Links der M3U-Weg: Die M3U-Adresse wird von einem Plugin zur Bouquet-Erstellung in eine Bouquet-Datei umgewandelt, die Sender stehen danach direkt in der Senderliste, die Programmdaten kommen über eine XMLTV-Adresse und den EPG-Import. Rechts der Xtream-Codes-Weg: Server, Benutzername und Passwort werden entweder in einem IPTV-Plugin mit eigener Oberfläche genutzt oder ebenfalls in ein Bouquet umgewandelt. Unten eine Gegenüberstellung von Einbindung, EPG und Aktualisierung.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- M3U -->
+    <rect x="30" y="30" width="555" height="480" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="58" y="58" width="90" height="38" rx="19" fill="#22d3ee"/>
+    <text x="103" y="84" text-anchor="middle" font-size="19" font-weight="800" fill="#03141a">M3U</text>
+    <text x="166" y="86" font-size="26" font-weight="800" fill="#f8fafc">Playlist wird Bouquet</text>
+    <rect x="58" y="120" width="499" height="52" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="76" y="153" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="19" fill="#67e8f9">http://anbieter.example/…/liste.m3u</text>
+    <path d="M307 172V200" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="58" y="208" width="499" height="60" rx="12" fill="#0b2232" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="307" y="246" text-anchor="middle" font-size="22" font-weight="700" fill="#f8fafc">Plugin zur Bouquet-Erstellung</text>
+    <path d="M307 268V296" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="58" y="304" width="499" height="52" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="76" y="337" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="19" fill="#e2e8f0">userbouquet.iptv.tv</text>
+    <text x="58" y="420" font-size="20" fill="#cbd5e1">Sender direkt in der Senderliste</text>
+    <text x="58" y="452" font-size="20" fill="#94a3b8">EPG über XMLTV-Adresse und EPG-Import</text>
+    <text x="58" y="484" font-size="20" fill="#94a3b8">Bei Änderungen Bouquet neu erzeugen</text>
+
+    <!-- Xtream -->
+    <rect x="615" y="30" width="555" height="480" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <rect x="643" y="58" width="110" height="38" rx="19" fill="#3b82f6"/>
+    <text x="698" y="84" text-anchor="middle" font-size="19" font-weight="800" fill="#f8fafc">Xtream</text>
+    <text x="771" y="86" font-size="26" font-weight="800" fill="#f8fafc">Zwei mögliche Wege</text>
+    <rect x="643" y="120" width="499" height="52" rx="12" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="892" y="153" text-anchor="middle" font-size="20" font-weight="700" fill="#e2e8f0">Server · Benutzername · Passwort</text>
+    <path d="M800 172C800 190 760 192 760 206" fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <path d="M984 172C984 190 1024 192 1024 206" fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="643" y="214" width="240" height="142" rx="14" fill="#0f1a33" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="663" y="250" font-size="17" font-weight="800" letter-spacing="1" fill="#93c5fd">WEG A</text>
+    <text x="663" y="282" font-size="20" font-weight="700" fill="#f8fafc">IPTV-Plugin mit</text>
+    <text x="663" y="308" font-size="20" font-weight="700" fill="#f8fafc">eigener Oberfläche</text>
+    <text x="663" y="336" font-size="17" fill="#94a3b8">Live, Filme, Serien</text>
+    <rect x="902" y="214" width="240" height="142" rx="14" fill="#0b2232" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="922" y="250" font-size="17" font-weight="800" letter-spacing="1" fill="#67e8f9">WEG B</text>
+    <text x="922" y="282" font-size="20" font-weight="700" fill="#f8fafc">Bouquet aus den</text>
+    <text x="922" y="308" font-size="20" font-weight="700" fill="#f8fafc">Zugangsdaten</text>
+    <text x="922" y="336" font-size="17" fill="#94a3b8">Sender in der Liste</text>
+    <text x="643" y="420" font-size="20" fill="#cbd5e1">Kategorien und EPG meist über den Server</text>
+    <text x="643" y="452" font-size="20" fill="#94a3b8">Kurze Eingabe, keine lange Adresse</text>
+    <text x="643" y="484" font-size="20" fill="#94a3b8">Plugin-Angebot je nach Image und Feed</text>
+
+    <!-- comparison -->
+    <rect x="30" y="540" width="1140" height="230" rx="24" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <g font-size="19" font-weight="700" letter-spacing="1.2" fill="#94a3b8">
+      <text x="62" y="586">KRITERIUM</text>
+      <text x="380" y="586">M3U</text>
+      <text x="790" y="586">XTREAM CODES</text>
+    </g>
+    <path d="M62 604H1138" stroke="#334155" stroke-width="2"/>
+    <g font-size="21" fill="#e2e8f0">
+      <text x="62" y="644" font-weight="700">Einbindung</text>
+      <text x="380" y="644">Bouquet aus der Liste</text>
+      <text x="790" y="644">Plugin oder Bouquet</text>
+      <text x="62" y="690" font-weight="700">EPG</text>
+      <text x="380" y="690">XMLTV + EPG-Import</text>
+      <text x="790" y="690">Meist über den Server</text>
+      <text x="62" y="736" font-weight="700">Aktualisierung</text>
+      <text x="380" y="736">Bouquet neu erzeugen</text>
+      <text x="790" y="736">Plugin lädt neu</text>
+    </g>
+  </g>
+</svg>

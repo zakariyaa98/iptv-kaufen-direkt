@@ -152,82 +152,24 @@ export const devices: Device[] = [
     ],
   },
   {
+    // The Enigma2 guide has its own page (app/geraete/enigma2-receiver/page.tsx, copy in lib/enigma2-content.ts).
+    // This entry only feeds the cards on /anleitungen and /angebote, the sitemap and the page metadata.
     slug: "enigma2-receiver",
     name: "Enigma2-Receiver (VU+, Dreambox, Zgemma, GigaBlue)",
     shortName: "Enigma2 Receiver",
     icon: "receiver",
-    title: "IPTV auf Enigma2-Receivern einrichten",
-    seoTitle: "IPTV auf Enigma2 einrichten – VU+, Dreambox, Zgemma & GigaBlue",
+    title: "IPTV auf Enigma2 Receiver einrichten: Bouquets, Plugins und Senderliste",
+    seoTitle: "IPTV auf Enigma2 Receiver einrichten: Bouquet & M3U",
     metaDescription:
-      "IPTV auf Linux-Receivern mit Enigma2: M3U als Bouquet einbinden, passende Plugins, ServiceApp und Tipps für VU+, Dreambox, Zgemma und GigaBlue.",
+      "IPTV auf Enigma2 Receiver einrichten: VU+, Dreambox, Zgemma und GigaBlue, OpenATV, OpenPLi und VTi, M3U oder Xtream als Bouquet und Hilfe bei Fehlern.",
     excerpt:
-      "Linux-Receiver können IPTV-Streams direkt in die Senderliste einbinden. So gelingt es auf VU+, Dreambox, Zgemma und GigaBlue.",
+      "VU+, Dreambox, Zgemma und GigaBlue: Images im Vergleich, vier Wege mit Plugin, M3U-Bouquet oder Xtream Codes, EPG und Lösungen für schwarze Sender.",
     publishedAt: PUBLISHED,
-    readingTimeMinutes: 7,
-    intro: [
-      "Enigma2 ist die Bedienoberfläche vieler Linux-Receiver, zum Beispiel von VU+, Dreambox, Zgemma und GigaBlue. Neben Satellit, Kabel und Antenne können diese Geräte auch IPTV-Streams abspielen.",
-      "Der große Vorteil: IPTV-Sender erscheinen auf Wunsch direkt in Ihrer gewohnten Senderliste, neben den Sat- oder Kabelsendern.",
-    ],
-    summary: [
-      "IPTV-Streams landen auf Enigma2 als eigenes Bouquet in der Senderliste.",
-      "M3U-Playlists wandeln Sie mit einem Plugin oder Skript in ein Bouquet um.",
-      "Das Plugin ServiceApp verbessert bei vielen Images die Wiedergabe von Streams.",
-      "Welche Plugins verfügbar sind, hängt vom installierten Image ab, etwa OpenATV oder OpenPLi.",
-    ],
-    sections: [
-      {
-        heading: "Voraussetzungen",
-        list: [
-          "Ein Receiver mit aktuellem Enigma2-Image, zum Beispiel OpenATV, OpenPLi oder VTi.",
-          "Netzwerkverbindung, idealerweise per LAN-Kabel.",
-          "Eine M3U-Playlist, etwa aus Ihrer FRITZ!Box mit DVB-C-Tuner, oder Zugangsdaten eines Anbieters, der dieses Format unterstützt.",
-          "Optional: Ein Programm wie DreamboxEDIT oder FileZilla, um Dateien auf den Receiver zu übertragen.",
-        ],
-      },
-      {
-        heading: "Weg 1: Plugin aus dem Plugin-Browser",
-        body: [
-          "Viele Images bieten im Plugin-Browser Erweiterungen an, die M3U-Playlists oder Xtream-Codes-Zugänge automatisch als Bouquet anlegen. Bekannte Beispiele sind XStreamity oder e2m3u2bouquet. Welche Plugins angeboten werden, unterscheidet sich je nach Image.",
-        ],
-        steps: [
-          "Drücken Sie die grüne Taste bzw. öffnen Sie Menü › Plugins.",
-          "Wählen Sie „Plugins herunterladen“ und suchen Sie in den Kategorien „Extensions“ oder „IPTV“.",
-          "Installieren Sie das Plugin und starten Sie die Benutzeroberfläche neu.",
-          "Tragen Sie im Plugin Ihre Playlist-Adresse bzw. Zugangsdaten ein und erstellen Sie das Bouquet.",
-        ],
-      },
-      {
-        heading: "Weg 2: Bouquet-Datei manuell anlegen",
-        body: [
-          "Fortgeschrittene Nutzer können eine Bouquet-Datei selbst erstellen. Jeder Stream wird darin mit einem Service-Typ, der Stream-Adresse und dem Sendernamen eingetragen. Der Service-Typ 4097 nutzt den Standard-Player des Images. Mit installiertem ServiceApp stehen zusätzlich die Typen 5001 und 5002 zur Verfügung.",
-          "Die fertige Datei kopieren Sie nach /etc/enigma2/ und tragen sie in der Datei bouquets.tv ein. Anschließend laden Sie die Senderlisten neu.",
-        ],
-        note: "Sichern Sie vor jeder Änderung Ihre bestehenden Senderlisten. Ein Fehler in der Bouquet-Datei kann die Senderliste unbrauchbar machen.",
-      },
-      {
-        heading: "Wiedergabe verbessern mit ServiceApp",
-        body: [
-          "ServiceApp ist ein Plugin, das alternative Player wie exteplayer3 oder gstplayer für Streams bereitstellt. Bei Rucklern, fehlendem Ton oder langen Umschaltzeiten lohnt ein Wechsel des Players in den ServiceApp-Einstellungen.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Brauche ich für IPTV auf Enigma2 OSCam?",
-        answer:
-          "Nein. OSCam ist eine Softcam für verschlüsselte Sat- und Kabelsender und hat mit IPTV-Streams nichts zu tun.",
-      },
-      {
-        question: "Kann ich IPTV-Sender aufnehmen?",
-        answer:
-          "Technisch ist das auf vielen Enigma2-Receivern möglich, sofern eine Festplatte oder ein USB-Stick angeschlossen ist. Ob Aufnahmen erlaubt sind, regeln die Nutzungsbedingungen Ihres Anbieters.",
-      },
-    ],
-    related: [
-      { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist und Xtream Codes erklärt" },
-      { href: "/anleitungen/epg-einrichten", label: "EPG für IPTV einrichten" },
-      { href: "/geraete/mag-box", label: "IPTV auf der MAG-Box" },
-    ],
+    updatedAt: "2026-11-02",
+    readingTimeMinutes: 17,
+    intro: [],
+    sections: [],
+    faq: [],
   },
 ];
 
