@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-labelledby="t d">
+  <title id="t">Tizen und webOS im Vergleich</title>
+  <desc id="d">Gegenüberstellung von Samsung Tizen und LG webOS: App-Bereich, Benutzerkonto, typische Fernbedienung und Software-Update. Darunter die vier Faktoren, von denen die App-Verfügbarkeit abhängt.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- Samsung / Tizen -->
+    <rect x="40" y="40" width="545" height="560" rx="26" fill="#111829" stroke="#22d3ee" stroke-opacity="0.45" stroke-width="2"/>
+    <rect x="40" y="40" width="545" height="96" rx="26" fill="url(#cyan)" fill-opacity="0.16"/>
+    <rect x="72" y="66" width="62" height="44" rx="8" fill="none" stroke="#22d3ee" stroke-width="4"/>
+    <path d="M92 118h22" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+    <text x="156" y="88" font-size="34" font-weight="800" fill="#f8fafc">Samsung</text>
+    <text x="156" y="120" font-size="22" font-weight="600" fill="#67e8f9">Betriebssystem Tizen</text>
+    <g font-size="20" font-weight="700" letter-spacing="1.5" fill="#94a3b8">
+      <text x="72" y="186">APP-BEREICH</text>
+      <text x="72" y="286">BENUTZERKONTO</text>
+      <text x="72" y="386">FERNBEDIENUNG</text>
+      <text x="72" y="496">SOFTWARE-UPDATE</text>
+    </g>
+    <g font-size="27" font-weight="600" fill="#f8fafc">
+      <text x="72" y="222">„Apps“ im Smart Hub</text>
+      <text x="72" y="322">Samsung-Konto</text>
+      <text x="72" y="422">Steuerkreuz und OK-Taste</text>
+      <text x="72" y="532">Einstellungen › Support</text>
+      <text x="72" y="566" font-size="23" fill="#cbd5e1">› Software-Update</text>
+    </g>
+    <path d="M72 248H553M72 348H553M72 466H553" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- LG / webOS -->
+    <rect x="615" y="40" width="545" height="560" rx="26" fill="#111829" stroke="#3b82f6" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="615" y="40" width="545" height="96" rx="26" fill="url(#blue)" fill-opacity="0.18"/>
+    <rect x="647" y="66" width="62" height="44" rx="8" fill="none" stroke="#60a5fa" stroke-width="4"/>
+    <path d="M667 118h22" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+    <text x="731" y="88" font-size="34" font-weight="800" fill="#f8fafc">LG</text>
+    <text x="731" y="120" font-size="22" font-weight="600" fill="#93c5fd">Betriebssystem webOS</text>
+    <g font-size="20" font-weight="700" letter-spacing="1.5" fill="#94a3b8">
+      <text x="647" y="186">APP-BEREICH</text>
+      <text x="647" y="286">BENUTZERKONTO</text>
+      <text x="647" y="386">FERNBEDIENUNG</text>
+      <text x="647" y="496">SOFTWARE-UPDATE</text>
+    </g>
+    <g font-size="27" font-weight="600" fill="#f8fafc">
+      <text x="647" y="222">„LG Content Store“ / „Apps“</text>
+      <text x="647" y="322">LG-Konto</text>
+      <text x="647" y="422">Magic Remote mit Zeiger</text>
+      <text x="647" y="452" font-size="23" fill="#cbd5e1">(bei vielen Modellen)</text>
+      <text x="647" y="532">Einstellungen › Support oder</text>
+      <text x="647" y="566" font-size="23" fill="#cbd5e1">› Allgemein (je nach Version)</text>
+    </g>
+    <path d="M647 248H1128M647 348H1128M647 466H1128" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- shared factors -->
+    <rect x="40" y="630" width="1120" height="150" rx="26" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <text x="72" y="676" font-size="22" font-weight="700" letter-spacing="1.5" fill="#a78bfa">OB EINE APP VERFÜGBAR IST, HÄNGT AB VON:</text>
+    <g font-size="25" font-weight="700" fill="#f8fafc">
+      <rect x="72" y="700" width="240" height="52" rx="26" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+      <text x="192" y="735" text-anchor="middle">Modell(jahr)</text>
+      <rect x="334" y="700" width="260" height="52" rx="26" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+      <text x="464" y="735" text-anchor="middle">Softwareversion</text>
+      <rect x="616" y="700" width="200" height="52" rx="26" fill="#0a0f1c" stroke="#3b82f6" stroke-opacity="0.7" stroke-width="2"/>
+      <text x="716" y="735" text-anchor="middle">Region</text>
+      <rect x="838" y="700" width="290" height="52" rx="26" fill="#0a0f1c" stroke="#3b82f6" stroke-opacity="0.7" stroke-width="2"/>
+      <text x="983" y="735" text-anchor="middle">aktuellem Store</text>
+    </g>
+  </g>
+</svg>

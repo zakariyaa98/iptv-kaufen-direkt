@@ -114,85 +114,24 @@ export const devices: Device[] = [
     ],
   },
   {
+    // The Smart TV guide has its own page (app/geraete/smart-tv/page.tsx, copy in lib/smart-tv-content.ts).
+    // This entry only feeds the cards on /anleitungen and /angebote, the sitemap and the page metadata.
     slug: "smart-tv",
     name: "Smart TV (Samsung & LG)",
     shortName: "Smart TV",
     icon: "tv",
-    title: "IPTV auf dem Smart TV einrichten: Samsung und LG",
-    seoTitle: "IPTV auf Smart TV einrichten – Samsung (Tizen) & LG (webOS)",
+    title: "IPTV auf Smart TV einrichten: Samsung und LG Schritt für Schritt",
+    seoTitle: "IPTV auf Smart TV einrichten: Samsung & LG",
     metaDescription:
-      "IPTV direkt auf dem Fernseher: So nutzen Sie IPTV auf Samsung- und LG-Smart-TVs, welche Apps es gibt und wann ein externer Stick die bessere Wahl ist.",
+      "IPTV auf Smart TV einrichten: Anleitung für Samsung (Tizen) und LG (webOS) – mit App-Auswahl, M3U-Playlist, WLAN oder LAN und Hilfe bei typischen Fehlern.",
     excerpt:
-      "Ohne Zusatzgerät IPTV schauen: Was auf Samsung- und LG-Fernsehern möglich ist und wo die Grenzen liegen.",
+      "Samsung (Tizen) und LG (webOS) Schritt für Schritt: App-Auswahl, M3U-Playlist, Netzwerk und Fehlerhilfe – und wann ein Stick besser ist.",
     publishedAt: PUBLISHED,
-    readingTimeMinutes: 5,
-    intro: [
-      "Moderne Fernseher von Samsung und LG haben eigene Betriebssysteme mit App-Store. Damit lässt sich IPTV oft direkt am TV nutzen, ganz ohne Stick oder Box.",
-      "Die App-Auswahl ist auf Samsung (Tizen) und LG (webOS) allerdings kleiner als auf Android-Geräten. Deshalb lohnt sich vor der Einrichtung ein kurzer Blick darauf, was Ihr Modell unterstützt.",
-    ],
-    summary: [
-      "Legale Dienste wie waipu.tv, Zattoo oder Joyn bieten je nach Modelljahr eigene Apps für Samsung und LG an.",
-      "Für M3U-Playlists gibt es Player-Apps im Samsung- bzw. LG-Store, die Auswahl wechselt aber häufig.",
-      "Ältere Fernseher erhalten oft keine App-Updates mehr. Ein Streaming-Stick ist dann die zuverlässigere Lösung.",
-    ],
-    sections: [
-      {
-        heading: "Samsung Smart TV (Tizen)",
-        body: [
-          "Auf Samsung-Fernsehern finden Sie Apps im Bereich „Apps“ des Smart Hub. Suchen Sie dort nach dem Namen Ihres Dienstes und installieren Sie die App.",
-          "Für eigene M3U-Playlists gibt es Player-Apps im Samsung-Store. Welche angeboten werden, ändert sich regelmäßig und hängt vom Modelljahr ab. Manche Apps verlangen eine einmalige Aktivierung über die Website des Entwicklers.",
-        ],
-        steps: [
-          "Drücken Sie die Home-Taste und öffnen Sie „Apps“.",
-          "Suchen Sie nach der gewünschten App und installieren Sie sie.",
-          "Melden Sie sich an bzw. hinterlegen Sie Ihre Playlist nach den Vorgaben der App.",
-        ],
-      },
-      {
-        heading: "LG Smart TV (webOS)",
-        body: [
-          "Bei LG heißt der App-Store „LG Content Store“ oder in neueren Versionen einfach „Apps“. Der Ablauf entspricht dem bei Samsung: App suchen, installieren und anmelden.",
-          "Auch hier gilt: Player-Apps für M3U-Listen kommen und gehen. Prüfen Sie vor einem Kauf von Premium-Funktionen, ob die App noch aktiv gepflegt wird.",
-        ],
-      },
-      {
-        heading: "Wann ein externes Gerät die bessere Wahl ist",
-        list: [
-          "Ihr Fernseher ist älter als etwa fünf Jahre und erhält keine App-Updates mehr.",
-          "Die gewünschte App ist für Ihr Modell nicht verfügbar.",
-          "Das Menü reagiert langsam oder Apps stürzen häufig ab.",
-          "Sie möchten eine bestimmte Player-App wie TiviMate nutzen, die es nur für Android gibt.",
-        ],
-        body: [
-          "In diesen Fällen ist ein [Fire TV Stick](/geraete/fire-tv-stick) oder eine [Android-TV-Box](/geraete/android-tv-box) die günstigere und flexiblere Lösung.",
-        ],
-      },
-      {
-        heading: "Tipps für ein stabiles Bild am Smart TV",
-        list: [
-          "Verbinden Sie den Fernseher nach Möglichkeit per LAN-Kabel mit dem Router.",
-          "Halten Sie die Firmware des Fernsehers aktuell.",
-          "Schalten Sie Bildverbesserer wie Bewegungsglättung testweise aus, wenn das Bild bei Sport verzögert wirkt.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Kann ich IPTV auf jedem Smart TV nutzen?",
-        answer:
-          "Nicht auf jedem. Entscheidend ist, ob für Ihr Modell eine passende App angeboten wird. Bei älteren Geräten ist ein externer Streaming-Stick oft die bessere Lösung.",
-      },
-      {
-        question: "Warum ist eine App aus dem Store meines Fernsehers verschwunden?",
-        answer:
-          "Hersteller und App-Entwickler entfernen Apps gelegentlich, etwa wenn sie nicht mehr gepflegt werden oder gegen Store-Richtlinien verstoßen. Bereits installierte Apps funktionieren manchmal weiter, erhalten aber keine Updates mehr.",
-      },
-    ],
-    related: [
-      { href: "/geraete/fire-tv-stick", label: "IPTV auf dem Fire TV Stick" },
-      { href: "/anleitungen/epg-einrichten", label: "EPG für IPTV einrichten" },
-      { href: "/iptv-legal", label: "Legale IPTV-Angebote in Deutschland" },
-    ],
+    updatedAt: "2026-11-02",
+    readingTimeMinutes: 14,
+    intro: [],
+    sections: [],
+    faq: [],
   },
   {
     slug: "android-tv-box",

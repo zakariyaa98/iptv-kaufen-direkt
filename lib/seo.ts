@@ -11,6 +11,8 @@ type PageMetaInput = {
   absoluteTitle?: boolean;
   publishedTime?: string;
   modifiedTime?: string;
+  /** Page-specific social image; defaults to the sitewide /opengraph-image. */
+  image?: { url: string; width: number; height: number; alt: string };
 };
 
 const OG_IMAGE = { url: "/opengraph-image", width: 1200, height: 630, alt: SITE.name };
@@ -27,6 +29,7 @@ export function pageMetadata({
   absoluteTitle = false,
   publishedTime,
   modifiedTime,
+  image = OG_IMAGE,
 }: PageMetaInput): Metadata {
   const fullTitle = absoluteTitle ? title : `${title} | ${SITE.name}`;
 
@@ -41,14 +44,14 @@ export function pageMetadata({
       url: path,
       title: fullTitle,
       description,
-      images: [OG_IMAGE],
+      images: [image],
       ...(type === "article" ? { publishedTime, modifiedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [OG_IMAGE.url],
+      images: [image.url],
     },
   };
 }

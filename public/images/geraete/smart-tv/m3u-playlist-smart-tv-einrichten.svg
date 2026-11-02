@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-labelledby="t d">
+  <title id="t">M3U-Playlist am Smart TV einrichten</title>
+  <desc id="d">Oben der Aufbau einer M3U-Adresse mit Server, Port, Pfad, Benutzername, Passwort und Format. Unten zwei Wege, die Adresse in die App zu bringen: direkt am Fernseher eintippen oder über die Website des App-Entwicklers mit der Geräte-ID hochladen. Danach lädt die App Gruppen, Sender und EPG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2947"/>
+      <stop offset="1" stop-color="#081226"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <text x="45" y="72" font-size="22" font-weight="700" letter-spacing="1.5" fill="#a78bfa">AUFBAU EINER M3U-ADRESSE (BEISPIEL)</text>
+
+    <!-- URL segments -->
+    <g font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="24" fill="#f8fafc">
+      <rect x="45" y="100" width="330" height="64" rx="12" fill="#0b2a3a" stroke="#22d3ee" stroke-width="2"/>
+      <text x="57" y="141" textLength="306" lengthAdjust="spacingAndGlyphs">http://anbieter.example</text>
+      <rect x="375" y="100" width="90" height="64" fill="#102a4a" stroke="#3b82f6" stroke-width="2"/>
+      <text x="385" y="141" textLength="70" lengthAdjust="spacingAndGlyphs">:8080</text>
+      <rect x="465" y="100" width="140" height="64" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <text x="475" y="141" textLength="120" lengthAdjust="spacingAndGlyphs">/get.php?</text>
+      <rect x="605" y="100" width="160" height="64" fill="#0b2a3a" stroke="#22d3ee" stroke-width="2"/>
+      <text x="615" y="141" textLength="140" lengthAdjust="spacingAndGlyphs">username=…</text>
+      <rect x="765" y="100" width="175" height="64" fill="#2a1f4a" stroke="#a78bfa" stroke-width="2"/>
+      <text x="775" y="141" textLength="155" lengthAdjust="spacingAndGlyphs">&amp;password=…</text>
+      <rect x="940" y="100" width="215" height="64" rx="12" fill="#102a4a" stroke="#3b82f6" stroke-width="2"/>
+      <text x="950" y="141" textLength="195" lengthAdjust="spacingAndGlyphs">&amp;type=m3u_plus</text>
+    </g>
+    <!-- segment labels -->
+    <g stroke="#334155" stroke-width="2">
+      <path d="M210 164v34M420 164v34M535 164v34M685 164v34M852 164v34M1047 164v34"/>
+    </g>
+    <g font-size="22" font-weight="700" text-anchor="middle">
+      <text x="210" y="226" fill="#67e8f9">Server</text>
+      <text x="420" y="226" fill="#93c5fd">Port</text>
+      <text x="535" y="226" fill="#cbd5e1">Pfad</text>
+      <text x="685" y="226" fill="#67e8f9">Benutzername</text>
+      <text x="852" y="226" fill="#c4b5fd">Passwort</text>
+      <text x="1047" y="226" fill="#93c5fd">Format</text>
+    </g>
+    <text x="45" y="280" font-size="22" fill="#94a3b8">Jedes Zeichen zählt: Groß- und Kleinschreibung, http oder https, Port und keine Leerzeichen.</text>
+
+    <path d="M40 316H1160" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Weg A -->
+    <rect x="40" y="350" width="620" height="200" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+    <rect x="72" y="382" width="92" height="38" rx="19" fill="#22d3ee"/>
+    <text x="118" y="409" text-anchor="middle" font-size="22" font-weight="800" fill="#03141a">Weg A</text>
+    <text x="72" y="470" font-size="28" font-weight="800" fill="#f8fafc">Direkt am Fernseher eintippen</text>
+    <text x="72" y="512" font-size="22" fill="#94a3b8">Fernbedienung und Bildschirmtastatur der App</text>
+    <!-- remote keys icon -->
+    <g fill="none" stroke="#67e8f9" stroke-width="3">
+      <rect x="560" y="378" width="70" height="48" rx="8"/>
+      <path d="M572 392h8M588 392h8M604 392h8M572 408h8M588 408h20M616 408h4"/>
+    </g>
+
+    <!-- Weg B -->
+    <rect x="40" y="580" width="620" height="200" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+    <rect x="72" y="612" width="92" height="38" rx="19" fill="#3b82f6"/>
+    <text x="118" y="639" text-anchor="middle" font-size="22" font-weight="800" fill="#f8fafc">Weg B</text>
+    <text x="72" y="700" font-size="28" font-weight="800" fill="#f8fafc">Über die Website der App hochladen</text>
+    <text x="72" y="742" font-size="22" fill="#94a3b8">Geräte-ID oder MAC-Adresse aus der App angeben</text>
+    <!-- laptop icon -->
+    <g fill="none" stroke="#93c5fd" stroke-width="3" stroke-linejoin="round">
+      <rect x="566" y="606" width="58" height="38" rx="5"/>
+      <path d="M554 652h82"/>
+    </g>
+
+    <!-- arrows -->
+    <path d="M664 450C710 450 712 520 752 530" fill="none" stroke="#22d3ee" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M664 680C710 680 712 610 752 600" fill="none" stroke="#22d3ee" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <!-- TV with loaded list -->
+    <rect x="760" y="380" width="400" height="290" rx="14" fill="#273149"/>
+    <rect x="770" y="390" width="380" height="270" rx="8" fill="url(#screen)"/>
+    <g font-size="16" font-weight="700" letter-spacing="1.2" fill="#94a3b8">
+      <text x="788" y="420">GRUPPEN</text>
+      <text x="914" y="420">SENDER</text>
+    </g>
+    <rect x="788" y="434" width="104" height="30" rx="8" fill="#22d3ee" fill-opacity="0.85"/>
+    <rect x="788" y="472" width="104" height="30" rx="8" fill="#172036"/>
+    <rect x="788" y="510" width="104" height="30" rx="8" fill="#172036"/>
+    <rect x="788" y="548" width="104" height="30" rx="8" fill="#172036"/>
+    <g>
+      <rect x="914" y="434" width="218" height="30" rx="8" fill="#172036" stroke="#22d3ee" stroke-width="2"/>
+      <rect x="926" y="445" width="110" height="8" rx="4" fill="#cbd5e1"/>
+      <rect x="914" y="472" width="218" height="30" rx="8" fill="#172036"/>
+      <rect x="926" y="483" width="90" height="8" rx="4" fill="#475569"/>
+      <rect x="914" y="510" width="218" height="30" rx="8" fill="#172036"/>
+      <rect x="926" y="521" width="130" height="8" rx="4" fill="#475569"/>
+      <rect x="914" y="548" width="218" height="30" rx="8" fill="#172036"/>
+      <rect x="926" y="559" width="70" height="8" rx="4" fill="#475569"/>
+    </g>
+    <text x="788" y="612" font-size="16" font-weight="700" letter-spacing="1.2" fill="#94a3b8">EPG</text>
+    <rect x="836" y="598" width="120" height="20" rx="6" fill="#3b82f6" fill-opacity="0.8"/>
+    <rect x="962" y="598" width="90" height="20" rx="6" fill="#172036"/>
+    <rect x="1058" y="598" width="74" height="20" rx="6" fill="#172036"/>
+    <rect x="788" y="632" width="344" height="8" rx="4" fill="#1e293b"/>
+    <rect x="788" y="632" width="150" height="8" rx="4" fill="#22d3ee"/>
+    <text x="960" y="720" text-anchor="middle" font-size="22" font-weight="700" fill="#cbd5e1">App lädt Gruppen, Sender und EPG</text>
+  </g>
+</svg>

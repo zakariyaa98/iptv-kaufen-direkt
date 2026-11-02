@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="t d">
+  <title id="t">IPTV-Einrichtung am Smart TV in sechs Schritten</title>
+  <desc id="d">Ablaufdiagramm: 1 Software aktualisieren, 2 Netzwerk prüfen, 3 App aus dem Store installieren, 4 Zugangsdaten eintragen, 5 Senderliste und EPG laden, 6 testen und Favoriten anlegen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <path d="M210 210H990V590H210" fill="none" stroke="url(#line)" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round" opacity="0.75"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <g>
+      <rect x="40" y="60" width="340" height="300" rx="26" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <circle cx="104" cy="124" r="34" fill="#22d3ee"/>
+      <text x="104" y="137" text-anchor="middle" font-size="36" font-weight="800" fill="#03141a">1</text>
+      <path d="M332 124a30 30 0 1 1-8-20M332 96v18h-18" fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="72" y="230" font-size="30" font-weight="800" fill="#f8fafc">Software</text>
+      <text x="72" y="272" font-size="30" font-weight="800" fill="#f8fafc">aktualisieren</text>
+      <text x="72" y="318" font-size="23" fill="#94a3b8">Firmware des Fernsehers</text>
+    </g>
+    <g>
+      <rect x="430" y="60" width="340" height="300" rx="26" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <circle cx="494" cy="124" r="34" fill="#22d3ee"/>
+      <text x="494" y="137" text-anchor="middle" font-size="36" font-weight="800" fill="#03141a">2</text>
+      <g fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round">
+        <path d="M680 120a44 44 0 0 1 62 0M692 134a26 26 0 0 1 38 0"/>
+        <circle cx="711" cy="150" r="5" fill="#67e8f9"/>
+      </g>
+      <text x="462" y="230" font-size="30" font-weight="800" fill="#f8fafc">Netzwerk</text>
+      <text x="462" y="272" font-size="30" font-weight="800" fill="#f8fafc">prüfen</text>
+      <text x="462" y="318" font-size="23" fill="#94a3b8">LAN oder stabiles WLAN</text>
+    </g>
+    <g>
+      <rect x="820" y="60" width="340" height="300" rx="26" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <circle cx="884" cy="124" r="34" fill="#22d3ee"/>
+      <text x="884" y="137" text-anchor="middle" font-size="36" font-weight="800" fill="#03141a">3</text>
+      <g fill="none" stroke="#67e8f9" stroke-width="5" stroke-linejoin="round">
+        <rect x="1070" y="96" width="26" height="26" rx="5"/>
+        <rect x="1106" y="96" width="26" height="26" rx="5"/>
+        <rect x="1070" y="132" width="26" height="26" rx="5"/>
+        <path d="M1119 132v26M1106 145h26" stroke-linecap="round"/>
+      </g>
+      <text x="852" y="230" font-size="30" font-weight="800" fill="#f8fafc">App aus dem</text>
+      <text x="852" y="272" font-size="30" font-weight="800" fill="#f8fafc">Store installieren</text>
+      <text x="852" y="318" font-size="23" fill="#94a3b8">Samsung- oder LG-Store</text>
+    </g>
+
+    <g>
+      <rect x="820" y="440" width="340" height="300" rx="26" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <circle cx="884" cy="504" r="34" fill="#3b82f6"/>
+      <text x="884" y="517" text-anchor="middle" font-size="36" font-weight="800" fill="#f8fafc">4</text>
+      <g fill="none" stroke="#93c5fd" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="1080" cy="530" r="16"/>
+        <path d="M1092 518l34-34M1114 496l10 10M1106 504l8 8"/>
+      </g>
+      <text x="852" y="610" font-size="30" font-weight="800" fill="#f8fafc">Zugangsdaten</text>
+      <text x="852" y="652" font-size="30" font-weight="800" fill="#f8fafc">eintragen</text>
+      <text x="852" y="698" font-size="23" fill="#94a3b8">M3U oder Xtream Codes</text>
+    </g>
+    <g>
+      <rect x="430" y="440" width="340" height="300" rx="26" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <circle cx="494" cy="504" r="34" fill="#3b82f6"/>
+      <text x="494" y="517" text-anchor="middle" font-size="36" font-weight="800" fill="#f8fafc">5</text>
+      <path d="M680 486h58M680 508h58M680 530h40" fill="none" stroke="#93c5fd" stroke-width="5" stroke-linecap="round"/>
+      <text x="462" y="610" font-size="30" font-weight="800" fill="#f8fafc">Senderliste</text>
+      <text x="462" y="652" font-size="30" font-weight="800" fill="#f8fafc">und EPG laden</text>
+      <text x="462" y="698" font-size="23" fill="#94a3b8">Erster Ladevorgang dauert</text>
+    </g>
+    <g>
+      <rect x="40" y="440" width="340" height="300" rx="26" fill="#111829" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="104" cy="504" r="34" fill="#a78bfa"/>
+      <text x="104" y="517" text-anchor="middle" font-size="36" font-weight="800" fill="#0a0f1c">6</text>
+      <path d="M290 510l16 16 32-34" fill="none" stroke="#67e8f9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="72" y="610" font-size="30" font-weight="800" fill="#f8fafc">Testen und</text>
+      <text x="72" y="652" font-size="30" font-weight="800" fill="#f8fafc">Favoriten anlegen</text>
+      <text x="72" y="698" font-size="23" fill="#94a3b8">Mehrere Sender prüfen</text>
+    </g>
+  </g>
+</svg>

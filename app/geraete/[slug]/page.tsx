@@ -11,8 +11,11 @@ type PageProps = {
 
 export const dynamicParams = false;
 
+// Devices with their own static route (app/geraete/<slug>/page.tsx) are rendered there, not here.
+const OWN_PAGE_SLUGS = new Set(["smart-tv"]);
+
 export function generateStaticParams() {
-  return devices.map((device) => ({ slug: device.slug }));
+  return devices.filter((device) => !OWN_PAGE_SLUGS.has(device.slug)).map((device) => ({ slug: device.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

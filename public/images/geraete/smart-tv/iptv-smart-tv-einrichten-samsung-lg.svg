@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t d">
+  <title id="t">IPTV auf Smart TV einrichten</title>
+  <desc id="d">Illustration: zwei moderne Smart TVs ohne Herstellerlogos, mit Tizen und webOS beschriftet, daneben Router, Fernbedienung und die drei Einrichtungsschritte.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#070b15"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.28" cy="0.28" r="0.55">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBlue" cx="0.82" cy="0.62" r="0.5">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94a3b8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#151c2e"/>
+    </linearGradient>
+    <linearGradient id="screenA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2947"/>
+      <stop offset="0.6" stop-color="#0a1a33"/>
+      <stop offset="1" stop-color="#081226"/>
+    </linearGradient>
+    <linearGradient id="screenB" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13234a"/>
+      <stop offset="0.6" stop-color="#0b1733"/>
+      <stop offset="1" stop-color="#081226"/>
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="blueViolet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2540"/>
+      <stop offset="1" stop-color="#111829"/>
+    </linearGradient>
+    <linearGradient id="reflect" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#grid)"/>
+  <rect width="1200" height="900" fill="url(#glowCyan)"/>
+  <rect width="1200" height="900" fill="url(#glowBlue)"/>
+
+  <!-- floor line -->
+  <path d="M0 790H1200" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- ===== TV A: wall-mounted, thin frame ===== -->
+  <g>
+    <rect x="70" y="120" width="720" height="420" rx="16" fill="url(#frame)"/>
+    <rect x="80" y="130" width="700" height="400" rx="9" fill="url(#screenA)"/>
+    <!-- abstract banner -->
+    <rect x="108" y="158" width="644" height="190" rx="14" fill="#0b2340"/>
+    <path d="M108 300C220 250 300 330 420 290S640 210 752 260V334A14 14 0 0 1 738 348H122A14 14 0 0 1 108 334Z" fill="url(#cyanBlue)" opacity="0.55"/>
+    <path d="M108 320C240 290 330 350 470 315S660 270 752 300V334A14 14 0 0 1 738 348H122A14 14 0 0 1 108 334Z" fill="#22d3ee" opacity="0.35"/>
+    <circle cx="430" cy="232" r="38" fill="#0a0f1c" fill-opacity="0.55" stroke="#67e8f9" stroke-width="3"/>
+    <path d="M419 214v36l30-18z" fill="#67e8f9"/>
+    <!-- abstract tile row -->
+    <g>
+      <rect x="108" y="376" width="96" height="62" rx="10" fill="#22d3ee" fill-opacity="0.85"/>
+      <rect x="216" y="376" width="96" height="62" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="324" y="376" width="96" height="62" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="432" y="376" width="96" height="62" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="540" y="376" width="96" height="62" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="648" y="376" width="104" height="62" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="128" y="398" width="56" height="18" rx="9" fill="#03141a" fill-opacity="0.55"/>
+      <rect x="240" y="400" width="48" height="14" rx="7" fill="#334155"/>
+      <rect x="348" y="400" width="48" height="14" rx="7" fill="#334155"/>
+      <rect x="456" y="400" width="48" height="14" rx="7" fill="#334155"/>
+      <rect x="564" y="400" width="48" height="14" rx="7" fill="#334155"/>
+      <rect x="676" y="400" width="48" height="14" rx="7" fill="#334155"/>
+    </g>
+    <rect x="108" y="462" width="300" height="12" rx="6" fill="#334155"/>
+    <rect x="108" y="486" width="200" height="12" rx="6" fill="#1e293b"/>
+    <rect x="80" y="130" width="700" height="400" rx="9" fill="url(#reflect)"/>
+  </g>
+  <!-- label A -->
+  <g>
+    <rect x="70" y="52" width="292" height="48" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="98" cy="76" r="7" fill="#22d3ee"/>
+    <text x="116" y="85" font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#f8fafc">Samsung · Tizen</text>
+  </g>
+
+  <!-- ===== lowboard with router and remote ===== -->
+  <rect x="50" y="690" width="560" height="54" rx="10" fill="url(#board)" stroke="#1e293b" stroke-width="2"/>
+  <rect x="80" y="744" width="16" height="46" fill="#111829"/>
+  <rect x="564" y="744" width="16" height="46" fill="#111829"/>
+
+  <!-- router -->
+  <g>
+    <rect x="96" y="640" width="170" height="50" rx="12" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <rect x="118" y="606" width="8" height="36" rx="4" fill="#334155"/>
+    <rect x="236" y="606" width="8" height="36" rx="4" fill="#334155"/>
+    <circle cx="140" cy="665" r="5" fill="#22d3ee"/>
+    <circle cx="160" cy="665" r="5" fill="#22d3ee" fill-opacity="0.6"/>
+    <circle cx="180" cy="665" r="5" fill="#3b82f6"/>
+    <rect x="200" y="660" width="46" height="10" rx="5" fill="#1e293b"/>
+    <g fill="none" stroke="#67e8f9" stroke-linecap="round" stroke-width="5">
+      <path d="M150 594a44 44 0 0 1 62 0" opacity="0.9"/>
+      <path d="M134 576a68 68 0 0 1 94 0" opacity="0.5"/>
+    </g>
+  </g>
+  <!-- LAN cable router to TV A -->
+  <path d="M266 680C340 680 350 590 380 542" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+  <!-- remote -->
+  <g transform="rotate(-14 470 716)">
+    <rect x="420" y="700" width="120" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <circle cx="446" cy="716" r="9" fill="#0a0f1c" stroke="#22d3ee" stroke-width="2"/>
+    <circle cx="476" cy="716" r="4" fill="#94a3b8"/>
+    <circle cx="496" cy="716" r="4" fill="#94a3b8"/>
+    <circle cx="516" cy="716" r="4" fill="#94a3b8"/>
+  </g>
+
+  <!-- ===== TV B: on pedestal, in front ===== -->
+  <g>
+    <ellipse cx="880" cy="792" rx="150" ry="14" fill="#000" opacity="0.35"/>
+    <rect x="852" y="700" width="56" height="74" rx="8" fill="#1e293b"/>
+    <rect x="770" y="768" width="220" height="20" rx="10" fill="#273149"/>
+    <rect x="630" y="400" width="500" height="306" rx="14" fill="url(#frame)"/>
+    <rect x="639" y="409" width="482" height="288" rx="8" fill="url(#screenB)"/>
+    <!-- abstract card layout -->
+    <rect x="662" y="432" width="270" height="150" rx="12" fill="url(#blueViolet)" opacity="0.5"/>
+    <path d="M662 540C730 500 790 560 860 520S920 500 932 505V570A12 12 0 0 1 920 582H674A12 12 0 0 1 662 570Z" fill="#3b82f6" opacity="0.55"/>
+    <rect x="948" y="432" width="150" height="68" rx="12" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <rect x="948" y="514" width="150" height="68" rx="12" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <rect x="966" y="458" width="80" height="14" rx="7" fill="#334155"/>
+    <rect x="966" y="540" width="60" height="14" rx="7" fill="#334155"/>
+    <g>
+      <rect x="662" y="606" width="78" height="64" rx="10" fill="#a78bfa" fill-opacity="0.75"/>
+      <rect x="752" y="606" width="78" height="64" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="842" y="606" width="78" height="64" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="932" y="606" width="78" height="64" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+      <rect x="1022" y="606" width="76" height="64" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+    </g>
+    <rect x="639" y="409" width="482" height="288" rx="8" fill="url(#reflect)"/>
+  </g>
+  <!-- label B -->
+  <g>
+    <rect x="770" y="816" width="238" height="48" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.7" stroke-width="2"/>
+    <circle cx="798" cy="840" r="7" fill="#3b82f6"/>
+    <text x="816" y="849" font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#f8fafc">LG · webOS</text>
+  </g>
+
+  <!-- ===== floating step card ===== -->
+  <g>
+    <rect x="828" y="96" width="320" height="252" rx="22" fill="#111829" fill-opacity="0.94" stroke="#334155" stroke-width="2"/>
+    <text x="856" y="142" font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#a78bfa">IN 3 SCHRITTEN</text>
+    <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" font-size="23" font-weight="600" fill="#f8fafc">
+      <circle cx="874" cy="190" r="18" fill="#22d3ee"/>
+      <text x="868" y="198" font-size="20" font-weight="800" fill="#03141a">1</text>
+      <text x="906" y="199">App installieren</text>
+      <circle cx="874" cy="250" r="18" fill="#22d3ee" fill-opacity="0.75"/>
+      <text x="867" y="258" font-size="20" font-weight="800" fill="#03141a">2</text>
+      <text x="906" y="259">Daten eintragen</text>
+      <circle cx="874" cy="310" r="18" fill="#3b82f6"/>
+      <text x="867" y="318" font-size="20" font-weight="800" fill="#f8fafc">3</text>
+      <text x="906" y="319">Wiedergabe testen</text>
+    </g>
+  </g>
+</svg>
