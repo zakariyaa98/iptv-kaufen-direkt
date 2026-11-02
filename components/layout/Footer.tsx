@@ -39,8 +39,8 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <BrandLogo variant="footer" />
           <p className="max-w-xs text-sm leading-relaxed text-muted">
-            Einrichtungshilfe, Support und Anleitungen für IPTV auf Ihren Geräten. Wir verkaufen keine
-            TV-Senderpakete.
+            Einrichtungshilfe, Support und Anleitungen für IPTV auf Ihren Geräten – persönlich, verständlich und auf
+            Deutsch.
           </p>
           <ul className="flex flex-col gap-2 text-sm">
             <li>
@@ -112,7 +112,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {SITE.name}
           </p>
-          <p>Einrichtungshilfe und Support – keine TV-Sender oder Zugangsdaten.</p>
+          <p>IPTV-Einrichtungshilfe, Support und Anleitungen auf Deutsch.</p>
         </div>
       </div>
     </footer>
