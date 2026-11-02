@@ -58,9 +58,9 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "Wobei wir helfen und wobei nicht",
+        heading: "Wobei wir Ihnen helfen",
         body: [
-          "Wir verkaufen keine Senderpakete und keine Zugangsdaten. Wir helfen Ihnen, ein passendes legales Angebot zu finden, und richten es auf Ihren Geräten ein. Details finden Sie bei unseren [Paketen](/iptv-pakete).",
+          "Wir helfen Ihnen, ein passendes legales Angebot zu finden, und richten es auf Ihren Geräten ein – mit persönlichem Support per WhatsApp, Telegram und E-Mail. Details finden Sie in unseren [IPTV-Angeboten](/angebote).",
         ],
       },
     ],
