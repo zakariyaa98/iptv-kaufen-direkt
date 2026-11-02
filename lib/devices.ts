@@ -12,106 +12,24 @@ const PUBLISHED = "2026-10-28";
 
 export const devices: Device[] = [
   {
+    // The Fire TV guide has its own page (app/geraete/fire-tv-stick/page.tsx, copy in lib/fire-tv-content.ts).
+    // This entry only feeds the cards on /anleitungen and /angebote, the sitemap and the page metadata.
     slug: "fire-tv-stick",
     name: "Amazon Fire TV Stick",
     shortName: "Fire TV Stick",
     icon: "stick",
-    title: "IPTV auf dem Fire TV Stick einrichten",
-    seoTitle: "IPTV auf dem Fire TV Stick einrichten – Schritt für Schritt",
+    title: "IPTV auf Fire TV Stick einrichten: vom Appstore bis zur Senderliste",
+    seoTitle: "IPTV auf Fire TV Stick einrichten: Player & M3U",
     metaDescription:
-      "So richten Sie IPTV auf dem Amazon Fire TV Stick ein: offizielle Apps legaler Anbieter, M3U-Player, Downloader und typische Fehler – verständlich erklärt.",
+      "IPTV auf Fire TV Stick einrichten: passendes Modell, IPTV-Player aus Appstore oder Downloader, M3U und Xtream Codes, WLAN oder LAN und Fehlerhilfe.",
     excerpt:
-      "Der Fire TV Stick ist das beliebteste IPTV-Gerät in Deutschland. Wir zeigen, welche Apps sinnvoll sind und wie die Einrichtung gelingt.",
+      "Modellwahl inklusive Vega OS, IPTV-Player aus Appstore oder Downloader, M3U und Xtream Codes sowie Hilfe gegen Puffern und volle Speicher.",
     publishedAt: PUBLISHED,
-    readingTimeMinutes: 6,
-    intro: [
-      "Der Amazon Fire TV Stick ist günstig, klein und wird einfach an einen HDMI-Anschluss des Fernsehers gesteckt. Deshalb ist er für viele der erste Schritt zu IPTV.",
-      "Wie die Einrichtung aussieht, hängt vom Dienst ab: Legale TV-Streaming-Anbieter bringen eine eigene App mit. Für eine M3U-Playlist, zum Beispiel aus Ihrer FRITZ!Box, brauchen Sie dagegen eine IPTV-Player-App.",
-    ],
-    summary: [
-      "Für Dienste wie waipu.tv, Zattoo oder MagentaTV installieren Sie die offizielle App aus dem Amazon Appstore.",
-      "Für eigene M3U-Playlists eignen sich Player-Apps wie TiviMate oder Kodi mit dem PVR IPTV Simple Client.",
-      "Apps außerhalb des Appstores sollten Sie nur aus vertrauenswürdigen Quellen installieren.",
-      "Für ruckelfreies HD-Bild ist eine stabile WLAN-Verbindung oder ein Ethernet-Adapter entscheidend.",
-    ],
-    sections: [
-      {
-        heading: "Welcher Fire TV Stick eignet sich für IPTV?",
-        body: [
-          "Grundsätzlich funktionieren alle aktuellen Modelle. Für 4K-Inhalte und flüssige Senderwechsel empfehlen wir ein 4K-Modell, etwa den Fire TV Stick 4K oder 4K Max, weil sie mehr Leistung und schnelleres WLAN bieten.",
-          "Ältere Modelle der ersten Generationen erhalten teils keine App-Updates mehr. Prüfen Sie im Zweifel, ob die gewünschte App Ihr Modell noch unterstützt.",
-        ],
-      },
-      {
-        heading: "Variante 1: Offizielle App eines legalen Anbieters",
-        body: [
-          "Das ist der einfachste und sicherste Weg. Viele lizenzierte TV-Streaming-Dienste in Deutschland bieten eine Fire-TV-App an.",
-        ],
-        steps: [
-          "Drücken Sie auf der Fernbedienung die Home-Taste und öffnen Sie die Suche (Lupe).",
-          "Geben Sie den Namen des Dienstes ein, zum Beispiel „waipu.tv“ oder „Zattoo“.",
-          "Wählen Sie die App aus und tippen Sie auf „Herunterladen“.",
-          "Öffnen Sie die App und melden Sie sich mit Ihrem Kundenkonto an.",
-        ],
-        note: "Welche Sender und Funktionen enthalten sind, legt allein der jeweilige Anbieter fest. Prüfen Sie den aktuellen Leistungsumfang auf dessen Website.",
-      },
-      {
-        heading: "Variante 2: IPTV-Player-App für eine eigene M3U-Playlist",
-        body: [
-          "Eine M3U-Playlist ist eine Liste von Stream-Adressen. Sie erhalten sie zum Beispiel von einer FRITZ!Box mit DVB-C-Empfang oder von einem Anbieter, der dieses Format unterstützt. Mehr dazu lesen Sie in unserer Anleitung [M3U-Playlist und Xtream Codes erklärt](/anleitungen/m3u-playlist-xtream-codes).",
-          "Bekannte Player-Apps sind TiviMate, IPTV Smarters und Kodi. Kodi ist quelloffen und steht im Amazon Appstore zur Verfügung; die Playlist binden Sie dort über das Add-on „PVR IPTV Simple Client“ ein.",
-        ],
-        steps: [
-          "Installieren Sie die Player-App aus dem Amazon Appstore, sofern verfügbar.",
-          "Öffnen Sie die App und wählen Sie „Playlist hinzufügen“ bzw. „Add playlist“.",
-          "Geben Sie die M3U-Adresse ein oder wählen Sie den Zugang per Xtream Codes, falls Ihr Anbieter das vorsieht.",
-          "Hinterlegen Sie die EPG-Adresse für die Programmzeitschrift, falls vorhanden.",
-          "Warten Sie, bis Sender und EPG geladen sind, und legen Sie Favoriten an.",
-        ],
-      },
-      {
-        heading: "Apps installieren, die nicht im Appstore sind",
-        body: [
-          "Manche Player-Apps sind nicht im Amazon Appstore gelistet. Fire OS erlaubt dann die Installation über eine APK-Datei. Dazu dient häufig die App „Downloader“, die es im Appstore gibt.",
-          "Auf neueren Fire-TV-Modellen sind die Entwickleroptionen zunächst ausgeblendet. Sie erscheinen, wenn Sie unter Einstellungen › Mein Fire TV › Info siebenmal auf den Gerätenamen klicken. Danach erlauben Sie die Installation unbekannter Apps gezielt nur für den Downloader.",
-        ],
-        note: "Laden Sie APK-Dateien ausschließlich von der offiziellen Website des Entwicklers. Fremde Downloads können Schadsoftware enthalten und Ihr Amazon-Konto gefährden.",
-      },
-      {
-        heading: "Häufige Probleme auf dem Fire TV Stick",
-        list: [
-          "Bild ruckelt: WLAN-Signal prüfen, den Stick mit dem mitgelieferten HDMI-Verlängerungsadapter vom Fernseher wegführen oder einen Ethernet-Adapter nutzen.",
-          "App stürzt ab: Cache der App unter Einstellungen › Anwendungen › Installierte Anwendungen leeren.",
-          "Speicher voll: Nicht genutzte Apps deinstallieren, da Fire-TV-Sticks nur begrenzten internen Speicher haben.",
-          "Kein EPG: EPG-Adresse in der Player-App prüfen und die Daten manuell aktualisieren.",
-        ],
-        body: [
-          "Weitere Ursachen und Lösungen finden Sie in unserer Anleitung [IPTV ruckelt – was tun?](/anleitungen/iptv-ruckelt-loesungen).",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Brauche ich für IPTV auf dem Fire TV Stick ein Amazon-Konto?",
-        answer:
-          "Ja. Für die Ersteinrichtung des Fire TV Sticks und für Downloads aus dem Amazon Appstore ist ein Amazon-Konto erforderlich.",
-      },
-      {
-        question: "Ist der Downloader legal?",
-        answer:
-          "Ja. Der Downloader ist eine reguläre App aus dem Amazon Appstore, mit der Sie Dateien herunterladen. Entscheidend ist, welche Inhalte Sie darüber beziehen und nutzen.",
-      },
-      {
-        question: "Kann ich mehrere IPTV-Apps parallel installieren?",
-        answer:
-          "Ja, solange genug Speicher frei ist. Für einen übersichtlichen Betrieb empfehlen wir aber, sich auf eine Player-App festzulegen.",
-      },
-    ],
-    related: [
-      { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist und Xtream Codes erklärt" },
-      { href: "/anleitungen/internetgeschwindigkeit-iptv", label: "Welche Internetgeschwindigkeit braucht IPTV?" },
-      { href: "/geraete/android-tv-box", label: "IPTV auf Android-TV-Boxen" },
-    ],
+    updatedAt: "2026-11-02",
+    readingTimeMinutes: 15,
+    intro: [],
+    sections: [],
+    faq: [],
   },
   {
     // The Smart TV guide has its own page (app/geraete/smart-tv/page.tsx, copy in lib/smart-tv-content.ts).

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-labelledby="t d">
+  <title id="t">Typische IPTV-Probleme am Fire TV Stick und Lösungen</title>
+  <desc id="d">Sechs Kacheln mit Problem und erster Lösung: Installation blockiert – unbekannte Apps für Downloader erlauben; Paket lässt sich nicht installieren – APK passt nicht zu Modell oder Fire OS; Bild puffert – LAN oder 5 GHz und Puffer erhöhen; Speicher voll – Cache leeren und Apps entfernen; EPG fehlt – EPG-Adresse und Zeitzone prüfen; App startet nicht – Update oder Neuinstallation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- row 1 -->
+    <g>
+      <rect x="30" y="30" width="366" height="370" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <rect x="58" y="58" width="60" height="60" rx="16" fill="#2a1f4a"/>
+      <g fill="none" stroke="#c4b5fd" stroke-width="4" stroke-linecap="round"><rect x="76" y="86" width="24" height="20" rx="3"/><path d="M80 86v-6a8 8 0 0 1 16 0v6"/></g>
+      <text x="58" y="166" font-size="25" font-weight="800" fill="#f8fafc">Installation</text>
+      <text x="58" y="198" font-size="25" font-weight="800" fill="#f8fafc">blockiert</text>
+      <path d="M58 232H368" stroke="#1e293b" stroke-width="2"/>
+      <g font-size="21" fill="#cbd5e1">
+        <text x="58" y="276">Unbekannte Apps nur für</text>
+        <text x="58" y="306">„Downloader“ erlauben</text>
+        <text x="58" y="352" font-size="18" fill="#94a3b8">Nur bei Fire OS möglich</text>
+      </g>
+    </g>
+    <g>
+      <rect x="417" y="30" width="366" height="370" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <rect x="445" y="58" width="60" height="60" rx="16" fill="#3b1a2e"/>
+      <g fill="none" stroke="#f9a8d4" stroke-width="4" stroke-linecap="round"><path d="M462 76h26v28h-26z"/><path d="M468 84l14 12M482 84l-14 12"/></g>
+      <text x="445" y="166" font-size="25" font-weight="800" fill="#f8fafc">Paket lässt sich</text>
+      <text x="445" y="198" font-size="25" font-weight="800" fill="#f8fafc">nicht installieren</text>
+      <path d="M445 232H755" stroke="#1e293b" stroke-width="2"/>
+      <g font-size="21" fill="#cbd5e1">
+        <text x="445" y="276">APK passt nicht zu Modell</text>
+        <text x="445" y="306">oder Fire-OS-Version</text>
+        <text x="445" y="352" font-size="18" fill="#94a3b8">Version für Fire TV wählen</text>
+      </g>
+    </g>
+    <g>
+      <rect x="804" y="30" width="366" height="370" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <rect x="832" y="58" width="60" height="60" rx="16" fill="#0b2a3a"/>
+      <circle cx="862" cy="88" r="15" fill="none" stroke="#334155" stroke-width="5"/>
+      <path d="M862 73a15 15 0 0 1 15 15" fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round"/>
+      <text x="832" y="166" font-size="25" font-weight="800" fill="#f8fafc">Bild puffert</text>
+      <text x="832" y="198" font-size="25" font-weight="800" fill="#f8fafc">oder ruckelt</text>
+      <path d="M832 232H1142" stroke="#1e293b" stroke-width="2"/>
+      <g font-size="21" fill="#cbd5e1">
+        <text x="832" y="276">LAN-Adapter oder 5 GHz,</text>
+        <text x="832" y="306">Puffer im Player erhöhen</text>
+        <text x="832" y="352" font-size="18" fill="#94a3b8">Hotspot-Test zur Eingrenzung</text>
+      </g>
+    </g>
+
+    <!-- row 2 -->
+    <g>
+      <rect x="30" y="420" width="366" height="370" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <rect x="58" y="448" width="60" height="60" rx="16" fill="#102a4a"/>
+      <g fill="none" stroke="#93c5fd" stroke-width="4" stroke-linecap="round"><rect x="72" y="464" width="32" height="30" rx="4"/><path d="M78 476h20M78 484h12"/></g>
+      <text x="58" y="556" font-size="25" font-weight="800" fill="#f8fafc">Speicher</text>
+      <text x="58" y="588" font-size="25" font-weight="800" fill="#f8fafc">fast voll</text>
+      <path d="M58 622H368" stroke="#1e293b" stroke-width="2"/>
+      <g font-size="21" fill="#cbd5e1">
+        <text x="58" y="666">Cache leeren, ungenutzte</text>
+        <text x="58" y="696">Apps und APK-Dateien löschen</text>
+        <text x="58" y="742" font-size="18" fill="#94a3b8">Anwendungen verwalten</text>
+      </g>
+    </g>
+    <g>
+      <rect x="417" y="420" width="366" height="370" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <rect x="445" y="448" width="60" height="60" rx="16" fill="#0b2a3a"/>
+      <g fill="none" stroke="#67e8f9" stroke-width="4" stroke-linecap="round"><path d="M459 466h32M459 478h32M459 490h20"/></g>
+      <text x="445" y="556" font-size="25" font-weight="800" fill="#f8fafc">Programm-</text>
+      <text x="445" y="588" font-size="25" font-weight="800" fill="#f8fafc">zeitschrift fehlt</text>
+      <path d="M445 622H755" stroke="#1e293b" stroke-width="2"/>
+      <g font-size="21" fill="#cbd5e1">
+        <text x="445" y="666">EPG-Adresse, Zeitzone</text>
+        <text x="445" y="696">und Zeitversatz prüfen</text>
+        <text x="445" y="742" font-size="18" fill="#94a3b8">EPG manuell aktualisieren</text>
+      </g>
+    </g>
+    <g>
+      <rect x="804" y="420" width="366" height="370" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <rect x="832" y="448" width="60" height="60" rx="16" fill="#2a1f4a"/>
+      <g fill="none" stroke="#c4b5fd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M876 478a14 14 0 1 1-4-10M876 464v8h-8"/></g>
+      <text x="832" y="556" font-size="25" font-weight="800" fill="#f8fafc">App startet nicht</text>
+      <text x="832" y="588" font-size="25" font-weight="800" fill="#f8fafc">oder stürzt ab</text>
+      <path d="M832 622H1142" stroke="#1e293b" stroke-width="2"/>
+      <g font-size="21" fill="#cbd5e1">
+        <text x="832" y="666">Stick neu starten, App</text>
+        <text x="832" y="696">aktualisieren oder neu</text>
+        <text x="832" y="726">installieren</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="t d">
+  <title id="t">Fire TV Stick mit WLAN oder Ethernet verbinden</title>
+  <desc id="d">Drei Varianten von hinten gesehen: Der Stick steckt direkt hinter dem Fernseher und das WLAN-Signal wird abgeschirmt; mit HDMI-Verlängerung hängt der Stick frei und empfängt besser; mit einem Ethernet-Adapter am Netzteil läuft die Verbindung per LAN-Kabel zum Router.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <linearGradient id="tvback" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#273149"/>
+      <stop offset="1" stop-color="#1a2238"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" fill="url(#bg)"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- Panel 1 -->
+    <rect x="30" y="30" width="366" height="720" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+    <text x="58" y="82" font-size="24" font-weight="800" fill="#f8fafc">WLAN, Stick direkt</text>
+    <text x="58" y="114" font-size="20" font-weight="600" fill="#f9a8d4">Signal oft abgeschirmt</text>
+    <rect x="70" y="150" width="286" height="210" rx="10" fill="url(#tvback)"/>
+    <rect x="150" y="200" width="126" height="90" rx="8" fill="#151c2e" stroke="#334155" stroke-width="2"/>
+    <rect x="262" y="300" width="22" height="30" rx="3" fill="#0a0f1c" stroke="#475569" stroke-width="2"/>
+    <rect x="282" y="300" width="64" height="30" rx="8" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <g fill="none" stroke="#f472b6" stroke-linecap="round" stroke-width="4" stroke-dasharray="4 8" opacity="0.8">
+      <path d="M352 290a30 30 0 0 1 0 50"/>
+      <path d="M366 276a50 50 0 0 1 0 78"/>
+    </g>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="58" y="430">Metallrückwand und</text>
+      <text x="58" y="458">Elektronik dämpfen</text>
+      <text x="58" y="486">das Funksignal</text>
+      <text x="58" y="546">Typisch: Puffern bei</text>
+      <text x="58" y="574">Live-Sport und 4K</text>
+    </g>
+
+    <!-- Panel 2 -->
+    <rect x="417" y="30" width="366" height="720" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="445" y="82" font-size="24" font-weight="800" fill="#f8fafc">WLAN mit Verlängerung</text>
+    <text x="445" y="114" font-size="20" font-weight="600" fill="#93c5fd">Stick hängt frei</text>
+    <rect x="457" y="150" width="286" height="210" rx="10" fill="url(#tvback)"/>
+    <rect x="537" y="200" width="126" height="90" rx="8" fill="#151c2e" stroke="#334155" stroke-width="2"/>
+    <rect x="649" y="300" width="22" height="30" rx="3" fill="#0a0f1c" stroke="#475569" stroke-width="2"/>
+    <path d="M671 315C700 315 700 380 680 400" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/>
+    <rect x="640" y="398" width="76" height="32" rx="9" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <g fill="none" stroke="#60a5fa" stroke-linecap="round" stroke-width="5">
+      <path d="M728 392a34 34 0 0 1 0 44"/>
+      <path d="M744 376a58 58 0 0 1 0 76" opacity="0.6"/>
+    </g>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="445" y="490">Kurzes HDMI-Kabel bzw.</text>
+      <text x="445" y="518">Adapter bringt den Stick</text>
+      <text x="445" y="546">aus dem Funkschatten</text>
+      <text x="445" y="606">Router möglichst im</text>
+      <text x="445" y="634">selben Raum, 5 GHz</text>
+    </g>
+
+    <!-- Panel 3 -->
+    <rect x="804" y="30" width="366" height="720" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="832" y="82" font-size="24" font-weight="800" fill="#f8fafc">Ethernet-Adapter</text>
+    <text x="832" y="114" font-size="20" font-weight="600" fill="#67e8f9">Stabil per LAN-Kabel</text>
+    <rect x="844" y="150" width="286" height="210" rx="10" fill="url(#tvback)"/>
+    <rect x="924" y="200" width="126" height="90" rx="8" fill="#151c2e" stroke="#334155" stroke-width="2"/>
+    <rect x="1036" y="300" width="22" height="30" rx="3" fill="#0a0f1c" stroke="#475569" stroke-width="2"/>
+    <rect x="1056" y="300" width="64" height="30" rx="8" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <!-- usb power cable to adapter -->
+    <path d="M1100 330C1100 380 1000 380 980 410" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+    <!-- adapter brick -->
+    <rect x="930" y="408" width="96" height="70" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <rect x="958" y="430" width="40" height="26" rx="4" fill="#0a0f1c" stroke="#22d3ee" stroke-width="2"/>
+    <!-- lan cable to router -->
+    <path d="M978 478C978 530 900 520 900 560" fill="none" stroke="#22d3ee" stroke-width="6" stroke-linecap="round"/>
+    <rect x="852" y="560" width="120" height="40" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <circle cx="874" cy="580" r="5" fill="#22d3ee"/>
+    <circle cx="892" cy="580" r="5" fill="#22d3ee" fill-opacity="0.6"/>
+    <text x="1060" y="586" text-anchor="middle" font-size="19" font-weight="600" fill="#94a3b8">Router</text>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="832" y="652">Netzteil mit LAN-Buchse;</text>
+      <text x="832" y="680">Kompatibilität mit Ihrem</text>
+      <text x="832" y="708">Modell vorab prüfen</text>
+    </g>
+  </g>
+</svg>

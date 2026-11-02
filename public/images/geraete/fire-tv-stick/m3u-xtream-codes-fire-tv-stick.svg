@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="t d">
+  <title id="t">M3U-Playlist und Xtream Codes auf dem Fire TV Stick</title>
+  <desc id="d">Schaubild: Eine Beispiel-M3U-Adresse enthält Server-Adresse mit Port, Benutzername und Passwort. Pfeile zeigen, welche Teile in die drei Felder eines Xtream-Codes-Zugangs gehören: Server-URL, Benutzername und Passwort. Darunter Tipps, wann welche Variante am Fire TV Stick bequemer ist.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#22d3ee"/></marker>
+    <marker id="aB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#60a5fa"/></marker>
+    <marker id="aV" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a78bfa"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- M3U line -->
+    <text x="40" y="62" font-size="21" font-weight="700" letter-spacing="1.5" fill="#94a3b8">M3U-PLAYLIST · EINE ADRESSE (BEISPIEL)</text>
+    <rect x="40" y="84" width="1120" height="76" rx="16" fill="#111829" stroke="#334155" stroke-width="2"/>
+    <text x="60" y="131" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="21" textLength="1080" lengthAdjust="spacingAndGlyphs" fill="#64748b"><tspan fill="#67e8f9" font-weight="700">http://anbieter.example:8080</tspan>/get.php?username=<tspan fill="#93c5fd" font-weight="700">max123</tspan>&amp;password=<tspan fill="#c4b5fd" font-weight="700">geheim</tspan>&amp;type=m3u_plus</text>
+    <!-- underline marks: char width = 1080/82 = 13.17 -->
+    <path d="M60 146H429" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+    <path d="M666 146H745" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+    <path d="M877 146H956" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- arrows -->
+    <path d="M244 166V300" stroke="#22d3ee" stroke-width="3" marker-end="url(#aC)"/>
+    <path d="M705 166C705 230 680 250 680 300" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#aB)"/>
+    <path d="M916 166C916 240 1010 250 1010 300" fill="none" stroke="#a78bfa" stroke-width="3" marker-end="url(#aV)"/>
+
+    <!-- Xtream fields -->
+    <text x="40" y="232" font-size="21" font-weight="700" letter-spacing="1.5" fill="#94a3b8">XTREAM CODES · DREI FELDER</text>
+    <g>
+      <text x="60" y="336" font-size="21" font-weight="700" fill="#67e8f9">Server-URL</text>
+      <rect x="60" y="350" width="400" height="66" rx="14" fill="#0a0f1c" stroke="#22d3ee" stroke-width="2"/>
+      <text x="80" y="391" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="21" fill="#e2e8f0" textLength="360" lengthAdjust="spacingAndGlyphs">http://anbieter.example:8080</text>
+      <text x="520" y="336" font-size="21" font-weight="700" fill="#93c5fd">Benutzername</text>
+      <rect x="520" y="350" width="320" height="66" rx="14" fill="#0a0f1c" stroke="#60a5fa" stroke-width="2"/>
+      <text x="540" y="391" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="22" fill="#e2e8f0">max123</text>
+      <text x="880" y="336" font-size="21" font-weight="700" fill="#c4b5fd">Passwort</text>
+      <rect x="880" y="350" width="260" height="66" rx="14" fill="#0a0f1c" stroke="#a78bfa" stroke-width="2"/>
+      <text x="900" y="393" font-size="26" fill="#e2e8f0" letter-spacing="4">••••••</text>
+    </g>
+    <text x="40" y="470" font-size="21" fill="#94a3b8">Gilt für Anbieter mit Xtream-Schnittstelle. Bei anderen Formaten erhalten Sie die Daten getrennt.</text>
+
+    <!-- tips -->
+    <rect x="40" y="510" width="545" height="250" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+    <rect x="72" y="540" width="80" height="36" rx="18" fill="#0b2a3a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="112" y="565" text-anchor="middle" font-size="19" font-weight="800" fill="#67e8f9">M3U</text>
+    <text x="72" y="626" font-size="26" font-weight="800" fill="#f8fafc">Eine lange Adresse</text>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="72" y="668">Bequem per Copy &amp; Paste, z. B. über</text>
+      <text x="72" y="698">eine Web-Eingabe der App oder die</text>
+      <text x="72" y="728">Smartphone-Tastatur der Fire-TV-App</text>
+    </g>
+
+    <rect x="615" y="510" width="545" height="250" rx="24" fill="#111829" stroke="#334155" stroke-width="2"/>
+    <rect x="647" y="540" width="120" height="36" rx="18" fill="#102a4a" stroke="#60a5fa" stroke-width="2"/>
+    <text x="707" y="565" text-anchor="middle" font-size="19" font-weight="800" fill="#93c5fd">Xtream</text>
+    <text x="647" y="626" font-size="26" font-weight="800" fill="#f8fafc">Drei kurze Felder</text>
+    <g font-size="21" fill="#cbd5e1">
+      <text x="647" y="668">Mit der Fernbedienung schneller</text>
+      <text x="647" y="698">eingegeben; viele Player laden EPG</text>
+      <text x="647" y="728">und Gruppen dabei automatisch</text>
+    </g>
+  </g>
+</svg>
