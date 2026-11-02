@@ -47,8 +47,10 @@ import { LOWEST_PRICE, formatPrice } from "@/lib/plans";
 import { pageMetadata } from "@/lib/seo";
 import { SITE, absoluteUrl } from "@/lib/site";
 import { WHATSAPP_DEFAULT_LINK, buildWhatsAppLink } from "@/lib/whatsapp";
-import infoImage from "@/public/images/home page/Informationen/IPTV in Deutschland Die wichtigsten Informationen.webp";
-import epgImage from "@/public/images/home page/Welche Funktionen bietet ein moderner IPTV-Dienst/2.webp";
+import mobileImage from "@/public/images/home page/Anleitungen/iptv-unterwegs-smartphone-livestream-zug.webp";
+import kodiEpgImage from "@/public/images/home page/Anleitungen/kodi-pvr-iptv-simple-client-epg.webp";
+import magPortalImage from "@/public/images/home page/Anleitungen/mag-box-portal-url-einrichten.webp";
+import xtreamLoginImage from "@/public/images/home page/Anleitungen/xtream-codes-login-iptv-player.webp";
 import privacyImage from "@/public/images/home page/Woran erkennt man einen seriosen IPTV Anbieter/Woran erkennt man einen seriösen IPTV Anbieter 6.webp";
 
 /*
@@ -410,13 +412,13 @@ export default function GuidesPage() {
               aria-hidden
               className="absolute -inset-3 -z-10 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,rgba(34,211,238,0.14),transparent_70%)] blur-2xl"
             />
-            <div className="overflow-hidden rounded-3xl border border-border-strong bg-white p-1.5 shadow-2xl shadow-black/40">
+            <div className="overflow-hidden rounded-3xl border border-border-strong bg-background-elevated shadow-2xl shadow-black/40">
               <Image
-                src={infoImage}
-                alt="IPTV-Grundlagen: Familie schaut Fernsehen über das Internet auf einem Smart TV, mit Hinweisen zu 4K-Qualität, Internetanschluss und Streaming-Apps"
+                src={mobileImage}
+                alt="Mann im Regionalzug verfolgt auf dem Smartphone die Tagesschau als Livestream in einer IPTV-App – IPTV über das offene Internet funktioniert auch unterwegs"
                 placeholder="blur"
-                sizes="(min-width: 1152px) 470px, (min-width: 1024px) 40vw, calc(100vw - 2rem)"
-                className="h-auto w-full rounded-[1.25rem]"
+                sizes="(min-width: 1152px) 500px, (min-width: 1024px) 44vw, calc(100vw - 2rem)"
+                className="h-auto w-full"
               />
             </div>
           </figure>
@@ -587,6 +589,37 @@ export default function GuidesPage() {
             </article>
           ))}
         </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {[
+            {
+              src: xtreamLoginImage,
+              // White graphic: shown uncropped on a matching white background.
+              contain: true,
+              alt: "Anmeldemaske von IPTV Smarters auf einem Fernseher mit den Feldern Beliebiger Name, Benutzername, Passwort sowie dem Feld für die Server-URL im Format http://url:port für Xtream Codes",
+            },
+            {
+              src: magPortalImage,
+              contain: false,
+              alt: "MAG-524-Box vor einem Fernseher, auf dem die Eingabemaske für die Portal-URL eines Stalker-Portals mit den Schaltflächen Speichern und Abbrechen zu sehen ist",
+            },
+          ].map((image) => (
+            <div
+              key={image.alt}
+              className={`relative aspect-[16/10] overflow-hidden rounded-2xl border border-border-strong shadow-xl shadow-black/30 ${
+                image.contain ? "bg-white" : "bg-background-elevated"
+              }`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                placeholder="blur"
+                fill
+                sizes="(min-width: 1152px) 532px, (min-width: 640px) 48vw, calc(100vw - 2rem)"
+                className={image.contain ? "object-contain" : "object-cover"}
+              />
+            </div>
+          ))}
+        </div>
         <p className="text-sm leading-relaxed text-muted">
           Alle drei Formate sind neutrale Technik. Entscheidend ist, dass Ihr Anbieter die Rechte an den Inhalten
           besitzt – mehr dazu unter{" "}
@@ -693,18 +726,17 @@ export default function GuidesPage() {
                 {paragraph}
               </p>
             ))}
-            <div className="flex items-center gap-5 rounded-2xl border border-border bg-background-elevated p-4 sm:p-5">
-              <div className="flex h-20 w-24 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#fefefe] ring-1 ring-white/10 sm:h-24 sm:w-32">
+            <div className="flex flex-col gap-4 rounded-2xl border border-border bg-background-elevated p-3 sm:p-4">
+              <div className="overflow-hidden rounded-xl ring-1 ring-white/10">
                 <Image
-                  src={epgImage}
-                  alt="Kalender mit Programmliste als Symbol für den elektronischen Programmführer (EPG) bei IPTV"
+                  src={kodiEpgImage}
+                  alt="Kodi mit PVR IPTV Simple Client unter Windows: geladene M3U-Senderliste mit ARD, ZDF und weiteren Sendern, aktuellen EPG-Einträgen und der Meldung „EPG erfolgreich aktualisiert“"
                   placeholder="blur"
-                  loading="lazy"
-                  sizes="128px"
-                  className="h-full w-full object-contain"
+                  sizes="(min-width: 1152px) 540px, (min-width: 1024px) 48vw, calc(100vw - 2rem)"
+                  className="h-auto w-full"
                 />
               </div>
-              <p className="text-sm leading-relaxed text-muted">
+              <p className="px-2 pb-1 text-sm leading-relaxed text-muted">
                 Wo Sie die XMLTV-Adresse in TiviMate, Kodi, IPTV Smarters und auf Enigma2 eintragen, zeigt unsere{" "}
                 <Link href="/anleitungen/epg-einrichten" className={inlineLink}>
                   Anleitung: EPG für IPTV einrichten
