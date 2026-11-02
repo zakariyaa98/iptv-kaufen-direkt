@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="t d">
+  <title id="t">MAG Box einrichten in sieben Schritten</title>
+  <desc id="d">Sieben nummerierte Kacheln: 1 Box anschließen per HDMI, Strom und LAN; 2 MAC-Adresse prüfen; 3 Portal-URL vom Anbieter erhalten; 4 Portal im Menü eintragen; 5 Einstellungen speichern; 6 Box neu starten; 7 Portal und Senderliste prüfen. Hinweis: Menünamen hängen von Modell und Firmware ab.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <text x="40" y="60" font-size="21" font-weight="700" letter-spacing="1.5" fill="#a78bfa">IN SIEBEN SCHRITTEN ZUM PORTAL</text>
+
+    <!-- row 1 -->
+    <g>
+      <rect x="40" y="90" width="262" height="270" rx="22" fill="#111829" stroke="#34d399" stroke-opacity="0.5" stroke-width="2"/>
+      <circle cx="90" cy="140" r="26" fill="#34d399"/><text x="90" y="150" text-anchor="middle" font-size="26" font-weight="800" fill="#04221a">1</text>
+      <g fill="none" stroke="#6ee7b7" stroke-width="4" stroke-linecap="round"><rect x="150" y="122" width="60" height="38" rx="6"/><path d="M180 160v14M166 176h28M226 140h40"/></g>
+      <text x="64" y="226" font-size="25" font-weight="800" fill="#f8fafc">Anschließen</text>
+      <text x="64" y="266" font-size="19" fill="#cbd5e1">HDMI, Strom und</text>
+      <text x="64" y="294" font-size="19" fill="#cbd5e1">LAN-Kabel</text>
+
+      <rect x="322" y="90" width="262" height="270" rx="22" fill="#111829" stroke="#34d399" stroke-opacity="0.5" stroke-width="2"/>
+      <circle cx="372" cy="140" r="26" fill="#34d399"/><text x="372" y="150" text-anchor="middle" font-size="26" font-weight="800" fill="#04221a">2</text>
+      <rect x="430" y="124" width="126" height="32" rx="6" fill="#0a0f1c" stroke="#22d3ee" stroke-width="2"/>
+      <text x="493" y="146" text-anchor="middle" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="15" fill="#67e8f9">00:1A:79:…</text>
+      <text x="346" y="226" font-size="25" font-weight="800" fill="#f8fafc">MAC prüfen</text>
+      <text x="346" y="266" font-size="19" fill="#cbd5e1">Aufkleber und Menü</text>
+      <text x="346" y="294" font-size="19" fill="#cbd5e1">vergleichen</text>
+
+      <rect x="604" y="90" width="262" height="270" rx="22" fill="#111829" stroke="#34d399" stroke-opacity="0.5" stroke-width="2"/>
+      <circle cx="654" cy="140" r="26" fill="#34d399"/><text x="654" y="150" text-anchor="middle" font-size="26" font-weight="800" fill="#04221a">3</text>
+      <g fill="none" stroke="#6ee7b7" stroke-width="4" stroke-linejoin="round"><path d="M716 124h80v40h-80z"/><path d="M716 124l40 24 40-24"/></g>
+      <text x="628" y="226" font-size="25" font-weight="800" fill="#f8fafc">Portal-URL</text>
+      <text x="628" y="266" font-size="19" fill="#cbd5e1">vom Anbieter erhalten,</text>
+      <text x="628" y="294" font-size="19" fill="#cbd5e1">MAC dort hinterlegen</text>
+
+      <rect x="886" y="90" width="274" height="270" rx="22" fill="#0b2232" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="936" cy="140" r="26" fill="#22d3ee"/><text x="936" y="150" text-anchor="middle" font-size="26" font-weight="800" fill="#03141a">4</text>
+      <rect x="994" y="124" width="140" height="32" rx="6" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+      <text x="1006" y="146" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="15" fill="#e2e8f0">http://…</text>
+      <text x="910" y="226" font-size="25" font-weight="800" fill="#f8fafc">Portal eintragen</text>
+      <text x="910" y="266" font-size="19" fill="#cbd5e1">Name und URL im</text>
+      <text x="910" y="294" font-size="19" fill="#cbd5e1">Portal-Menü</text>
+    </g>
+
+    <!-- row 2 -->
+    <g>
+      <rect x="181" y="390" width="262" height="270" rx="22" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="231" cy="440" r="26" fill="#3b82f6"/><text x="231" y="450" text-anchor="middle" font-size="26" font-weight="800" fill="#f8fafc">5</text>
+      <g fill="none" stroke="#93c5fd" stroke-width="4" stroke-linejoin="round"><path d="M296 420h52l14 14v40h-66z"/><path d="M308 420v18h34v-18M308 474v-20h46v20"/></g>
+      <text x="205" y="526" font-size="25" font-weight="800" fill="#f8fafc">Speichern</text>
+      <text x="205" y="566" font-size="19" fill="#cbd5e1">Eingaben bestätigen,</text>
+      <text x="205" y="594" font-size="19" fill="#cbd5e1">Warnungen lesen</text>
+
+      <rect x="463" y="390" width="262" height="270" rx="22" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="513" cy="440" r="26" fill="#3b82f6"/><text x="513" y="450" text-anchor="middle" font-size="26" font-weight="800" fill="#f8fafc">6</text>
+      <path d="M626 430a26 26 0 1 1-8-12" fill="none" stroke="#93c5fd" stroke-width="4" stroke-linecap="round"/>
+      <path d="M622 406l-3 14 14-2" fill="none" stroke="#93c5fd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="487" y="526" font-size="25" font-weight="800" fill="#f8fafc">Neu starten</text>
+      <text x="487" y="566" font-size="19" fill="#cbd5e1">Portal oder Box</text>
+      <text x="487" y="594" font-size="19" fill="#cbd5e1">neu laden</text>
+
+      <rect x="745" y="390" width="274" height="270" rx="22" fill="#171433" stroke="#a78bfa" stroke-opacity="0.7" stroke-width="2"/>
+      <circle cx="795" cy="440" r="26" fill="#a78bfa"/><text x="795" y="450" text-anchor="middle" font-size="26" font-weight="800" fill="#1b1533">7</text>
+      <path d="M866 442l14 14 28-30" fill="none" stroke="#c4b5fd" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="769" y="526" font-size="25" font-weight="800" fill="#f8fafc">Prüfen</text>
+      <text x="769" y="566" font-size="19" fill="#cbd5e1">Lädt das Portal? Laufen</text>
+      <text x="769" y="594" font-size="19" fill="#cbd5e1">mehrere Sender?</text>
+    </g>
+
+    <text x="600" y="716" text-anchor="middle" font-size="19" fill="#94a3b8">Menünamen und Wege hängen von Modell und Firmware ab.</text>
+  </g>
+</svg>

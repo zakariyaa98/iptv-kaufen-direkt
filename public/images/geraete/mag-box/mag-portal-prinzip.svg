@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="t d">
+  <title id="t">So funktioniert das MAG-Portal</title>
+  <desc id="d">Ablaufschema in drei Stationen: Die MAG-Box mit ihrer MAC-Adresse verbindet sich über die eingetragene Portal-URL mit dem Portal des Anbieters. Das Portal prüft, ob die MAC-Adresse freigeschaltet ist, und liefert dann Senderliste, Programmführer und Menü an den Fernseher. Darunter drei Hinweise: Die Box braucht keine App, die MAC-Adresse ist der Schlüssel und die Portal-URL ist die Adresse.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#34d399"/></marker>
+  </defs>
+  <rect width="1200" height="660" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <text x="40" y="60" font-size="21" font-weight="700" letter-spacing="1.5" fill="#a78bfa">DAS PORTAL-PRINZIP</text>
+
+    <!-- box -->
+    <rect x="40" y="90" width="330" height="330" rx="24" fill="#111829" stroke="#34d399" stroke-opacity="0.6" stroke-width="2"/>
+    <path d="M110 200l95-30 95 30-95 26z" fill="#2a3550" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M110 200v14l95 26v-14z" fill="#151c2e" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M205 226v14l95-26v-14z" fill="#1e293b" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+    <ellipse cx="205" cy="198" rx="32" ry="9" fill="none" stroke="#34d399" stroke-width="3"/>
+    <text x="205" y="298" text-anchor="middle" font-size="28" font-weight="800" fill="#f8fafc">MAG-Box</text>
+    <rect x="72" y="320" width="266" height="72" rx="14" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="205" y="346" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1" fill="#67e8f9">MAC-ADRESSE</text>
+    <text x="205" y="376" text-anchor="middle" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#e2e8f0">00:1A:79:XX:XX:XX</text>
+
+    <!-- arrow 1 -->
+    <path d="M378 255H428" stroke="#34d399" stroke-width="4" marker-end="url(#a)"/>
+    <text x="403" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#6ee7b7">URL</text>
+
+    <!-- portal -->
+    <rect x="435" y="90" width="330" height="330" rx="24" fill="#0b2a22" stroke="#34d399" stroke-opacity="0.7" stroke-width="2"/>
+    <g fill="none" stroke="#6ee7b7" stroke-width="4">
+      <rect x="560" y="140" width="80" height="26" rx="6"/>
+      <rect x="560" y="174" width="80" height="26" rx="6"/>
+      <rect x="560" y="208" width="80" height="26" rx="6"/>
+    </g>
+    <circle cx="576" cy="153" r="3" fill="#6ee7b7"/><circle cx="576" cy="187" r="3" fill="#6ee7b7"/><circle cx="576" cy="221" r="3" fill="#6ee7b7"/>
+    <text x="600" y="298" text-anchor="middle" font-size="28" font-weight="800" fill="#f8fafc">Portal des Anbieters</text>
+    <rect x="467" y="320" width="266" height="72" rx="14" fill="#0a0f1c" stroke="#34d399" stroke-opacity="0.7" stroke-width="2"/>
+    <path d="M492 356l10 10 18-20" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="532" y="350" font-size="18" font-weight="700" fill="#e2e8f0">MAC freigeschaltet?</text>
+    <text x="532" y="376" font-size="16" fill="#94a3b8">dann Zugriff erlaubt</text>
+
+    <!-- arrow 2 -->
+    <path d="M773 255H823" stroke="#34d399" stroke-width="4" marker-end="url(#a)"/>
+
+    <!-- TV -->
+    <rect x="830" y="90" width="330" height="330" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <rect x="880" y="130" width="230" height="140" rx="10" fill="#0a1226" stroke="#334155" stroke-width="3"/>
+    <g>
+      <rect x="896" y="146" width="198" height="20" rx="6" fill="#132038"/>
+      <rect x="904" y="152" width="90" height="8" rx="4" fill="#cbd5e1"/>
+      <rect x="896" y="172" width="198" height="20" rx="6" fill="#0f2a3a" stroke="#22d3ee" stroke-width="1.5"/>
+      <rect x="904" y="178" width="110" height="8" rx="4" fill="#f8fafc"/>
+      <rect x="896" y="198" width="198" height="20" rx="6" fill="#132038"/>
+      <rect x="904" y="204" width="70" height="8" rx="4" fill="#cbd5e1"/>
+      <rect x="896" y="224" width="198" height="20" rx="6" fill="#132038"/>
+      <rect x="904" y="230" width="100" height="8" rx="4" fill="#cbd5e1"/>
+    </g>
+    <rect x="975" y="270" width="40" height="14" fill="#1e293b"/>
+    <text x="995" y="324" text-anchor="middle" font-size="28" font-weight="800" fill="#f8fafc">Fernseher</text>
+    <text x="995" y="362" text-anchor="middle" font-size="19" fill="#cbd5e1">Senderliste, EPG</text>
+    <text x="995" y="390" text-anchor="middle" font-size="19" fill="#cbd5e1">und Menü vom Portal</text>
+
+    <!-- notes -->
+    <g>
+      <rect x="40" y="460" width="360" height="170" rx="22" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <text x="68" y="506" font-size="23" font-weight="800" fill="#f8fafc">Keine App nötig</text>
+      <text x="68" y="546" font-size="19" fill="#cbd5e1">Oberfläche und Senderliste</text>
+      <text x="68" y="574" font-size="19" fill="#cbd5e1">kommen vom Portal,</text>
+      <text x="68" y="602" font-size="19" fill="#cbd5e1">nicht aus einem App-Store</text>
+
+      <rect x="420" y="460" width="360" height="170" rx="22" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <text x="448" y="506" font-size="23" font-weight="800" fill="#f8fafc">MAC = Schlüssel</text>
+      <text x="448" y="546" font-size="19" fill="#cbd5e1">Der Anbieter schaltet genau</text>
+      <text x="448" y="574" font-size="19" fill="#cbd5e1">diese eine Box frei</text>
+
+      <rect x="800" y="460" width="360" height="170" rx="22" fill="#111829" stroke="#334155" stroke-width="2"/>
+      <text x="828" y="506" font-size="23" font-weight="800" fill="#f8fafc">URL = Adresse</text>
+      <text x="828" y="546" font-size="19" fill="#cbd5e1">Sagt der Box, wo das</text>
+      <text x="828" y="574" font-size="19" fill="#cbd5e1">Portal im Internet liegt</text>
+    </g>
+  </g>
+</svg>

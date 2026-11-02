@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t d">
+  <title id="t">IPTV auf der MAG Box einrichten</title>
+  <desc id="d">Illustration ohne Herstellerlogos: Fernseher mit einer Portal-Startseite aus Kacheln für Live-TV, Favoriten, Programmführer und Einstellungen, davor eine kompakte MAG-Box auf dem Lowboard, per LAN-Kabel mit dem Router verbunden, dazu eine Fernbedienung und die Stichworte Portal-URL, MAC-Adresse und LAN.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1529"/>
+      <stop offset="1" stop-color="#060a14"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="0.5" cy="0.28" r="0.6">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0.1" cy="0.9" r="0.45">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#94a3b8" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#151c2e"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="boxTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4663"/>
+      <stop offset="1" stop-color="#1b2338"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#grid)"/>
+  <rect width="1200" height="900" fill="url(#g1)"/>
+  <rect width="1200" height="900" fill="url(#g2)"/>
+
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- TV -->
+    <rect x="150" y="50" width="820" height="490" rx="18" fill="url(#frame)"/>
+    <rect x="162" y="62" width="796" height="466" rx="10" fill="#0a1226"/>
+    <!-- portal header -->
+    <rect x="190" y="90" width="740" height="56" rx="12" fill="#0f1a33"/>
+    <rect x="210" y="108" width="110" height="20" rx="10" fill="#34d399" fill-opacity="0.85"/>
+    <text x="910" y="126" text-anchor="end" font-size="20" font-weight="700" fill="#94a3b8">20:15</text>
+    <!-- tiles -->
+    <g font-size="22" font-weight="800">
+      <rect x="190" y="170" width="356" height="160" rx="18" fill="url(#tile)"/>
+      <rect x="216" y="198" width="54" height="38" rx="8" fill="none" stroke="#04221a" stroke-width="4"/>
+      <path d="M232 244h22" stroke="#04221a" stroke-width="4" stroke-linecap="round"/>
+      <text x="216" y="300" fill="#04221a">Live-TV</text>
+
+      <rect x="566" y="170" width="364" height="160" rx="18" fill="#132038" stroke="#334155" stroke-width="2"/>
+      <path d="M622 210l10 20 22 3-16 15 4 22-20-11-20 11 4-22-16-15 22-3z" fill="none" stroke="#fcd34d" stroke-width="3.5" stroke-linejoin="round"/>
+      <text x="592" y="300" fill="#e2e8f0">Favoriten</text>
+
+      <rect x="190" y="350" width="356" height="150" rx="18" fill="#132038" stroke="#334155" stroke-width="2"/>
+      <g stroke="#93c5fd" stroke-width="4" stroke-linecap="round"><path d="M216 384h60M216 400h40M216 416h52"/></g>
+      <text x="216" y="474" fill="#e2e8f0">Programmführer</text>
+
+      <rect x="566" y="350" width="364" height="150" rx="18" fill="#132038" stroke="#334155" stroke-width="2"/>
+      <circle cx="616" cy="398" r="18" fill="none" stroke="#c4b5fd" stroke-width="4"/>
+      <circle cx="616" cy="398" r="6" fill="#c4b5fd"/>
+      <text x="592" y="474" fill="#e2e8f0">Einstellungen</text>
+    </g>
+
+    <!-- stand -->
+    <rect x="520" y="540" width="80" height="44" fill="#1e293b"/>
+    <rect x="430" y="580" width="260" height="14" rx="7" fill="#273149"/>
+
+    <!-- lowboard -->
+    <rect x="80" y="660" width="1040" height="70" rx="12" fill="#151d33" stroke="#1e293b" stroke-width="2"/>
+    <rect x="110" y="730" width="18" height="60" fill="#111829"/>
+    <rect x="1072" y="730" width="18" height="60" fill="#111829"/>
+    <path d="M0 790H1200" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- MAG box: compact, rounded -->
+    <ellipse cx="380" cy="662" rx="140" ry="12" fill="#000" fill-opacity="0.35"/>
+    <path d="M250 628l130-40 130 40-130 34z" fill="url(#boxTop)" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M250 628v16l130 34v-16z" fill="#151c2e" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M380 662v16l130-34v-16z" fill="#1e293b" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+    <ellipse cx="380" cy="625" rx="44" ry="13" fill="none" stroke="#34d399" stroke-opacity="0.8" stroke-width="3"/>
+    <circle cx="278" cy="646" r="3.5" fill="#34d399"/>
+
+    <!-- router -->
+    <rect x="860" y="618" width="170" height="42" rx="10" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <rect x="880" y="584" width="8" height="36" rx="4" fill="#334155"/>
+    <rect x="1002" y="584" width="8" height="36" rx="4" fill="#334155"/>
+    <circle cx="906" cy="639" r="5" fill="#34d399"/>
+    <circle cx="926" cy="639" r="5" fill="#22d3ee"/>
+    <circle cx="946" cy="639" r="5" fill="#34d399" fill-opacity="0.5"/>
+    <!-- LAN -->
+    <path d="M500 650C620 690 760 690 860 648" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- remote standing -->
+    <g>
+      <rect x="640" y="590" width="54" height="72" rx="16" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+      <circle cx="667" cy="614" r="12" fill="none" stroke="#64748b" stroke-width="3.5"/>
+      <circle cx="657" cy="644" r="4" fill="#475569"/><circle cx="677" cy="644" r="4" fill="#475569"/>
+    </g>
+
+    <!-- chips -->
+    <g font-weight="700" font-size="21" fill="#f8fafc">
+      <rect x="995" y="80" width="185" height="48" rx="24" fill="#111829" stroke="#34d399" stroke-opacity="0.7" stroke-width="2"/>
+      <text x="1087" y="112" text-anchor="middle">Portal-URL</text>
+      <rect x="995" y="144" width="185" height="48" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.7" stroke-width="2"/>
+      <text x="1087" y="176" text-anchor="middle">MAC-Adresse</text>
+      <rect x="995" y="208" width="185" height="48" rx="24" fill="#111829" stroke="#a78bfa" stroke-opacity="0.7" stroke-width="2"/>
+      <text x="1087" y="240" text-anchor="middle">LAN</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="t d">
+  <title id="t">MAG-Portal, M3U und Xtream Codes im Vergleich</title>
+  <desc id="d">Drei Spalten: Das MAG-Portal nutzt eine Portal-URL und die MAC-Adresse der Box, typisch für MAG-Boxen. Eine M3U-Playlist ist eine einzelne Playlist-Adresse für Player auf Android TV, Smart TV oder dem PC. Xtream Codes bestehen aus Server, Benutzername und Passwort und werden von vielen IPTV-Playern unterstützt. Unten der Hinweis, dass es drei unterschiedliche Verfahren sind und Zugangsdaten nicht beliebig zwischen ihnen austauschbar sind.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- Portal -->
+    <rect x="30" y="30" width="366" height="540" rx="24" fill="#0b2a22" stroke="#34d399" stroke-opacity="0.7" stroke-width="2"/>
+    <rect x="58" y="58" width="150" height="38" rx="19" fill="#34d399"/>
+    <text x="133" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#04221a">MAG-PORTAL</text>
+    <text x="58" y="148" font-size="16" font-weight="700" letter-spacing="1" fill="#6ee7b7">EINGABE</text>
+    <rect x="58" y="162" width="310" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="74" y="191" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#e2e8f0">Portal-URL</text>
+    <text x="213" y="246" text-anchor="middle" font-size="26" font-weight="800" fill="#6ee7b7">+</text>
+    <rect x="58" y="262" width="310" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="74" y="291" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#e2e8f0">MAC der Box</text>
+    <text x="58" y="360" font-size="16" font-weight="700" letter-spacing="1" fill="#6ee7b7">TYPISCHES GERÄT</text>
+    <text x="58" y="392" font-size="21" font-weight="700" fill="#f8fafc">MAG-Box</text>
+    <text x="58" y="452" font-size="19" fill="#cbd5e1">Anmeldung über die</text>
+    <text x="58" y="480" font-size="19" fill="#cbd5e1">Gerätekennung, Menü</text>
+    <text x="58" y="508" font-size="19" fill="#cbd5e1">kommt vom Portal</text>
+
+    <!-- M3U -->
+    <rect x="417" y="30" width="366" height="540" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="445" y="58" width="90" height="38" rx="19" fill="#22d3ee"/>
+    <text x="490" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#03141a">M3U</text>
+    <text x="445" y="148" font-size="16" font-weight="700" letter-spacing="1" fill="#67e8f9">EINGABE</text>
+    <rect x="445" y="162" width="310" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="461" y="191" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#e2e8f0">Playlist-Adresse</text>
+    <text x="445" y="360" font-size="16" font-weight="700" letter-spacing="1" fill="#67e8f9">TYPISCHES GERÄT</text>
+    <text x="445" y="392" font-size="21" font-weight="700" fill="#f8fafc">Android TV, Smart TV,</text>
+    <text x="445" y="420" font-size="21" font-weight="700" fill="#f8fafc">andere Player</text>
+    <text x="445" y="480" font-size="19" fill="#cbd5e1">Eine Textliste mit</text>
+    <text x="445" y="508" font-size="19" fill="#cbd5e1">Sendern und Adressen</text>
+
+    <!-- Xtream -->
+    <rect x="804" y="30" width="366" height="540" rx="24" fill="#111829" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="2"/>
+    <rect x="832" y="58" width="110" height="38" rx="19" fill="#3b82f6"/>
+    <text x="887" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#f8fafc">XTREAM</text>
+    <text x="832" y="148" font-size="16" font-weight="700" letter-spacing="1" fill="#93c5fd">EINGABE</text>
+    <rect x="832" y="162" width="310" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="848" y="191" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#e2e8f0">Server</text>
+    <rect x="832" y="214" width="150" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="848" y="243" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#e2e8f0">Benutzer</text>
+    <rect x="992" y="214" width="150" height="44" rx="10" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="1008" y="243" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#e2e8f0">Passwort</text>
+    <text x="832" y="360" font-size="16" font-weight="700" letter-spacing="1" fill="#93c5fd">TYPISCHES GERÄT</text>
+    <text x="832" y="392" font-size="21" font-weight="700" fill="#f8fafc">Viele IPTV-Player</text>
+    <text x="832" y="452" font-size="19" fill="#cbd5e1">Anmeldung am Server,</text>
+    <text x="832" y="480" font-size="19" fill="#cbd5e1">Kategorien und EPG</text>
+    <text x="832" y="508" font-size="19" fill="#cbd5e1">meist automatisch</text>
+
+    <!-- bottom -->
+    <rect x="30" y="600" width="1140" height="150" rx="24" fill="#2a1f08" stroke="#fbbf24" stroke-opacity="0.7" stroke-width="2"/>
+    <path d="M86 640l22 38h-44z" fill="none" stroke="#fcd34d" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M86 654v12" stroke="#fcd34d" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="86" cy="672" r="2.5" fill="#fcd34d"/>
+    <text x="130" y="660" font-size="25" font-weight="800" fill="#fef3c7">Drei verschiedene Verfahren</text>
+    <text x="130" y="700" font-size="20" fill="#fde68a">Eine Portal-URL ist keine M3U-Adresse – und Xtream-Daten lassen sich</text>
+    <text x="130" y="730" font-size="20" fill="#fde68a">nicht einfach als Portal eintragen. Nutzen Sie, was Ihr Anbieter für Ihr Gerät liefert.</text>
+  </g>
+</svg>

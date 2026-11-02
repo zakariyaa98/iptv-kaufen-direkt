@@ -72,84 +72,24 @@ export const devices: Device[] = [
     faq: [],
   },
   {
+    // The MAG Box guide has its own page (app/geraete/mag-box/page.tsx, copy in lib/mag-content.ts).
+    // This entry only feeds the cards on /anleitungen and /angebote, the sitemap and the page metadata.
     slug: "mag-box",
     name: "MAG-Box (Infomir)",
     shortName: "MAG Box",
     icon: "mag",
-    title: "IPTV auf der MAG-Box einrichten",
-    seoTitle: "MAG Box IPTV einrichten – Portal, MAC-Adresse & Fehlerhilfe",
+    title: "IPTV auf MAG Box einrichten: Portal, MAC-Adresse und Senderliste",
+    seoTitle: "IPTV auf MAG Box einrichten: Portal & MAC-Adresse",
     metaDescription:
-      "So richten Sie IPTV auf einer MAG-Box von Infomir ein: Portal-Adresse eintragen, MAC-Adresse finden, Firmware aktualisieren und typische Fehler beheben.",
+      "IPTV auf MAG Box einrichten: Portal-URL und MAC-Adresse erklärt, 7 Schritte für MAG 254, 322, 420 und 520, Netzwerk-Tipps und Hilfe bei Fehlern.",
     excerpt:
-      "MAG-Boxen arbeiten mit einem Portal statt mit Apps. So tragen Sie das Portal ein und lösen häufige Fehler.",
+      "Portal-Prinzip, MAC-Adresse und Portal-URL verständlich erklärt: sieben Schritte, MAG-Modelle im Vergleich und Lösungen für typische Portal-Fehler.",
     publishedAt: PUBLISHED,
-    readingTimeMinutes: 5,
-    intro: [
-      "MAG-Boxen des Herstellers Infomir sind reine IPTV-Empfänger. Statt einzelner Apps verbinden sie sich mit einem sogenannten Portal, das Ihr IPTV-Anbieter bereitstellt.",
-      "Die Box wird dabei über ihre MAC-Adresse erkannt. Diese Adresse müssen Sie Ihrem Anbieter mitteilen, bevor das Portal funktioniert.",
-    ],
-    summary: [
-      "Für eine MAG-Box brauchen Sie eine Portal-Adresse Ihres Anbieters.",
-      "Die MAC-Adresse steht auf dem Aufkleber an der Unterseite der Box.",
-      "Das Portal tragen Sie unter Einstellungen › Systemeinstellungen › Server › Portale ein.",
-    ],
-    sections: [
-      {
-        heading: "Vorbereitung",
-        list: [
-          "Schließen Sie die Box per HDMI an den Fernseher und nach Möglichkeit per LAN-Kabel an den Router an.",
-          "Notieren Sie die MAC-Adresse vom Aufkleber der Box. Sie beginnt meist mit 00:1A:79.",
-          "Teilen Sie die MAC-Adresse Ihrem Anbieter mit und lassen Sie sich die Portal-Adresse geben.",
-        ],
-      },
-      {
-        heading: "Portal eintragen",
-        steps: [
-          "Schalten Sie die Box ein und öffnen Sie die Einstellungen (Zahnrad-Symbol oder Taste SET).",
-          "Wählen Sie Systemeinstellungen › Server › Portale.",
-          "Tragen Sie bei „Portal 1 Name“ eine beliebige Bezeichnung ein.",
-          "Tragen Sie bei „Portal 1 URL“ die Adresse Ihres Anbieters exakt ein, einschließlich http:// und abschließendem Schrägstrich, falls angegeben.",
-          "Speichern Sie mit OK und starten Sie die Box über das Menü neu.",
-        ],
-      },
-      {
-        heading: "Typische Fehlermeldungen",
-        table: {
-          headers: ["Meldung", "Mögliche Ursache", "Lösung"],
-          rows: [
-            ["Authentifizierung fehlgeschlagen", "MAC-Adresse beim Anbieter nicht freigeschaltet", "MAC-Adresse prüfen und beim Anbieter bestätigen lassen"],
-            ["Portal nicht erreichbar", "Tippfehler in der URL oder Server gestört", "URL Zeichen für Zeichen prüfen, später erneut versuchen"],
-            ["Endlos-Ladebildschirm", "Veraltete Firmware oder Netzwerkproblem", "Box neu starten, Firmware aktualisieren, LAN statt WLAN"],
-            ["Kein Bild bei einzelnen Sendern", "Sender beim Anbieter gestört", "Anderen Sender testen und Anbieter informieren"],
-          ],
-          caption: "Die genaue Formulierung der Meldungen kann je nach Firmware-Version abweichen.",
-        },
-      },
-      {
-        heading: "Firmware aktuell halten",
-        body: [
-          "Infomir veröffentlicht für viele Modelle Firmware-Updates. Sie finden die Funktion meist unter Einstellungen › Software-Update. Ein Update behebt häufig Probleme mit Ladezeiten und Portalen.",
-        ],
-        note: "Unterbrechen Sie während eines Firmware-Updates niemals die Stromzufuhr. Das kann die Box dauerhaft beschädigen.",
-      },
-    ],
-    faq: [
-      {
-        question: "Kann ich auf einer MAG-Box Apps wie Netflix installieren?",
-        answer:
-          "Nur sehr eingeschränkt. MAG-Boxen sind auf IPTV-Portale ausgelegt. Wenn Sie viele Streaming-Apps nutzen möchten, ist ein Android-TV-Gerät oder ein Fire TV Stick besser geeignet.",
-      },
-      {
-        question: "Kann ich mehrere Portale speichern?",
-        answer:
-          "Ja. Die meisten MAG-Modelle erlauben mehrere Portaleinträge. Beim Start wählen Sie dann, welches Portal geladen wird.",
-      },
-    ],
-    related: [
-      { href: "/anleitungen/iptv-ruckelt-loesungen", label: "IPTV ruckelt – Ursachen und Lösungen" },
-      { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV-Anbieter erkennen" },
-      { href: "/geraete/enigma2-receiver", label: "IPTV auf Enigma2-Receivern" },
-    ],
+    updatedAt: "2026-11-02",
+    readingTimeMinutes: 16,
+    intro: [],
+    sections: [],
+    faq: [],
   },
   {
     // The Enigma2 guide has its own page (app/geraete/enigma2-receiver/page.tsx, copy in lib/enigma2-content.ts).

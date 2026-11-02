@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="t d">
+  <title id="t">Wo Sie die MAC-Adresse der MAG Box finden</title>
+  <desc id="d">Links die Unterseite einer MAG-Box mit Typenschild, auf dem die MAC-Adresse im Format 00:1A:79 gefolgt von sechs weiteren Zeichen steht. Rechts ein Bildschirm mit den Geräteinformationen im Menü der Box, in denen dieselbe MAC-Adresse angezeigt wird; der Menüname hängt von Modell und Firmware ab. Unten drei Hinweise: Eine MAC-Adresse enthält nur die Ziffern 0 bis 9 und die Buchstaben A bis F, sie besteht aus sechs Zweiergruppen mit fünf Doppelpunkten, und Kopieren oder ein Foto vom Aufkleber vermeidet Tippfehler.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- left: sticker -->
+    <rect x="30" y="30" width="555" height="470" rx="24" fill="#111829" stroke="#34d399" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="58" y="58" width="150" height="38" rx="19" fill="#34d399"/>
+    <text x="133" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#04221a">WEG 1</text>
+    <text x="226" y="86" font-size="25" font-weight="800" fill="#f8fafc">Aufkleber</text>
+    <!-- box underside -->
+    <rect x="90" y="130" width="435" height="290" rx="40" fill="#1b2338" stroke="#475569" stroke-width="2"/>
+    <circle cx="130" cy="170" r="10" fill="#0a0f1c"/><circle cx="485" cy="170" r="10" fill="#0a0f1c"/>
+    <circle cx="130" cy="380" r="10" fill="#0a0f1c"/><circle cx="485" cy="380" r="10" fill="#0a0f1c"/>
+    <rect x="150" y="190" width="315" height="170" rx="10" fill="#f1f5f9"/>
+    <g font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" fill="#0f172a">
+      <text x="170" y="226" font-size="17">MODEL: MAG ···</text>
+      <text x="170" y="256" font-size="17">S/N: ············</text>
+      <rect x="164" y="272" width="288" height="44" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+      <text x="176" y="301" font-size="19" font-weight="700">MAC: 00:1A:79:··:··:··</text>
+      <g fill="#0f172a"><rect x="170" y="330" width="4" height="20"/><rect x="178" y="330" width="2" height="20"/><rect x="184" y="330" width="6" height="20"/><rect x="194" y="330" width="2" height="20"/><rect x="200" y="330" width="4" height="20"/><rect x="208" y="330" width="2" height="20"/><rect x="214" y="330" width="6" height="20"/><rect x="224" y="330" width="2" height="20"/><rect x="230" y="330" width="4" height="20"/></g>
+    </g>
+    <text x="58" y="462" font-size="20" fill="#cbd5e1">Meist auf der Unterseite oder Rückseite</text>
+
+    <!-- right: menu -->
+    <rect x="615" y="30" width="555" height="470" rx="24" fill="#111829" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="643" y="58" width="150" height="38" rx="19" fill="#22d3ee"/>
+    <text x="718" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#03141a">WEG 2</text>
+    <text x="811" y="86" font-size="25" font-weight="800" fill="#f8fafc">Menü der Box</text>
+    <rect x="655" y="130" width="475" height="290" rx="14" fill="#0a1226" stroke="#334155" stroke-width="3"/>
+    <text x="679" y="170" font-size="17" font-weight="700" letter-spacing="1.2" fill="#94a3b8">GERÄTEINFORMATIONEN</text>
+    <g font-size="18">
+      <text x="679" y="214" fill="#94a3b8">Modell</text><rect x="870" y="202" width="140" height="12" rx="6" fill="#475569"/>
+      <text x="679" y="252" fill="#94a3b8">Firmware</text><rect x="870" y="240" width="180" height="12" rx="6" fill="#475569"/>
+      <rect x="671" y="272" width="443" height="48" rx="10" fill="#0f2a3a" stroke="#22d3ee" stroke-width="2"/>
+      <text x="687" y="303" fill="#e2e8f0" font-weight="700">MAC</text>
+      <text x="870" y="303" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" fill="#67e8f9">00:1A:79:··:··:··</text>
+      <text x="679" y="356" fill="#94a3b8">IP-Adresse</text><rect x="870" y="344" width="120" height="12" rx="6" fill="#475569"/>
+    </g>
+    <text x="643" y="462" font-size="20" fill="#cbd5e1">Menüname je nach Modell und Firmware</text>
+
+    <!-- tips -->
+    <rect x="30" y="530" width="1140" height="220" rx="24" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <text x="62" y="576" font-size="20" font-weight="700" letter-spacing="1.4" fill="#a78bfa">BEIM ABSCHREIBEN BEACHTEN</text>
+    <g>
+      <rect x="62" y="600" width="340" height="120" rx="16" fill="#0a0f1c"/>
+      <text x="86" y="644" font-size="22" font-weight="800" fill="#f8fafc">Nur 0–9 und A–F</text>
+      <text x="86" y="680" font-size="18" fill="#94a3b8">Ein „O“ ist immer eine Null</text>
+      <rect x="430" y="600" width="340" height="120" rx="16" fill="#0a0f1c"/>
+      <text x="454" y="644" font-size="22" font-weight="800" fill="#f8fafc">6 Paare, 5 Doppelpunkte</text>
+      <text x="454" y="680" font-size="18" fill="#94a3b8">z. B. 00:1A:79:XX:XX:XX</text>
+      <rect x="798" y="600" width="340" height="120" rx="16" fill="#0a0f1c"/>
+      <text x="822" y="644" font-size="22" font-weight="800" fill="#f8fafc">Kopieren statt tippen</text>
+      <text x="822" y="680" font-size="18" fill="#94a3b8">Foto vom Aufkleber hilft</text>
+    </g>
+  </g>
+</svg>
