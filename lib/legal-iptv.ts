@@ -1,3 +1,8 @@
+import type { StaticImageData } from "next/image";
+import photoFamily from "@/public/images/iptv legal/IPTV Abonnement legal.webp";
+import photoGuide from "@/public/images/iptv legal/IPTV legal in Deutschland.webp";
+import photoInterface from "@/public/images/iptv legal/IPTV legal oder illegal.webp";
+import photoPlayer from "@/public/images/iptv legal/illegale IPTV Anbieter.webp";
 import type { FaqItem } from "./faq-data";
 import { DURATIONS, LOWEST_PRICE, PLAN_SCOPE_NOTE, PRICE_NOTE, deviceCategories, durationLabel, formatPrice } from "./plans";
 
@@ -59,6 +64,38 @@ export const LEGAL_IPTV_IMAGES = {
     alt: "Warnsignale bei verdächtigen IPTV Anbietern: eine fiktive Werbeanzeige mit tausenden Sendern, allen Sport- und Premium-Sendern und einem Kleinstpreis unter einer Lupe",
   },
 } as const;
+
+/*
+ * Photos showing third-party logos, club crests, film titles and app branding. They are illustrations only:
+ * keep the captions neutral, keep them out of Part 2 and away from the offers and prices, so they never read as
+ * something this site sells or as a verdict on a brand, service or app.
+ */
+export const LEGAL_IPTV_PHOTOS: Record<"interface" | "player" | "family" | "guide", { image: StaticImageData; alt: string; caption: string }> = {
+  interface: {
+    image: photoInterface,
+    alt: "Wohnzimmer mit großem Fernseher, auf dem eine beispielhafte IPTV-Oberfläche mit Live-TV, Filmen und Sportübertragungen zu sehen ist",
+    caption:
+      "Symbolbild einer IPTV-Oberfläche. Die gezeigte Oberfläche ist trotz unseres Markennamens kein Produkt von uns: Wir bieten keine Sender, Filme oder Abonnements an. Sender, Titel und Sportereignisse dienen nur der Illustration. Eine Oberfläche allein sagt nichts darüber aus, ob Rechte vorliegen.",
+  },
+  player: {
+    image: photoPlayer,
+    alt: "Fernseher im Wohnzimmer mit der Startseite einer IPTV-Player-App, einer Anmeldung über Xtream Codes und einer Filmübersicht",
+    caption:
+      "Symbolbild: Startseite einer Player-App mit Anmeldung über Xtream Codes. Das Bild zeigt nur den technischen Zugangsweg und ist keine Aussage über die Rechtmäßigkeit der App oder eines Anbieters.",
+  },
+  family: {
+    image: photoFamily,
+    alt: "Familie mit zwei Kindern schaut auf dem Sofa gemeinsam ein Fußballspiel im Fernsehen, auf dem Tisch steht Popcorn",
+    caption:
+      "Symbolbild: gemeinsamer Fernsehabend. Die gezeigte Übertragung und die Vereinslogos dienen nur der Illustration und sind kein Angebot von uns.",
+  },
+  guide: {
+    image: photoGuide,
+    alt: "Wandfernseher im Wohnzimmer mit einer beispielhaften Programmübersicht zu Fußballspielen und einer App-Leiste mit Mediatheken und Streamingdiensten",
+    caption:
+      "Symbolbild: So kann eine Programmübersicht mit Apps verschiedener Dienste aussehen. Die gezeigten Marken, Vereine und Dienste stehen in keiner Verbindung zu uns und werden über uns nicht angeboten. Ein Abonnement schließen Sie direkt beim jeweiligen Anbieter ab.",
+  },
+};
 
 export const heroFacts = [
   { label: "IPTV-Technik", value: "Übertragung über das Internet" },

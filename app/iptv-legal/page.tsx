@@ -13,6 +13,7 @@ import { FaqList, faqJsonLd } from "@/components/ui/FaqList";
 import { JsonLd } from "@/components/ui/JsonLd";
 import {
   LEGAL_IPTV_IMAGES as IMAGES,
+  LEGAL_IPTV_PHOTOS as PHOTOS,
   LEGAL_IPTV_PUBLISHED,
   LEGAL_IPTV_UPDATED,
   cheapNote,
@@ -112,6 +113,28 @@ function Topic({ title, image, reverse = false, children }: { title: string; ima
       </div>
       <Illustration image={image} className={`min-w-0 ${reverse ? "lg:order-1" : ""}`} />
     </div>
+  );
+}
+
+/**
+ * Illustrative photo with its neutral caption. `beside` puts the caption next to the photo from lg upwards.
+ * The static import supplies width, height and a blur placeholder, so the layout doesn't shift while it loads.
+ */
+function PhotoFigure({ photo, beside = false }: { photo: (typeof PHOTOS)[keyof typeof PHOTOS]; beside?: boolean }) {
+  return (
+    <figure className={`flex min-w-0 flex-col gap-3 ${beside ? "lg:grid lg:grid-cols-2 lg:items-center lg:gap-12" : ""}`}>
+      <div className="min-w-0 overflow-hidden rounded-3xl border border-border-strong bg-background shadow-2xl shadow-black/30">
+        <Image
+          src={photo.image}
+          alt={photo.alt}
+          sizes="(min-width: 1152px) 520px, (min-width: 1024px) 46vw, calc(100vw - 2rem)"
+          placeholder="blur"
+          loading="lazy"
+          className="h-auto w-full"
+        />
+      </div>
+      <figcaption className="min-w-0 text-xs leading-relaxed text-muted lg:text-sm">{photo.caption}</figcaption>
+    </figure>
   );
 }
 
@@ -301,19 +324,27 @@ export default function IptvLegalPage() {
           <Paragraphs items={technologyVsContent} />
         </Topic>
 
+        <PhotoFigure photo={PHOTOS.interface} beside />
+
         <Topic title="IPTV Urheberrecht: Warum Senderechte und Lizenzen zählen" image={IMAGES.rights}>
           <Paragraphs items={rightsIntro} />
         </Topic>
 
         <div className="flex flex-col gap-5">
           <SubHeading>Sind IPTV-Apps, M3U-Playlists und Xtream Codes legal?</SubHeading>
-          <CardGrid items={playerTools} />
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-12">
+            <PhotoFigure photo={PHOTOS.player} />
+            <CardGrid items={playerTools} columns="min-w-0" />
+          </div>
           <Note>{playerToolsNote}</Note>
         </div>
 
         <div className="flex flex-col gap-5">
           <SubHeading>Seriöse IPTV Anbieter erkennen</SubHeading>
-          <CheckList items={legitimateSigns} columns="md:grid-cols-2 md:gap-x-8" />
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-12">
+            <CheckList items={legitimateSigns} columns="min-w-0" />
+            <PhotoFigure photo={PHOTOS.family} />
+          </div>
           <Note>
             <FormattedText text={legitimateSignsNote} />
           </Note>
@@ -322,6 +353,8 @@ export default function IptvLegalPage() {
         <div className="flex flex-col gap-5">
           <SubHeading>IPTV Anbieter in Deutschland: legale Möglichkeiten</SubHeading>
           <p className="text-base leading-relaxed text-secondary">{legalOptionsIntro}</p>
+          {/* Above the cards on purpose: this photo shows third-party brands and must not sit next to our prices. */}
+          <PhotoFigure photo={PHOTOS.guide} beside />
           <CardGrid items={legalOptions} />
           <p className="text-xs leading-relaxed text-muted">{legalOptionsNote}</p>
         </div>
@@ -487,8 +520,9 @@ export default function IptvLegalPage() {
             ))}
           </ul>
           <p className="text-xs leading-relaxed text-muted">
-            Stand: {formatGuideDate(LEGAL_IPTV_UPDATED)}. Genannte Marken gehören ihren jeweiligen Inhabern und dienen nur
-            der Beschreibung.
+            Stand: {formatGuideDate(LEGAL_IPTV_UPDATED)}. Genannte oder in Symbolbildern sichtbare Marken, Logos und Titel
+            gehören ihren jeweiligen Inhabern und dienen nur der Beschreibung oder Illustration. Sie sind kein Angebot von
+            uns.
           </p>
         </Container>
       </section>
