@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" role="img" aria-labelledby="t d">
+  <title id="t">IPTV ohne Lizenz</title>
+  <desc id="d">Ein Programm gelangt ohne Erlaubnis des Rechteinhabers auf einen Server und wird von dort an viele Geräte weiterverbreitet. Die Lizenz ist durchgestrichen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="400" y="62" font-size="32" font-weight="800" fill="#f8fafc">Verbreitung ohne Erlaubnis</text>
+
+    <rect x="30" y="110" width="190" height="230" rx="22" fill="#111829" stroke="#334155" stroke-width="2.5"/>
+    <rect x="75" y="138" width="100" height="68" rx="8" fill="#0a1226" stroke="#475569" stroke-width="4"/>
+    <path d="M113 156l26 16-26 16z" fill="#cbd5e1"/>
+    <text x="125" y="262" font-size="26" font-weight="800" fill="#f8fafc">Programm</text>
+    <text x="125" y="298" font-size="22" fill="#cbd5e1">geschützt</text>
+
+    <path d="M226 240H336" stroke="#fbbf24" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#a)"/>
+    <g>
+      <rect x="234" y="150" width="94" height="50" rx="12" fill="#2b1f0a" stroke="#fbbf24" stroke-width="2.5"/>
+      <text x="281" y="183" font-size="22" font-weight="800" fill="#fcd34d">Lizenz</text>
+      <path d="M240 194L322 156" stroke="#fb7185" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <rect x="344" y="110" width="186" height="230" rx="22" fill="#2b1f0a" stroke="#fbbf24" stroke-opacity=".7" stroke-width="2.5"/>
+    <g fill="none" stroke="#fcd34d" stroke-width="5">
+      <rect x="392" y="138" width="90" height="28" rx="7"/>
+      <rect x="392" y="176" width="90" height="28" rx="7"/>
+    </g>
+    <circle cx="408" cy="152" r="4" fill="#fcd34d"/><circle cx="408" cy="190" r="4" fill="#fcd34d"/>
+    <text x="437" y="262" font-size="26" font-weight="800" fill="#f8fafc">Server</text>
+    <text x="437" y="298" font-size="22" fill="#cbd5e1">ohne Rechte</text>
+
+    <g stroke="#fbbf24" stroke-width="4" stroke-dasharray="8 6" fill="none" marker-end="url(#a)">
+      <path d="M536 200L600 140"/>
+      <path d="M536 225H600"/>
+      <path d="M536 250L600 310"/>
+    </g>
+    <g fill="#0a1226" stroke="#475569" stroke-width="3.5">
+      <rect x="612" y="104" width="86" height="54" rx="7"/>
+      <rect x="612" y="198" width="86" height="54" rx="7"/>
+      <rect x="612" y="292" width="86" height="54" rx="7"/>
+    </g>
+    <text x="736" y="240" font-size="34" font-weight="800" fill="#cbd5e1">…</text>
+
+    <rect x="30" y="376" width="740" height="76" rx="20" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="400" y="424" font-size="25" fill="#e2e8f0">Der Stream sieht aus wie ein normales Angebot</text>
+  </g>
+</svg>

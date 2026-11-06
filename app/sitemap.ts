@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { ANLEITUNGEN_UPDATED } from "@/lib/anleitungen-content";
 import { devices } from "@/lib/devices";
 import { guides } from "@/lib/guides";
-import { legalIptvArticle } from "@/lib/legal-iptv";
+import { LEGAL_IPTV_UPDATED } from "@/lib/legal-iptv";
 import { LEGAL, absoluteUrl } from "@/lib/site";
 
 const SITE_UPDATED = "2026-10-28";
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/iptv-pakete", priority: 0.9 },
     { path: "/angebote", priority: 0.9 },
     { path: "/anleitungen", priority: 0.8, lastModified: ANLEITUNGEN_UPDATED },
-    { path: "/iptv-legal", priority: 0.8, lastModified: legalIptvArticle.updatedAt ?? legalIptvArticle.publishedAt },
+    { path: "/iptv-legal", priority: 0.8, lastModified: LEGAL_IPTV_UPDATED },
     { path: "/faq", priority: 0.6 },
     { path: "/kontakt", priority: 0.6 },
     { path: "/ueber-uns", priority: 0.5 },

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="t d">
+  <title id="t">IPTV legal oder illegal im Vergleich</title>
+  <desc id="d">Links ein Fernseher mit Häkchen und dem Text Mit Senderechten, rechts ein Fernseher mit Warndreieck und dem Text Ohne Senderechte.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="30" y="30" width="360" height="430" rx="26" fill="#0b2a22" stroke="#34d399" stroke-opacity=".7" stroke-width="2.5"/>
+    <text x="210" y="84" font-size="34" font-weight="800" fill="#6ee7b7">IPTV legal</text>
+    <rect x="75" y="112" width="270" height="170" rx="14" fill="#0a1226" stroke="#475569" stroke-width="4"/>
+    <circle cx="210" cy="197" r="54" fill="#34d399" fill-opacity=".15" stroke="#34d399" stroke-width="5"/>
+    <path d="M184 198l18 18 36-40" fill="none" stroke="#34d399" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="188" y="282" width="44" height="18" fill="#334155"/>
+    <rect x="150" y="300" width="120" height="9" rx="4" fill="#475569"/>
+    <text x="210" y="368" font-size="29" font-weight="800" fill="#f8fafc">Mit Senderechten</text>
+    <text x="210" y="412" font-size="24" fill="#cbd5e1">Lizenz vorhanden</text>
+
+    <rect x="410" y="30" width="360" height="430" rx="26" fill="#2b1f0a" stroke="#fbbf24" stroke-opacity=".7" stroke-width="2.5"/>
+    <text x="590" y="84" font-size="34" font-weight="800" fill="#fcd34d">IPTV illegal</text>
+    <rect x="455" y="112" width="270" height="170" rx="14" fill="#0a1226" stroke="#475569" stroke-width="4"/>
+    <path d="M590 140l60 106H530z" fill="#fbbf24" fill-opacity=".15" stroke="#fbbf24" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M590 176v32" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="590" cy="226" r="5.5" fill="#fbbf24"/>
+    <rect x="568" y="282" width="44" height="18" fill="#334155"/>
+    <rect x="530" y="300" width="120" height="9" rx="4" fill="#475569"/>
+    <text x="590" y="368" font-size="29" font-weight="800" fill="#f8fafc">Ohne Senderechte</text>
+    <text x="590" y="412" font-size="24" fill="#cbd5e1">Keine Erlaubnis</text>
+
+    <rect x="30" y="482" width="740" height="88" rx="22" fill="#111829" stroke="#22d3ee" stroke-opacity=".6" stroke-width="2.5"/>
+    <text x="400" y="538" font-size="30" font-weight="700" fill="#f8fafc">Gleiche Technik, entscheidend sind die Rechte</text>
+  </g>
+</svg>

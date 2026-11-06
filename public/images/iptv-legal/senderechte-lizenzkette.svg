@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" role="img" aria-labelledby="t d">
+  <title id="t">Lizenzkette beim legalen IPTV</title>
+  <desc id="d">Der Rechteinhaber erteilt dem Anbieter eine Lizenz. Der Anbieter überträgt das Programm an die Zuschauer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#34d399"/></marker>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="400" y="62" font-size="32" font-weight="800" fill="#f8fafc">So entsteht ein lizenziertes Angebot</text>
+
+    <rect x="30" y="170" width="220" height="190" rx="22" fill="#111829" stroke="#a78bfa" stroke-opacity=".7" stroke-width="2.5"/>
+    <text x="140" y="242" font-size="58" font-weight="800" fill="#a78bfa">§</text>
+    <text x="140" y="296" font-size="26" font-weight="800" fill="#f8fafc">Rechteinhaber</text>
+    <text x="140" y="330" font-size="22" fill="#cbd5e1">erlaubt</text>
+
+    <rect x="290" y="170" width="220" height="190" rx="22" fill="#111829" stroke="#22d3ee" stroke-opacity=".7" stroke-width="2.5"/>
+    <g fill="none" stroke="#67e8f9" stroke-width="5">
+      <rect x="360" y="192" width="80" height="24" rx="6"/>
+      <rect x="360" y="224" width="80" height="24" rx="6"/>
+    </g>
+    <text x="400" y="296" font-size="26" font-weight="800" fill="#f8fafc">Anbieter</text>
+    <text x="400" y="330" font-size="22" fill="#cbd5e1">überträgt</text>
+
+    <rect x="550" y="170" width="220" height="190" rx="22" fill="#111829" stroke="#34d399" stroke-opacity=".7" stroke-width="2.5"/>
+    <rect x="615" y="190" width="90" height="60" rx="7" fill="#0a1226" stroke="#475569" stroke-width="4"/>
+    <path d="M650 206l20 14-20 14z" fill="#34d399"/>
+    <text x="660" y="296" font-size="26" font-weight="800" fill="#f8fafc">Zuschauer</text>
+    <text x="660" y="330" font-size="22" fill="#cbd5e1">sehen</text>
+
+    <path d="M252 265H284" stroke="#34d399" stroke-width="5" marker-end="url(#a)"/>
+    <path d="M512 265H544" stroke="#34d399" stroke-width="5" marker-end="url(#a)"/>
+
+    <g>
+      <rect x="205" y="92" width="130" height="58" rx="14" fill="#0b2a22" stroke="#34d399" stroke-width="2.5"/>
+      <path d="M223 122l8 8 14-16" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="288" y="130" font-size="24" font-weight="800" fill="#6ee7b7">Lizenz</text>
+      <path d="M270 152V256" stroke="#34d399" stroke-width="2.5" stroke-dasharray="6 6"/>
+    </g>
+
+    <text x="400" y="422" font-size="25" fill="#e2e8f0">Die Lizenz legt fest, wer was zeigen darf</text>
+  </g>
+</svg>

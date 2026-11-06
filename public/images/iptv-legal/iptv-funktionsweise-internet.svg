@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" role="img" aria-labelledby="t d">
+  <title id="t">So funktioniert IPTV</title>
+  <desc id="d">Drei Stationen: Der Anbieter sendet einen Datenstrom über das Internet an eine App oder einen Receiver am Fernseher.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1629"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#22d3ee"/></marker>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="400" y="62" font-size="32" font-weight="800" fill="#f8fafc">Fernsehen über das Internet</text>
+
+    <rect x="30" y="100" width="210" height="250" rx="22" fill="#111829" stroke="#22d3ee" stroke-opacity=".6" stroke-width="2.5"/>
+    <g fill="none" stroke="#67e8f9" stroke-width="5">
+      <rect x="90" y="132" width="90" height="30" rx="7"/>
+      <rect x="90" y="172" width="90" height="30" rx="7"/>
+      <rect x="90" y="212" width="90" height="30" rx="7"/>
+    </g>
+    <circle cx="107" cy="147" r="4" fill="#67e8f9"/><circle cx="107" cy="187" r="4" fill="#67e8f9"/><circle cx="107" cy="227" r="4" fill="#67e8f9"/>
+    <text x="135" y="298" font-size="28" font-weight="800" fill="#f8fafc">Anbieter</text>
+    <text x="135" y="330" font-size="22" fill="#cbd5e1">sendet</text>
+
+    <path d="M246 225H282" stroke="#22d3ee" stroke-width="5" marker-end="url(#a)"/>
+
+    <rect x="295" y="100" width="210" height="250" rx="22" fill="#111829" stroke="#a78bfa" stroke-opacity=".6" stroke-width="2.5"/>
+    <g fill="none" stroke="#a78bfa" stroke-width="5">
+      <circle cx="400" cy="187" r="54"/>
+      <ellipse cx="400" cy="187" rx="24" ry="54"/>
+      <path d="M346 187h108M354 160h92M354 214h92"/>
+    </g>
+    <text x="400" y="298" font-size="28" font-weight="800" fill="#f8fafc">Internet</text>
+    <text x="400" y="330" font-size="22" fill="#cbd5e1">Datenstrom</text>
+
+    <path d="M511 225H547" stroke="#22d3ee" stroke-width="5" marker-end="url(#a)"/>
+
+    <rect x="560" y="100" width="210" height="250" rx="22" fill="#111829" stroke="#34d399" stroke-opacity=".6" stroke-width="2.5"/>
+    <rect x="600" y="132" width="130" height="86" rx="9" fill="#0a1226" stroke="#475569" stroke-width="4"/>
+    <path d="M652 156l30 19-30 19z" fill="#34d399"/>
+    <rect x="652" y="218" width="26" height="12" fill="#334155"/>
+    <rect x="628" y="230" width="74" height="7" rx="3" fill="#475569"/>
+    <text x="665" y="298" font-size="28" font-weight="800" fill="#f8fafc">Ihr Gerät</text>
+    <text x="665" y="330" font-size="22" fill="#cbd5e1">App, Receiver</text>
+
+    <rect x="30" y="378" width="740" height="74" rx="20" fill="#0a0f1c" stroke="#334155" stroke-width="2"/>
+    <text x="400" y="425" font-size="25" fill="#e2e8f0">Keine Satellitenschüssel und kein Kabelanschluss nötig</text>
+  </g>
+</svg>
