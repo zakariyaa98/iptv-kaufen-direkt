@@ -36,10 +36,10 @@ export const post: BlogPost = {
   ],
   publishedAt: "2026-11-08",
   image: {
-    src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/iptv-mehrere-geraete-gleichzeitig.svg",
-    width: 1200,
-    height: 675,
-    alt: "Illustration: Ein Router in der Mitte ist mit zwei Fernsehern, einem Smartphone und einem Tablet verbunden. Zwei Geräte zeigen ein aktives Stream-Symbol, die anderen sind im Ruhezustand.",
+    src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/iptv-mehrere-geraete-familie-wohnzimmer.webp",
+    width: 1920,
+    height: 1280,
+    alt: "Familie von hinten auf dem Sofa vor einem Smart TV, der „IPTV auf mehreren Geräten nutzen“ mit Symbolen für Smart TV, Tablet, Smartphone und Laptop zeigt",
   },
   intro: [
     "Wer IPTV im Wohnzimmer eingerichtet hat, möchte es oft auch im Schlafzimmer, im Kinderzimmer oder unterwegs auf dem Smartphone nutzen. Technisch ist das selten ein Problem – organisatorisch schon eher. Denn zwei Fragen werden gern verwechselt: Auf wie vielen Geräten dürfen Sie Ihre App installieren und sich anmelden? Und wie viele Streams dürfen gleichzeitig laufen?",
@@ -81,6 +81,14 @@ export const post: BlogPost = {
             "Apps im Hintergrund: Wechseln Sie mit der Home-Taste zurück zum Startbildschirm, kann eine App je nach Gerät weiterlaufen und die Verbindung halten.",
           ],
         },
+        {
+          type: "image",
+          src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/iptv-app-live-tv-catch-up-aufnahmen.webp",
+          width: 1920,
+          height: 1280,
+          alt: "Fernbedienung vor einem Fernseher mit IPTV-App: Reiter für Live TV, Catch-up, Timeshift und Aufnahmen, darunter die laufende Sendung und die Programmübersicht (EPG)",
+          caption: "Live-TV, Catch-up, Timeshift oder Aufnahme: Jede laufende Wiedergabe belegt eine eigene Verbindung.",
+        },
         { type: "h3", text: "Die Meldung „zu viele Verbindungen“" },
         {
           type: "p",
@@ -120,6 +128,14 @@ export const post: BlogPost = {
           type: "p",
           text: "Die Unterschiede zwischen den Zugangsarten erklärt unser Ratgeber [M3U-Playlist, Xtream Codes und Portal](/anleitungen/m3u-playlist-xtream-codes). Wie die MAC-Bindung bei MAG-Boxen funktioniert und wo Sie die Adresse finden, zeigt die [MAG-Box-Anleitung](/geraete/mag-box).",
         },
+        {
+          type: "image",
+          src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/iptv-gleichzeitige-verbindungen-geraete.webp",
+          width: 1920,
+          height: 1280,
+          alt: "Infografik „Wie viele Geräte gleichzeitig?“: Ein Router verbindet Fernseher, Laptop, Smartphone und Tablet, die alle dasselbe Fußballspiel zeigen, mit dem Hinweis, dass die Zahl gleichzeitiger Streams vom Tarif abhängt",
+          caption: "Symbolbild: Wie viele Streams gleichzeitig laufen dürfen, legt Ihr TV-Anbieter im Tarif fest.",
+        },
       ],
     },
     {
@@ -132,6 +148,14 @@ export const post: BlogPost = {
         {
           type: "p",
           text: "In der Praxis ist der Anschluss aber seltener der Engpass als die Verteilung in der Wohnung. Das WLAN teilt seine Sendezeit unter allen Geräten auf. Ein Fernseher zwei Wände vom Router entfernt bremst dabei nicht nur sich selbst, sondern auch die anderen.",
+        },
+        {
+          type: "image",
+          src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/router-heimnetz-mehrere-geraete-wlan.webp",
+          width: 1920,
+          height: 1280,
+          alt: "Grafik eines WLAN-Routers im Heimnetz, der per Funk gleichzeitig mit Smart TV, Laptop, Tablet und Smartphone verbunden ist",
+          caption: "Symbolbild: Alle Geräte teilen sich das WLAN des Routers. Ein schlecht angebundenes Gerät bremst auch die anderen.",
         },
         { type: "h3", text: "So verteilen Sie das Netz sinnvoll" },
         {
@@ -152,6 +176,13 @@ export const post: BlogPost = {
     {
       heading: "Schritt für Schritt: ein weiteres Gerät hinzufügen",
       blocks: [
+        {
+          type: "image",
+          src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/iptv-weiteres-geraet-einrichten-4-schritte.webp",
+          width: 1920,
+          height: 1280,
+          alt: "Infografik „IPTV einrichten – so gelingt es in 4 Schritten“: Router prüfen, App oder Portal öffnen, Zugangsdaten eingeben und den Stream testen, darunter eine Fernbedienung",
+        },
         {
           type: "steps",
           items: [
@@ -184,6 +215,14 @@ export const post: BlogPost = {
         {
           type: "p",
           text: "Maßgeblich ist die größte Zahl an Streams, die realistisch zur selben Zeit laufen, etwa am Sonntagabend. Rechnen Sie Aufnahmen mit. Planen Sie die Datenrate für genau diese Situation.",
+        },
+        {
+          type: "image",
+          src: "/images/blog/iptv-mehrere-geraete-gleichzeitig/iptv-gleichzeitig-streamen-tv-tablet-smartphone.webp",
+          width: 1920,
+          height: 1280,
+          alt: "Wohnzimmer am Abend: Der Fernseher zeigt ein Fußballspiel live, davor streamen ein Tablet mit Senderliste und ein Smartphone gleichzeitig über denselben WLAN-Router",
+          caption: "Symbolbild: Jedes Gerät, das gerade streamt, zählt als eigene Verbindung – auch das Smartphone.",
         },
         { type: "h3", text: "Unterwegs auf dem Smartphone" },
         {
