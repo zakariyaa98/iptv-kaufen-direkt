@@ -36,10 +36,10 @@ export const post: BlogPost = {
   ],
   publishedAt: "2026-11-08",
   image: {
-    src: "/images/blog/iptv-schwarzes-bild-kein-ton/iptv-schwarzes-bild-kein-ton.svg",
-    width: 1200,
-    height: 675,
-    alt: "Illustration: Fernseher mit schwarzem Bild und Tonwelle, daneben ein Decoder-Chip mit den Formaten H.264, H.265 und AV1 sowie ein Lautsprecher mit durchgestrichenem AC3-Symbol",
+    src: "/images/blog/iptv-schwarzes-bild-kein-ton/iptv-player-decoder-einstellungen-fernseher.webp",
+    width: 1920,
+    height: 1280,
+    alt: "Mann auf dem Sofa öffnet mit der Fernbedienung die Video-Einstellungen eines IPTV-Players am Fernseher: Seitenverhältnis 16:9, Bildrate Auto und Decoder auf Hardware",
   },
   intro: [
     "Der Sender startet, die Zeitanzeige läuft, der Ton ist da – nur das Bild bleibt schwarz. Oder es ist genau umgekehrt: Das Bild läuft einwandfrei, aber aus den Lautsprechern kommt nichts. Beides wirkt wie ein Totalausfall, hat aber meist eine eng begrenzte Ursache.",
