@@ -35,10 +35,10 @@ export const post: BlogPost = {
   ],
   publishedAt: "2026-11-08",
   image: {
-    src: "/images/blog/iptv-catch-up-timeshift-aufnahme/iptv-catch-up-timeshift-aufnahme.svg",
-    width: 1200,
-    height: 675,
-    alt: "Illustration: Programmzeitschrift über einer Zeitleiste mit markiertem Archivbereich, Live-Markierung sowie Symbolen für Pause, Zurückspulen und Aufnahme",
+    src: "/images/blog/iptv-catch-up-timeshift-aufnahme/iptv-live-pause-fussball-fernbedienung.webp",
+    width: 1920,
+    height: 1280,
+    alt: "Hand mit Fernbedienung vor einem Fernseher im Wohnzimmer: Ein Bundesliga-Spiel ist per Timeshift angehalten, eingeblendet sind „Zeitversetztes Fernsehen • Pause“ und eine Zeitleiste mit „Zeitversetzt: -00:12“",
   },
   intro: [
     "„Zeitversetzt fernsehen“ ist ein Sammelbegriff für vier Funktionen: das Live-Programm anhalten und zurückspulen (Timeshift), eine laufende Sendung von vorn starten (Restart), vergangene Sendungen aus einem Archiv abrufen (Catch-up oder Replay) und Sendungen dauerhaft speichern (Aufnahme).",
@@ -86,6 +86,14 @@ export const post: BlogPost = {
           type: "p",
           text: "Weil der Puffer zum laufenden Sender gehört, ist er bei einem Senderwechsel in der Regel verloren. Manche TV-Dienste bieten Timeshift serverseitig an. Dann ist der Zeitraum größer, und Ihr Gerät braucht keinen eigenen Speicher dafür.",
         },
+        {
+          type: "image",
+          src: "/images/blog/iptv-catch-up-timeshift-aufnahme/timeshift-puffer-zeitleiste-fernseher.webp",
+          width: 2048,
+          height: 1152,
+          alt: "Fernseher mit Timeshift-Anzeige: Die Zeitleiste reicht von -30:00 bis LIVE, die Wiedergabe liegt 12:34 Minuten hinter dem Live-Programm, darunter Tasten für Zurückspulen, Pause und Vorspulen sowie der Hinweis auf 90 Minuten Puffer",
+          caption: "Symbolbild: Timeshift zeigt, wie weit Sie hinter dem Live-Programm liegen. Wie lang der Puffer ist, legt Ihre App oder Ihr TV-Dienst fest.",
+        },
         { type: "h3", text: "Tipps für flüssiges Timeshift" },
         {
           type: "list",
@@ -103,6 +111,14 @@ export const post: BlogPost = {
         {
           type: "p",
           text: "Beim Catch-up speichert der Anbieter das Programm ausgewählter Sender für eine bestimmte Zeit auf seinen Servern. Wählen Sie in der Programmzeitschrift eine vergangene Sendung, fragt die App beim Server genau dieses Zeitfenster ab: Sender, Startzeit und Dauer. Deshalb hängt Catch-up so eng am EPG. Ohne Programmdaten weiß die App nicht, wo eine Sendung beginnt.",
+        },
+        {
+          type: "image",
+          src: "/images/blog/iptv-catch-up-timeshift-aufnahme/epg-catch-up-wochenplan.webp",
+          width: 1920,
+          height: 1280,
+          alt: "App-Oberfläche in zwei Bereichen: links die elektronische Programmzeitschrift (EPG) mit laufender Sendung, Fortschrittsbalken und nächsten Sendungen, rechts ein Catch-up-Wochenplan von Montag bis Freitag mit vergangenen Sendungen zur Wiedergabe sowie den Schaltflächen „Aufnahme planen“ und „Erinnern einrichten“",
+          caption: "Symbolbild: Bei Sendern mit Archiv lassen sich vergangene Sendungen direkt aus der Programmzeitschrift als Replay starten.",
         },
         {
           type: "p",
@@ -176,6 +192,14 @@ export const post: BlogPost = {
         {
           type: "p",
           text: "Bei einer Cloud-Aufnahme speichert der TV-Dienst die Sendung auf seinen Servern. Sie können sie danach auf allen Geräten abspielen, die mit Ihrem Konto verbunden sind. Legale TV-Streaming-Dienste bieten das häufig in bestimmten Tarifen an. Wie viel Speicher Sie haben und welche Sender aufgenommen werden dürfen, regelt der Dienst.",
+        },
+        {
+          type: "image",
+          src: "/images/blog/iptv-catch-up-timeshift-aufnahme/cloud-aufnahmen-uebersicht.webp",
+          width: 1920,
+          height: 1280,
+          alt: "Aufnahmen-Übersicht einer IPTV-App mit Anzeige des Cloud-Speichers (68 von 200 Stunden frei), Reitern für alle, geplante und archivierte Aufnahmen sowie Kacheln gespeicherter Sendungen mit Sender, Datum, Dauer und Dateigröße",
+          caption: "Symbolbild einer Cloud-Aufnahme-Übersicht. Ob Aufnahmen möglich sind und wie viel Speicher Sie haben, hängt von Ihrem TV-Dienst ab.",
         },
         { type: "h3", text: "Lokale Aufnahme auf dem Gerät" },
         {
