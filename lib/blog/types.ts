@@ -31,6 +31,17 @@ export type BlogBlock =
   | { type: "table"; headers: string[]; rows: string[][]; caption?: string }
   | { type: "note"; text: string; title?: string }
   | { type: "code"; code: string; caption?: string }
+  /**
+   * Offer box linking to the commercial pages. The starting price and the scope note
+   * ("no channels or access data") are read from lib/plans.ts – never type prices here.
+   */
+  | {
+      type: "cta";
+      title: string;
+      text: string;
+      primary: { href: string; label: string };
+      secondary?: { href: string; label: string };
+    }
   | ({ type: "image" } & BlogImage);
 
 /** One H2 section. Its H3 sub-headings appear indented in the table of contents. */

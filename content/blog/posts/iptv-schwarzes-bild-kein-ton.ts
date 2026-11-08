@@ -31,6 +31,8 @@ export const post: BlogPost = {
     "Smart TV",
     "Android TV",
     "4K",
+    "IPTV Anbieter",
+    "IPTV Angebote",
   ],
   publishedAt: "2026-11-08",
   image: {
@@ -174,6 +176,13 @@ export const post: BlogPost = {
           type: "p",
           text: "Läuft der Ton, aber zeitversetzt zum Bild, ist das ein anderes Thema: Viele Fernseher und Player haben eine Einstellung für den Tonversatz (Audio-Verzögerung). Wie das bei Samsung und LG aussieht, steht in unserer [Smart-TV-Anleitung](/geraete/smart-tv).",
         },
+        {
+          type: "cta",
+          title: "Bild oder Ton fehlt immer noch? Wir prüfen das mit Ihnen",
+          text: "Decoder, Tonspur, Passthrough und HDMI-Einstellungen gehen wir gemeinsam Schritt für Schritt durch – per WhatsApp, Telegram oder E-Mail und passend zu Ihrem Gerät. Unsere IPTV Angebote enthalten Einrichtungshilfe und Support für die gewählte Laufzeit.",
+          primary: { href: "/angebote", label: "Angebote entdecken" },
+          secondary: { href: "/iptv-pakete", label: "Preise ansehen" },
+        },
       ],
     },
     {
@@ -211,10 +220,14 @@ export const post: BlogPost = {
           type: "p",
           text: "Die Kaufkriterien für Boxen im Detail finden Sie in unserer Anleitung zur [Android TV Box](/geraete/android-tv-box). Einen Überblick über alle Geräte bieten unsere [Anleitungen](/anleitungen#geraete).",
         },
+        {
+          type: "p",
+          text: "Wenn Sie gerade [IPTV in Deutschland kaufen](/) möchten, klären Sie die Format-Frage am besten vor dem Abschluss: Seriöse Anbieter sagen offen, in welchen Formaten ihre Sender laufen und welche Geräte sie unterstützen. Worauf Sie außerdem achten sollten, zeigt unser Ratgeber [seriöse IPTV Anbieter erkennen](/anleitungen/iptv-anbieter-erkennen).",
+        },
       ],
     },
     {
-      heading: "Wann Sie den Anbieter kontaktieren sollten",
+      heading: "Wann Sie Ihren IPTV Anbieter kontaktieren sollten",
       blocks: [
         {
           type: "p",
@@ -231,6 +244,13 @@ export const post: BlogPost = {
         {
           type: "p",
           text: "Beschreiben Sie dabei Sender, Uhrzeit, Gerät, App und die Decoder-Einstellung, die Sie getestet haben. Die Codec-Informationen aus VLC helfen zusätzlich. Schicken Sie keine Screenshots, auf denen Ihre Zugangsdaten zu sehen sind.",
+        },
+        {
+          type: "cta",
+          title: "Ein Gerät, das zu Ihrem Dienst passt – von Anfang an",
+          text: "Wir sagen Ihnen ehrlich, ob Ihr Smart TV, Fire TV Stick oder Receiver die Formate Ihres Dienstes verarbeitet, und richten Player, Decoder und Ton mit Ihnen ein. Vergleichen Sie unsere IPTV Angebote für 1, 2 oder 3 Geräte.",
+          primary: { href: "/angebote", label: "IPTV Angebote vergleichen" },
+          secondary: { href: "/iptv-pakete", label: "Alle Preise ansehen" },
         },
       ],
     },
@@ -263,5 +283,7 @@ export const post: BlogPost = {
     { href: "/anleitungen#fehler", label: "Häufige Konfigurationsfehler im Überblick" },
     { href: "/geraete/android-tv-box", label: "IPTV auf Android TV Box einrichten" },
     { href: "/geraete/smart-tv", label: "IPTV auf Smart TV (Samsung & LG) einrichten" },
+    { href: "/angebote", label: "IPTV Angebote & Preise im Überblick" },
+    { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV Anbieter erkennen" },
   ],
 };

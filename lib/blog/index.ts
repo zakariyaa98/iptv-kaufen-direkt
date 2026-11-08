@@ -121,6 +121,8 @@ function blockText(block: BlogBlock): string {
       return [...block.headers, ...block.rows.flat()].join(" ");
     case "code":
       return block.code;
+    case "cta":
+      return `${block.title} ${block.text}`;
     case "image":
       return block.caption ?? "";
   }

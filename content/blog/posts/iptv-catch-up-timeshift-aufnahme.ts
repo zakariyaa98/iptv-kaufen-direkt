@@ -29,6 +29,9 @@ export const post: BlogPost = {
     "M3U",
     "Kodi",
     "Speicher",
+    "IPTV Anbieter",
+    "IPTV Angebote",
+    "IPTV Preise",
   ],
   publishedAt: "2026-11-08",
   image: {
@@ -110,6 +113,11 @@ export const post: BlogPost = {
           type: "p",
           text: "Viele Apps markieren Sender mit Archiv in der Senderliste oder im EPG mit einem kleinen Symbol, oft eine Uhr oder ein Rückspulpfeil. Vergangene Sendungen sind bei diesen Sendern in der Programmzeitschrift anwählbar, bei Sendern ohne Archiv nicht. Wie viele Tage zurück das Archiv reicht, legt der Anbieter pro Sender fest.",
         },
+        { type: "h3", text: "Catch-up vor dem Kauf beim IPTV Anbieter erfragen" },
+        {
+          type: "p",
+          text: "Ob ein Dienst Catch-up anbietet, für welche Sender und wie viele Tage zurück, unterscheidet sich deutlich. Wenn Sie [IPTV in Deutschland kaufen](/) möchten und Wert auf zeitversetztes Fernsehen legen, fragen Sie diese Punkte vor dem Abschluss nach – zusammen mit den Kriterien aus unserem Ratgeber [seriöse IPTV Anbieter erkennen](/anleitungen/iptv-anbieter-erkennen).",
+        },
         { type: "h3", text: "Catch-up mit Xtream Codes, M3U und Portal" },
         {
           type: "p",
@@ -151,6 +159,13 @@ export const post: BlogPost = {
             "Die Sendung auswählen und „Abspielen“, „Replay“ oder „Catch-up“ wählen. Bei einer laufenden Sendung heißt die Option oft „Von vorn“ oder „Restart“.",
             "Innerhalb der Sendung können Sie wie bei einem Video vor- und zurückspulen.",
           ],
+        },
+        {
+          type: "cta",
+          title: "Catch-up, EPG und Timeshift gemeinsam einrichten",
+          text: "Zeitzone, EPG-Quelle, Archiv-Anzeige und Puffer: Wir stellen Ihre Player-App mit Ihnen so ein, dass zeitversetztes Fernsehen zuverlässig funktioniert – auf Fire TV, Smart TV, Android TV, MAG-Box oder Enigma2.",
+          primary: { href: "/angebote", label: "Angebote entdecken" },
+          secondary: { href: "/iptv-pakete", label: "Preise ansehen" },
         },
       ],
     },
@@ -196,6 +211,13 @@ export const post: BlogPost = {
           type: "p",
           text: "Startet eine Sendung aus dem Archiv mit Ton, aber schwarzem Bild, ist das meist ein Format-Problem und hat mit dem Archiv nichts zu tun. Die passenden Schritte finden Sie im Artikel [IPTV zeigt schwarzes Bild oder hat keinen Ton](/blog/iptv-schwarzes-bild-kein-ton). Stockt die Wiedergabe, hilft unsere Anleitung [IPTV ruckelt oder friert ein](/anleitungen/iptv-ruckelt-loesungen).",
         },
+        {
+          type: "cta",
+          title: "Persönliche Hilfe statt Rätselraten",
+          text: "Läuft das Archiv trotz aller Einstellungen nicht, schauen wir uns App, Zugangsart und Geräteeinstellungen mit Ihnen an. Unsere IPTV Angebote gibt es mit Laufzeiten von 1 Monat bis 2 Jahre – die IPTV Preise sind Gesamtpreise für die ganze Laufzeit.",
+          primary: { href: "/angebote", label: "IPTV Angebote vergleichen" },
+          secondary: { href: "/iptv-pakete", label: "Alle Preise ansehen" },
+        },
       ],
     },
   ],
@@ -227,5 +249,7 @@ export const post: BlogPost = {
     { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist, Xtream Codes und Portal erklärt" },
     { href: "/anleitungen#apps", label: "IPTV-Apps im Vergleich" },
     { href: "/iptv-legal", label: "IPTV legal in Deutschland" },
+    { href: "/angebote", label: "IPTV Angebote & Preise im Überblick" },
+    { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV Anbieter erkennen" },
   ],
 };

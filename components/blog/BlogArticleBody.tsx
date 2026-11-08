@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/CheckIcon";
 import { FormattedText } from "@/components/content/FormattedText";
 import { slugify } from "@/lib/blog";
+import { LOWEST_PRICE, PLAN_SCOPE_NOTE, PRICE_NOTE, formatPrice } from "@/lib/plans";
 import type { BlogBlock, BlogSection } from "@/lib/blog/types";
 
 function Block({ block }: { block: BlogBlock }) {
@@ -106,6 +108,40 @@ function Block({ block }: { block: BlogBlock }) {
           </pre>
           {block.caption ? <figcaption className="text-xs leading-relaxed text-muted">{block.caption}</figcaption> : null}
         </figure>
+      );
+
+    case "cta":
+      return (
+        <aside
+          aria-label={block.title}
+          className="relative my-2 overflow-hidden rounded-3xl border border-accent/30 bg-surface p-6 sm:p-8"
+        >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_0%,rgba(34,211,238,0.14),transparent_70%),radial-gradient(ellipse_40%_60%_at_100%_100%,rgba(167,139,250,0.10),transparent_70%)]"
+          />
+          <div className="relative flex flex-col gap-4">
+            <span className="w-fit rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+              Pakete ab {formatPrice(LOWEST_PRICE)} · für 1, 2 oder 3 Geräte
+            </span>
+            <p className="text-xl font-semibold tracking-tight text-balance text-foreground sm:text-2xl">{block.title}</p>
+            <p className="text-base leading-relaxed text-secondary">{block.text}</p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Button href={block.primary.href} className="w-full sm:w-auto">
+                {block.primary.label}
+                <span aria-hidden>→</span>
+              </Button>
+              {block.secondary ? (
+                <Button href={block.secondary.href} variant="secondary" className="w-full sm:w-auto">
+                  {block.secondary.label}
+                </Button>
+              ) : null}
+            </div>
+            <p className="text-xs leading-relaxed text-muted">
+              {PLAN_SCOPE_NOTE} {PRICE_NOTE}
+            </p>
+          </div>
+        </aside>
       );
 
     case "image":

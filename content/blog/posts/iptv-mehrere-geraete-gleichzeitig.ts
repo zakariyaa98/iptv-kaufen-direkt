@@ -29,6 +29,10 @@ export const post: BlogPost = {
     "MAG-Box",
     "Xtream Codes",
     "M3U",
+    "IPTV Angebote",
+    "IPTV Preise",
+    "IPTV kaufen",
+    "IPTV Anbieter",
   ],
   publishedAt: "2026-11-08",
   image: {
@@ -65,7 +69,7 @@ export const post: BlogPost = {
         },
         {
           type: "p",
-          text: "Manche Dienste führen zusätzlich eine Geräteliste in Ihrem Kundenkonto und begrenzen, wie viele Geräte dort angemeldet sein dürfen. Wie es bei Ihnen geregelt ist, steht in den Tarifbedingungen Ihres Anbieters.",
+          text: "Manche Dienste führen zusätzlich eine Geräteliste in Ihrem Kundenkonto und begrenzen, wie viele Geräte dort angemeldet sein dürfen. Wie es bei Ihnen geregelt ist, steht in den Tarifbedingungen Ihres Anbieters. Wenn Sie gerade [IPTV in Deutschland kaufen](/) möchten, gehört die Zahl der gleichzeitigen Streams deshalb zu den wichtigsten Fragen vor dem Abschluss – neben den Punkten aus unserem Ratgeber [seriöse IPTV Anbieter erkennen](/anleitungen/iptv-anbieter-erkennen).",
         },
         { type: "h3", text: "Was alles eine Verbindung belegt" },
         {
@@ -159,6 +163,13 @@ export const post: BlogPost = {
             "Testen Sie den Ernstfall: Starten Sie auf allen Geräten gleichzeitig einen Sender und prüfen Sie, ob Verbindungslimit und Heimnetz mitspielen.",
           ],
         },
+        {
+          type: "cta",
+          title: "Zweites oder drittes Gerät? Wir richten es mit Ihnen ein",
+          text: "App-Installation, Zugangsdaten, EPG und Favoriten – wir begleiten Sie auf jedem Gerät Schritt für Schritt per WhatsApp, Telegram oder E-Mail. Unsere IPTV Angebote richten sich nach der Zahl Ihrer Geräte.",
+          primary: { href: "/angebote", label: "Angebote entdecken" },
+          secondary: { href: "/iptv-pakete", label: "Preise ansehen" },
+        },
       ],
     },
     {
@@ -182,11 +193,18 @@ export const post: BlogPost = {
       ],
     },
     {
-      heading: "Einrichtungshilfe für mehrere Geräte",
+      heading: "IPTV Angebote für mehrere Geräte: Einrichtungshilfe und Preise",
       blocks: [
         {
           type: "p",
-          text: "Wenn Sie nicht jedes Gerät selbst einrichten möchten, unterstützen wir Sie dabei. Unsere [Angebote](/angebote) gibt es für 1, 2 oder 3 Geräte. Sie umfassen Einrichtungshilfe, Support und Anleitungen. TV-Sender oder Zugangsdaten sind nicht enthalten. Wie viele Streams gleichzeitig laufen dürfen, legt weiterhin Ihr TV-Anbieter fest.",
+          text: "Wenn Sie nicht jedes Gerät selbst einrichten möchten, unterstützen wir Sie dabei. Unsere [IPTV Angebote für 1, 2 oder 3 Geräte](/angebote) umfassen Einrichtungshilfe, Support und Anleitungen – vom Fernseher im Wohnzimmer bis zum Receiver im Schlafzimmer. Die aktuellen [IPTV Preise](/iptv-pakete) sind Gesamtpreise für die gewählte Laufzeit. TV-Sender oder Zugangsdaten sind nicht enthalten. Wie viele Streams gleichzeitig laufen dürfen, legt weiterhin Ihr TV-Anbieter fest.",
+        },
+        {
+          type: "cta",
+          title: "Das passende Paket für Ihren Haushalt",
+          text: "Wählen Sie, für wie viele Geräte Sie Hilfe brauchen und wie lange Sie Support möchten. Auf der Angebotsseite sehen Sie alle Kombinationen auf einen Blick.",
+          primary: { href: "/angebote", label: "IPTV Angebote vergleichen" },
+          secondary: { href: "/iptv-pakete", label: "Alle Preise ansehen" },
         },
       ],
     },
@@ -218,6 +236,7 @@ export const post: BlogPost = {
     { href: "/anleitungen/internetgeschwindigkeit-iptv", label: "Welche Internetgeschwindigkeit braucht IPTV?" },
     { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist, Xtream Codes und Portal erklärt" },
     { href: "/geraete/mag-box", label: "IPTV auf der MAG-Box einrichten" },
-    { href: "/angebote", label: "Angebote für 1, 2 oder 3 Geräte" },
+    { href: "/angebote", label: "IPTV Angebote für 1, 2 oder 3 Geräte" },
+    { href: "/iptv-pakete", label: "IPTV Preise und Pakete im Vergleich" },
   ],
 };
