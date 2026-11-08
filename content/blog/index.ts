@@ -2,6 +2,7 @@ import type { BlogPost } from "@/lib/blog/types";
 import { post as catchUpTimeshift } from "./posts/iptv-catch-up-timeshift-aufnahme";
 import { post as mehrereGeraete } from "./posts/iptv-mehrere-geraete-gleichzeitig";
 import { post as schwarzesBild } from "./posts/iptv-schwarzes-bild-kein-ton";
+import { post as wasIstIptv } from "./posts/was-ist-iptv";
 
 /**
  * Register of all blog articles (published and drafts).
@@ -10,4 +11,4 @@ import { post as schwarzesBild } from "./posts/iptv-schwarzes-bild-kein-ton";
  * Order does not matter – listings are sorted by publishedAt automatically.
  * Full guide: content/blog/README.md
  */
-export const allPosts: BlogPost[] = [schwarzesBild, catchUpTimeshift, mehrereGeraete];
+export const allPosts: BlogPost[] = [schwarzesBild, catchUpTimeshift, mehrereGeraete, wasIstIptv];

@@ -46,7 +46,7 @@ export const heroTrustPoints = [
 ];
 
 export const introParagraphs = [
-  "IPTV steht für Internet Protocol Television. Gemeint ist Fernsehen, das nicht über Satellit, Kabel oder Antenne zu Ihnen kommt, sondern als Datenstrom über Ihren Internetanschluss. Für Sie als Zuschauer fühlt sich das an wie gewohntes Fernsehen: Sie wählen einen Sender, sehen das laufende Programm und können – je nach Dienst – Sendungen neu starten oder später abrufen.",
+  "IPTV steht für Internet Protocol Television. Gemeint ist Fernsehen, das nicht über Satellit, Kabel oder Antenne zu Ihnen kommt, sondern als Datenstrom über Ihren Internetanschluss. Für Sie als Zuschauer fühlt sich das an wie gewohntes Fernsehen: Sie wählen einen Sender, sehen das laufende Programm und können – je nach Dienst – Sendungen neu starten oder später abrufen. Wie das technisch funktioniert, lesen Sie in unserem Beitrag [Was ist IPTV? Einfach erklärt](/blog/was-ist-iptv).",
   "Viele Menschen in Deutschland nutzen IPTV längst, ohne es so zu nennen. Die Fernsehpakete von Internetanbietern, TV-Streaming-Dienste mit eigener App und die Livestreams in den Mediatheken der Sender beruhen auf derselben Grundtechnik. Eine Satellitenschüssel oder Kabeldose brauchen Sie dafür nicht. Entscheidend sind ein stabiler Internetanschluss und ein Gerät, auf dem die passende App läuft.",
   "Wer IPTV kaufen möchte, steht trotzdem vor vielen Fragen: Welcher Dienst bietet die gewünschten Sender? Läuft die App auf dem eigenen Fernseher? Reicht die Leitung für HD oder 4K? Und ist das Angebot überhaupt legal? Auf dieser Seite finden Sie die Antworten – kompakt, ehrlich und ohne Fachchinesisch.",
 ];

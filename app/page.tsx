@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FormattedText } from "@/components/content/FormattedText";
 import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
 import { HomePricing } from "@/components/plans/HomePricing";
@@ -227,7 +228,7 @@ export default function HomePage() {
             />
             {introParagraphs.map((paragraph) => (
               <p key={paragraph} className="text-base leading-relaxed text-secondary">
-                {paragraph}
+                <FormattedText text={paragraph} />
               </p>
             ))}
           </div>

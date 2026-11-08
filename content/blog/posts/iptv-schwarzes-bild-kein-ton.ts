@@ -279,6 +279,7 @@ export const post: BlogPost = {
   ],
   relatedSlugs: ["iptv-mehrere-geraete-gleichzeitig", "iptv-catch-up-timeshift-aufnahme"],
   furtherReading: [
+    { href: "/blog/was-ist-iptv", label: "Wie funktioniert IPTV? Die Technik im Überblick" },
     { href: "/anleitungen/iptv-ruckelt-loesungen", label: "IPTV ruckelt oder friert ein: Ursachen und Lösungen" },
     { href: "/anleitungen#fehler", label: "Häufige Konfigurationsfehler im Überblick" },
     { href: "/geraete/android-tv-box", label: "IPTV auf Android TV Box einrichten" },

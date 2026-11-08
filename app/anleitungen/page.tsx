@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { FormattedText } from "@/components/content/FormattedText";
 import { DeviceIcon } from "@/components/devices/DeviceIcon";
 import { WhatsAppIcon } from "@/components/layout/WhatsAppButton";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -360,7 +361,9 @@ export default function GuidesPage() {
         title="Was ist IPTV und wie funktioniert es?"
         tinted
         intro={basicsParagraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph}>
+            <FormattedText text={paragraph} />
+          </p>
         ))}
       >
         <div className="flex flex-col gap-5">

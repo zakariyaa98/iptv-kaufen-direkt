@@ -272,6 +272,7 @@ export const post: BlogPost = {
   ],
   relatedSlugs: ["iptv-schwarzes-bild-kein-ton", "iptv-catch-up-timeshift-aufnahme"],
   furtherReading: [
+    { href: "/blog/was-ist-iptv", label: "Was ist IPTV? Grundlagen einfach erklärt" },
     { href: "/anleitungen/internetgeschwindigkeit-iptv", label: "Welche Internetgeschwindigkeit braucht IPTV?" },
     { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist, Xtream Codes und Portal erklärt" },
     { href: "/geraete/mag-box", label: "IPTV auf der MAG-Box einrichten" },

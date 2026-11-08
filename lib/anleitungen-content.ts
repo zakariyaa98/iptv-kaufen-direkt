@@ -66,7 +66,7 @@ export const quickStart: { icon: QuickStartIcon; title: string; text: string }[]
 /* ---------------------------------------------------------------- Grundlagen */
 
 export const basicsParagraphs = [
-  "IPTV (Internet Protocol Television) überträgt Fernsehen als Datenstrom über das Internet statt über Satellit, Kabel oder Antenne. Für die Einrichtung ist vor allem ein Gedanke hilfreich: Bei IPTV übernimmt die App die Rolle des Empfängers. Wo früher Tuner und Sendersuchlauf standen, stehen heute eine Server-Adresse und Ihre persönlichen Zugangsdaten.",
+  "IPTV (Internet Protocol Television) überträgt Fernsehen als Datenstrom über das Internet statt über Satellit, Kabel oder Antenne. Für die Einrichtung ist vor allem ein Gedanke hilfreich: Bei IPTV übernimmt die App die Rolle des Empfängers. Wo früher Tuner und Sendersuchlauf standen, stehen heute eine Server-Adresse und Ihre persönlichen Zugangsdaten. Ausführlicher erklärt das unser Grundlagenartikel [Wie funktioniert IPTV?](/blog/was-ist-iptv)",
   "Daraus folgt auch, warum IPTV so flexibel ist. Derselbe Zugang funktioniert – je nach Tarif – auf dem Fernseher im Wohnzimmer, auf dem Stick im Schlafzimmer und auf dem Tablet. Und es erklärt, wo Probleme entstehen können: Zwischen Sender und Bildschirm liegen mehrere Stationen. Wer sie kennt, findet Fehler deutlich schneller.",
 ];
 

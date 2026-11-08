@@ -269,6 +269,7 @@ export const post: BlogPost = {
   ],
   relatedSlugs: ["iptv-mehrere-geraete-gleichzeitig", "iptv-schwarzes-bild-kein-ton"],
   furtherReading: [
+    { href: "/blog/was-ist-iptv", label: "Was ist IPTV? Fernsehen über das Internet erklärt" },
     { href: "/anleitungen/epg-einrichten", label: "EPG für IPTV einrichten" },
     { href: "/anleitungen/m3u-playlist-xtream-codes", label: "M3U-Playlist, Xtream Codes und Portal erklärt" },
     { href: "/anleitungen#apps", label: "IPTV-Apps im Vergleich" },
