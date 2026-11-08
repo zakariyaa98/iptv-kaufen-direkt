@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d">
+  <title id="t">So wird ein IPTV-Stream decodiert</title>
+  <desc id="d">Der Stream wird in Video- und Tonspur getrennt. Die Videospur läuft über den Video-Decoder zum Fernseher, die Tonspur über den Audio-Decoder oder per Passthrough zur Soundbar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1730"/><stop offset="1" stop-color="#070b15"/></linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1200" height="560" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif" text-anchor="middle">
+    <!-- Stream -->
+    <rect x="40" y="200" width="200" height="140" rx="18" fill="#111829" stroke="#22d3ee" stroke-width="3"/>
+    <text x="140" y="256" fill="#f8fafc" font-size="26" font-weight="800">Stream</text>
+    <text x="140" y="290" fill="#94a3b8" font-size="18">MPEG-TS / HLS</text>
+    <!-- split -->
+    <path d="M240 250 C300 250 300 140 360 140" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <path d="M240 290 C300 290 300 400 360 400" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <!-- Tracks -->
+    <rect x="365" y="90" width="210" height="100" rx="16" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <text x="470" y="132" fill="#f8fafc" font-size="22" font-weight="700">Videospur</text>
+    <text x="470" y="164" fill="#94a3b8" font-size="17">H.264 · H.265 · AV1</text>
+    <rect x="365" y="350" width="210" height="100" rx="16" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <text x="470" y="392" fill="#f8fafc" font-size="22" font-weight="700">Tonspur</text>
+    <text x="470" y="424" fill="#94a3b8" font-size="17">AAC · MP2 · AC3 · E-AC3</text>
+    <path d="M575 140h70" stroke="#64748b" stroke-width="3" marker-end="url(#ar)"/>
+    <path d="M575 400h70" stroke="#64748b" stroke-width="3" marker-end="url(#ar)"/>
+    <!-- Decoders -->
+    <rect x="650" y="90" width="220" height="100" rx="16" fill="#111829" stroke="#22d3ee" stroke-width="2"/>
+    <text x="760" y="132" fill="#f8fafc" font-size="22" font-weight="700">Video-Decoder</text>
+    <text x="760" y="164" fill="#67e8f9" font-size="17">Hardware oder Software</text>
+    <rect x="650" y="350" width="220" height="100" rx="16" fill="#111829" stroke="#a78bfa" stroke-width="2"/>
+    <text x="760" y="392" fill="#f8fafc" font-size="22" font-weight="700">Audio-Decoder</text>
+    <text x="760" y="424" fill="#c4b5fd" font-size="17">oder Passthrough</text>
+    <path d="M870 140h70" stroke="#64748b" stroke-width="3" marker-end="url(#ar)"/>
+    <path d="M870 400h70" stroke="#64748b" stroke-width="3" marker-end="url(#ar)"/>
+    <!-- Outputs -->
+    <rect x="945" y="80" width="215" height="120" rx="14" fill="#334155"/>
+    <rect x="955" y="90" width="195" height="100" rx="8" fill="#0d2547"/>
+    <text x="1052" y="148" fill="#f8fafc" font-size="22" font-weight="700">Fernseher</text>
+    <rect x="945" y="365" width="215" height="70" rx="35" fill="#172036" stroke="#334155" stroke-width="2"/>
+    <text x="1052" y="408" fill="#f8fafc" font-size="20" font-weight="700">Lautsprecher / Soundbar</text>
+    <!-- failure hints -->
+    <text x="760" y="235" fill="#94a3b8" font-size="17">Format unbekannt → schwarzes Bild</text>
+    <text x="760" y="490" fill="#94a3b8" font-size="17">Format unbekannt → kein Ton</text>
+  </g>
+</svg>

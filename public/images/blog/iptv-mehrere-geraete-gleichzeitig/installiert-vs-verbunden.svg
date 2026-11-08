@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="t d">
+  <title id="t">Installiert ist nicht gleich verbunden</title>
+  <desc id="d">Drei Geräte mit eingerichteter App. Zwei streamen und belegen die beiden erlaubten Verbindungen, das dritte erhält die Meldung „zu viele Verbindungen“.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1730"/><stop offset="1" stop-color="#070b15"/></linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#22d3ee"/></marker>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <text x="60" y="64" fill="#f8fafc" font-size="28" font-weight="800">Beispiel: Tarif mit 2 gleichzeitigen Verbindungen</text>
+
+    <!-- server -->
+    <rect x="870" y="150" width="270" height="250" rx="20" fill="#111829" stroke="#a78bfa" stroke-width="2"/>
+    <text x="1005" y="196" fill="#f8fafc" font-size="22" font-weight="700" text-anchor="middle">Server des Anbieters</text>
+    <rect x="905" y="225" width="200" height="54" rx="12" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="2"/>
+    <text x="1005" y="259" fill="#f8fafc" font-size="19" font-weight="700" text-anchor="middle">Verbindung 1 ✓</text>
+    <rect x="905" y="295" width="200" height="54" rx="12" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="2"/>
+    <text x="1005" y="329" fill="#f8fafc" font-size="19" font-weight="700" text-anchor="middle">Verbindung 2 ✓</text>
+
+    <!-- devices -->
+    <g font-size="20">
+      <rect x="60" y="120" width="330" height="80" rx="16" fill="#172036" stroke="#22d3ee" stroke-width="2"/>
+      <text x="90" y="157" fill="#f8fafc" font-weight="700">Fernseher Wohnzimmer</text>
+      <text x="90" y="184" fill="#67e8f9" font-size="17">App eingerichtet · streamt</text>
+      <rect x="60" y="230" width="330" height="80" rx="16" fill="#172036" stroke="#22d3ee" stroke-width="2"/>
+      <text x="90" y="267" fill="#f8fafc" font-weight="700">Fernseher Schlafzimmer</text>
+      <text x="90" y="294" fill="#67e8f9" font-size="17">App eingerichtet · streamt</text>
+      <rect x="60" y="340" width="330" height="80" rx="16" fill="#172036" stroke="#ef4444" stroke-width="2"/>
+      <text x="90" y="377" fill="#f8fafc" font-weight="700">Smartphone</text>
+      <text x="90" y="404" fill="#fca5a5" font-size="17">App eingerichtet · startet Stream</text>
+    </g>
+    <path d="M390 160 C640 160 640 252 900 252" stroke="#22d3ee" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <path d="M390 270 C640 270 640 322 900 322" stroke="#22d3ee" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <path d="M390 380 H640" stroke="#ef4444" stroke-width="3" stroke-dasharray="10 8"/>
+    <path d="M650 365l30 30M680 365l-30 30" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+    <rect x="560" y="420" width="300" height="50" rx="25" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="2"/>
+    <text x="710" y="452" fill="#fecaca" font-size="19" font-weight="700" text-anchor="middle">„Zu viele Verbindungen“</text>
+  </g>
+</svg>

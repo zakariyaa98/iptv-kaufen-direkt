@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t d">
+  <title id="t">IPTV auf mehreren Geräten gleichzeitig</title>
+  <desc id="d">Ein Router in der Mitte, verbunden mit zwei Fernsehern, einem Smartphone und einem Tablet. Zwei Geräte streamen, zwei sind im Ruhezustand.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1730"/><stop offset="1" stop-color="#070b15"/></linearGradient>
+    <radialGradient id="ga" cx="0.5" cy="0.5" r="0.45"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#94a3b8" fill-opacity="0.08"/></pattern>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#334155"/><stop offset="1" stop-color="#151c2e"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d2547"/><stop offset="1" stop-color="#081226"/></linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <rect width="1200" height="675" fill="url(#ga)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <!-- links -->
+    <g stroke-width="4" fill="none">
+      <path d="M600 340L300 190" stroke="#22d3ee"/>
+      <path d="M600 340L900 190" stroke="#22d3ee"/>
+      <path d="M600 340L300 500" stroke="#334155" stroke-dasharray="10 10"/>
+      <path d="M600 340L900 500" stroke="#334155" stroke-dasharray="10 10"/>
+    </g>
+    <!-- router -->
+    <rect x="510" y="300" width="180" height="80" rx="18" fill="#172036" stroke="#22d3ee" stroke-width="3"/>
+    <circle cx="550" cy="340" r="6" fill="#22d3ee"/><circle cx="575" cy="340" r="6" fill="#22d3ee"/><circle cx="600" cy="340" r="6" fill="#64748b"/>
+    <path d="M540 300v-40M660 300v-40" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+    <text x="600" y="420" fill="#cbd5e1" font-size="20" font-weight="700" text-anchor="middle">Heimnetz</text>
+
+    <!-- TV 1 streaming -->
+    <g transform="translate(150 80)">
+      <rect width="300" height="180" rx="14" fill="url(#frame)"/>
+      <rect x="10" y="10" width="280" height="160" rx="8" fill="url(#screen)"/>
+      <path d="M130 60v60l52-30z" fill="#22d3ee"/>
+      <text x="150" y="215" fill="#f8fafc" font-size="20" font-weight="700" text-anchor="middle">Wohnzimmer · Stream 1</text>
+    </g>
+    <!-- TV 2 streaming -->
+    <g transform="translate(760 100)">
+      <rect width="260" height="160" rx="14" fill="url(#frame)"/>
+      <rect x="10" y="10" width="240" height="140" rx="8" fill="url(#screen)"/>
+      <path d="M112 52v56l48-28z" fill="#22d3ee"/>
+      <text x="130" y="195" fill="#f8fafc" font-size="20" font-weight="700" text-anchor="middle">Kinderzimmer · Stream 2</text>
+    </g>
+    <!-- phone idle -->
+    <g transform="translate(250 450)">
+      <rect width="100" height="170" rx="18" fill="#172036" stroke="#334155" stroke-width="3"/>
+      <rect x="10" y="18" width="80" height="130" rx="8" fill="#0a0f1c"/>
+      <text x="50" y="95" fill="#64748b" font-size="16" text-anchor="middle">bereit</text>
+    </g>
+    <!-- tablet idle -->
+    <g transform="translate(820 440)">
+      <rect width="190" height="150" rx="16" fill="#172036" stroke="#334155" stroke-width="3"/>
+      <rect x="12" y="12" width="166" height="126" rx="8" fill="#0a0f1c"/>
+      <text x="95" y="82" fill="#64748b" font-size="16" text-anchor="middle">bereit</text>
+    </g>
+    <!-- badge -->
+    <rect x="455" y="570" width="290" height="56" rx="28" fill="none" stroke="#a78bfa" stroke-width="2"/>
+    <text x="600" y="605" fill="#f8fafc" font-size="22" font-weight="700" text-anchor="middle">2 von 2 Verbindungen aktiv</text>
+  </g>
+</svg>

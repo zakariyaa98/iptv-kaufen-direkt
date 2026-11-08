@@ -411,6 +411,7 @@ export const topicClusters: { title: string; text: string; links: TopicLink[] }[
       { href: "#ablauf", label: "IPTV einrichten in sechs Schritten" },
       { href: "#einstellungen", label: "IPTV-Einstellungen richtig konfigurieren" },
       { href: "/anleitungen/internetgeschwindigkeit-iptv", label: "Welche Internetgeschwindigkeit braucht IPTV?" },
+      { href: "/blog/iptv-mehrere-geraete-gleichzeitig", label: "IPTV auf mehreren Geräten gleichzeitig nutzen" },
     ],
   },
   {
@@ -428,6 +429,7 @@ export const topicClusters: { title: string; text: string; links: TopicLink[] }[
       { href: "#apps", label: "IPTV-Apps im Vergleich" },
       { href: "/geraete/android-tv-box", label: "TiviMate und Kodi auf Android TV nutzen" },
       { href: "/geraete/fire-tv-stick", label: "IPTV-Player auf dem Fire TV Stick" },
+      { href: "/blog/iptv-catch-up-timeshift-aufnahme", label: "Catch-up, Timeshift und Aufnahme erklärt" },
     ],
   },
   {
@@ -455,6 +457,7 @@ export const topicClusters: { title: string; text: string; links: TopicLink[] }[
     links: [
       { href: "/anleitungen/iptv-ruckelt-loesungen", label: "IPTV ruckelt oder friert ein: Lösungen" },
       { href: "#fehler", label: "Häufige Konfigurationsfehler" },
+      { href: "/blog/iptv-schwarzes-bild-kein-ton", label: "Schwarzes Bild oder kein Ton? Codec-Probleme lösen" },
       { href: "/anleitungen/iptv-anbieter-erkennen", label: "Seriöse IPTV-Anbieter erkennen" },
       { href: "/iptv-legal", label: "IPTV legal in Deutschland" },
     ],

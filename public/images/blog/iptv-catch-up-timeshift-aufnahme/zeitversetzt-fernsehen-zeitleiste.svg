@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="t d">
+  <title id="t">Zeitversetzt fernsehen: Catch-up, Restart, Timeshift und Aufnahme</title>
+  <desc id="d">Zeitleiste von vor 7 Tagen bis jetzt. Links das Catch-up-Archiv beim Anbieter, dann der Restart der laufenden Sendung, kurz vor der Live-Markierung der Timeshift-Puffer auf dem Gerät. Darunter eine Aufnahme als dauerhaft gespeicherter Block.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1730"/><stop offset="1" stop-color="#070b15"/></linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <text x="60" y="64" fill="#f8fafc" font-size="28" font-weight="800">Wo die zeitversetzten Inhalte liegen</text>
+
+    <!-- axis -->
+    <path d="M60 250H1140" stroke="#334155" stroke-width="4"/>
+    <g fill="#94a3b8" font-size="18" text-anchor="middle">
+      <path d="M60 240v20M360 240v20M660 240v20M930 240v20" stroke="#334155" stroke-width="3"/>
+      <text x="60" y="290">vor 7 Tagen</text><text x="360" y="290">vor 3 Tagen</text><text x="660" y="290">gestern</text><text x="930" y="290">heute 20:00</text>
+    </g>
+    <!-- now -->
+    <path d="M1040 120V300" stroke="#f8fafc" stroke-width="3"/>
+    <rect x="1002" y="96" width="76" height="30" rx="15" fill="#ef4444"/>
+    <text x="1040" y="117" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">JETZT</text>
+
+    <!-- archive -->
+    <rect x="60" y="150" width="870" height="70" rx="14" fill="#a78bfa" fill-opacity="0.18" stroke="#a78bfa" stroke-width="2"/>
+    <text x="90" y="182" fill="#f8fafc" font-size="22" font-weight="700">Catch-up / Replay</text>
+    <text x="90" y="208" fill="#c4b5fd" font-size="17">Archiv auf dem Server des Anbieters – Dauer je Sender</text>
+    <!-- restart -->
+    <rect x="930" y="150" width="110" height="70" rx="14" fill="#22d3ee" fill-opacity="0.18" stroke="#22d3ee" stroke-width="2"/>
+    <text x="985" y="192" fill="#f8fafc" font-size="19" font-weight="700" text-anchor="middle">Restart</text>
+    <!-- timeshift -->
+    <rect x="985" y="320" width="55" height="46" rx="10" fill="#22d3ee"/>
+    <path d="M1012 312v-50" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="970" y="352" fill="#f8fafc" font-size="20" font-weight="700" text-anchor="end">Timeshift-Puffer auf dem Gerät</text>
+    <text x="970" y="380" fill="#94a3b8" font-size="17" text-anchor="end">wenige Minuten bis Stunden, je nach App</text>
+
+    <!-- recording -->
+    <rect x="360" y="420" width="300" height="60" rx="14" fill="#172036" stroke="#ef4444" stroke-width="2"/>
+    <circle cx="392" cy="450" r="10" fill="#ef4444"/>
+    <text x="412" y="457" fill="#f8fafc" font-size="20" font-weight="700">Aufnahme: bleibt gespeichert</text>
+    <path d="M510 420V260" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="690" y="446" fill="#94a3b8" font-size="17">Cloud des Dienstes oder lokal</text>
+    <text x="690" y="470" fill="#94a3b8" font-size="17">(intern, USB, Festplatte)</text>
+  </g>
+</svg>

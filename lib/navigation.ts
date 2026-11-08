@@ -4,6 +4,7 @@ export const mainNav: NavLink[] = [
   { href: "/iptv-pakete", label: "Pakete" },
   { href: "/angebote", label: "Angebote" },
   { href: "/anleitungen", label: "Anleitungen" },
+  { href: "/blog", label: "Blog" },
   { href: "/iptv-legal", label: "IPTV legal" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
